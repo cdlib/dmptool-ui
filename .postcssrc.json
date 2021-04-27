@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "postcss-svg": {
+      "dirs": "node_modules/@fortawesome/fontawesome-pro/sprites/",
+      "svgo": true
+    },
+    "postcss-logical": {
+      "dir": "ltr"
+    }
+  }
+}
