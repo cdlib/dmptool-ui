@@ -1,0 +1,45 @@
+/* Initial Tests */
+
+@import 'variables';
+
+.t-tests {
+
+  // Tests for basic SCSS variable use:
+
+  .c-tests1 {
+    width: 15rem;
+    margin-block-end: $space-base;
+  }
+
+  .c-tests2 {
+    margin-block-end: $space-lg;
+  }
+
+  output {
+    font-weight: 900;
+  }
+
+  .c-tests3 {
+
+    // Tests for stylelint use-logical rule and postcss-logical. Confirm that the following 2 logical properties are getting converted back to legacy physical properties:
+
+    @supports (display: none) {
+      inset: 10em 20px 30ch 40%;
+      padding-inline-start: 20px;
+    }
+
+    // Tests for stylelint max-nesting-depth rules. The following nested <div>, pseudo element, and @supports rules should not trigger a stylelint warning:
+
+    &:not(:first-child) {
+      cursor: pointer;
+    }
+  }
+
+  // Tests for CSS background-image with SVGs. Confirm that postcss-svg is parsing a Font Awesome SVG sprite fragment and setting the fill color to green:
+
+  .c-tests4 {
+    height: 10rem;
+    background-image: url('regular.svg#address-card' param(--color hsl(120, 100%, 25%)));
+    background-repeat: no-repeat;
+  }
+}
