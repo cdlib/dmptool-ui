@@ -1,0 +1,1 @@
+document.querySelector("#js-tests2 output").innerText="Yes";
