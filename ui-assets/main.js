@@ -1,1 +1,1 @@
-document.querySelector("#js-tests2 output").innerText="Yes";
+!function(){if(document.querySelector("#js-tests2")){document.querySelector("#js-tests2 output").innerText="Yes"}}();
