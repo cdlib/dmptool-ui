@@ -8,30 +8,43 @@
   </picture>
 </a>
 
-  <button class="c-navtoggle" aria-label="main navigation"></button>
+  <button id="js-navtoggle" class="c-navtoggle" aria-label="main navigation"></button>
 
-  <nav aria-label="main" class="sc-nav c-headernav">
+  <nav aria-label="main" id="js-headernav" class="sc-nav c-headernav" hidden>
   <ul>
     <li><a href="">Home</a></li>
     <li><a href="">Public DMPs</a></li>
     <li><a href="">Funder Requirements</a></li>
-    <li><a href="">About</a></li>
-    <li><a href="">Blog</a></li>
     <li><a href="">Help</a></li>
   </ul>
 </nav>
 
-  <div class="c-language">
-  [Language]
-</div>
+  <nav aria-label="language" class="c-language">
+  <ul>
+    <li>
+      <a href="">Language</a>
+      <ul>
+        <li><a href="">English (US)</a></li>
+        <li><a href="">Português (Brasil)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 </header>
 
 <main id="maincontent">
   <div class="c-calltoaction">
   <div class="c-calltoaction__content">
-    <h1>Create, review, share and publish DMPs that meet institutional and funder requirements.</h1>
+    <h1>Create, review, share and publish Data Management Plans that meet institutional and funder requirements.</h1>
   </div>
+</div>
+
+
+  <div class="c-login">
+  
+
+  <img src="../../ui-assets/images/login-sample.png" width="300px" alt="login sample">
 </div>
 
   <div class="c-home-stats">
@@ -43,14 +56,12 @@
 </div>
 
 </main>
-<aside>
-  <div class="c-login">
-  <img src="../../ui-assets/images/login-sample.png" alt="login sample">
-</div>
-
-</aside>
 <footer class="c-footer">
-  <nav aria-label="footer" class="sc-nav c-footernav">
+  <a class="c-logo-cdl" href="https://cdlib.org">
+  <img src="../../ui-assets/images/logo-cdl.svg" alt="California Digital Library logo">
+</a>
+
+  <nav aria-label="footer" class="c-footernav">
   <ul>
     <li><a href="">About</a></li>
     <li><a href="">Contact Us</a></li>
@@ -62,22 +73,21 @@
   </ul>
 </nav>
 
-  <div class="c-social">
-  <ul>
-    <li><a class="c-social__icon-twitter" href=""><span>Twitter</span></a></li>
-    <li><a class="c-social__icon-rss" href=""><span>RSS</span></a></li>
-  </ul>
-</div>
-
-  <a class="c-footer__logo-cdl" href="https://cdlib.org">
-    <img src="../../ui-assets/images/logo-cdl.svg" alt="California Digital Library logo">
-  </a>
+  <p class="c-footer__service">
+    DMPTool is a service of the <a href="https://cdlib.org">California Digital Library</a>, a division of the <a href="https://www.universityofcalifornia.edu">University of California Office of the President</a>. Version: v3.1.5
+  </p>
   <p class="c-footer__copyright">
-    &copy; 2010-2021 The Regents of the University of California
+    &copy; 2021 The Regents of the University of California
   </p>
-  <p class="c-footer__version">
-    Version: v3.1.5;
-  </p>
+  <ul class="c-social">
+  <li><a class="c-social__icon-twitter" href="" title="DMPTool Twitter"></a></li>
+  <li><a class="c-social__icon-rss" href="" title="DMPTool RSS"></a></li>
+</ul>
+
+  <div class="c-footer__blog" role="marquee">
+    <h2>DMPTool News</h2>
+    <div>[blog content goes here]</div>
+  </div>
 </footer>
 
 
