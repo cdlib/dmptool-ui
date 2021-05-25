@@ -184,7 +184,7 @@
   </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="logo-dmptool.html">@logo-dmptool</a>&#x27;</span> }}</span><span class="xml">
   </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="nav-toggle.html">@nav-toggle</a>&#x27;</span> }}</span><span class="xml">
   </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="header-nav.html">@header-nav</a>&#x27;</span> }}</span><span class="xml">
-  </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="language.html">@language</a>&#x27;</span> }}</span><span class="xml">
+  </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="language2.html">@language2</a>&#x27;</span> }}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -246,7 +246,7 @@
             
                 <a href="header-nav.html">@<span>header-nav</span></a>, 
             
-                <a href="language.html">@<span>language</span></a>
+                <a href="language2.html">@<span>language2</span></a>
             
             </span>
         </li class="Meta-item">
@@ -288,17 +288,13 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;language&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-language&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Language<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://dmptool.org/locale/en-US&quot;</span>&gt;</span>English (US)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://dmptool.org/locale/pt-BR&quot;</span>&gt;</span>Português (Brasil)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-language2&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-language2__button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-language2__button&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;language menu&quot;</span>&gt;</span>Language<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-language2__menu&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-language2__menu&quot;</span> <span class="hljs-attr">hidden</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://dmptool.org/locale/en-US&quot;</span>&gt;</span>English (US)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;pt&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://dmptool.org/locale/pt-BR&quot;</span>&gt;</span>Português (Brasil)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></pre>
         
@@ -604,6 +600,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="language.html" data-role="tree-link" data-pjax data-handle="language">
                 <span>Language</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="language2.html" data-role="tree-link" data-pjax data-handle="language2">
+                <span>Language 2</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -955,8 +977,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-05-21T23:32:33.783Z">
-                                5/21/2021
+                            <time datetime="2021-05-25T00:06:17.820Z">
+                                5/24/2021
                             </time>
                         
                     </dd>
@@ -981,6 +1003,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         
