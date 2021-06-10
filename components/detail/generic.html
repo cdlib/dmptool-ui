@@ -184,7 +184,9 @@
 </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="header.html">@header</a>&#x27;</span> }}</span><span class="xml">
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;maincontent&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Generic Page<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Eos vitae iusto, perferendis sunt distinctio ipsam necessitatibus nemo, iste, temporibus id numquam rerum facere consectetur natus rem blanditiis. Velit autem odit labore cum numquam distinctio delectus excepturi quae. Doloremque consequuntur quis et eligendi explicabo nam quisquam modi autem, voluptatem labore porro amet ducimus tempora eum natus odit dolores iure in voluptate. Illo repellat magni excepturi delectus nesciunt error facilis expedita, ipsa suscipit repellendus omnis fuga ab assumenda quibusdam sed necessitatibus dolore sequi quos ad voluptatibus, vel facere atque corrupti tempora? Non officiis veritatis ab cum minus, exercitationem minima consequuntur voluptatum ipsum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> loop}}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">test.lorem</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
 </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="footer.html">@footer</a>&#x27;</span> }}</span></pre>
     </code>
@@ -195,7 +197,35 @@
     <code class="Code Code--lang-json hljs">
         
             
-            <pre><span class="hljs-comment">/* No context defined. */</span></pre>
+            <pre>{
+  <span class="hljs-attr">&quot;loop&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;test&quot;</span>: {
+        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Voluptatem aut quasi ullam accusantium id asperiores sit. Voluptatem reiciendis ut quia quo ut labore deserunt repudiandae aut. A similique sed similique facere fuga sed aliquid delectus reprehenderit. Temporibus voluptas esse dignissimos unde. Explicabo mollitia aut possimus numquam quidem sequi voluptas ratione quos. Iste dolorem sunt. Facere qui voluptates aliquam iure sapiente atque mollitia expedita. Est est aut repellat repudiandae autem similique ut. Beatae accusantium tempore nisi ex consequuntur accusantium eius. Et esse asperiores.&quot;</span>
+      }
+    },
+    {
+      <span class="hljs-attr">&quot;test&quot;</span>: {
+        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Porro molestiae dignissimos voluptatem. Ea quaerat voluptas molestias at animi et pariatur officia. Delectus libero corporis optio accusamus molestiae aut dolor. Quis possimus rerum perferendis at fugiat sunt inventore. Ad aut laudantium et dolorem quia iste sit asperiores. Ut ut veniam nam porro perferendis. Unde asperiores architecto. Tempore nesciunt sapiente rerum laudantium. Voluptatem dolor illum est autem optio ut. Repudiandae reprehenderit accusantium adipisci ipsa laboriosam occaecati minus. Qui ipsa rerum occaecati et quam enim rerum. Nam earum debitis natus assumenda necessitatibus pariatur officiis.&quot;</span>
+      }
+    },
+    {
+      <span class="hljs-attr">&quot;test&quot;</span>: {
+        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Unde libero quia harum quo dolorem. Voluptatum eum ut illum quas. Inventore expedita consequatur nesciunt aut possimus cumque. Corrupti vel ad voluptas atque aspernatur et. Asperiores distinctio nisi veritatis ducimus ipsa. Magni molestiae repellendus incidunt. Nihil laudantium quidem itaque odio. Aperiam consequatur sit voluptatem necessitatibus et voluptates pariatur dolores. Minima error eos sint. Quam autem nihil quas qui repellat quaerat voluptatum dicta.&quot;</span>
+      }
+    },
+    {
+      <span class="hljs-attr">&quot;test&quot;</span>: {
+        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Dolore nihil maiores iusto. Ipsam quia est quae voluptas. Quas necessitatibus possimus officiis ratione dolorum. Eum qui est quae consequuntur suscipit earum itaque distinctio. Qui quas iusto voluptates hic. Ratione saepe et ut. Eaque soluta explicabo optio. Cupiditate laborum enim voluptatibus quos necessitatibus ea. Reprehenderit temporibus earum et velit molestiae reprehenderit qui. Dolorum modi unde quo magnam quibusdam. Molestiae hic labore. Velit doloremque non culpa quos doloremque laudantium.&quot;</span>
+      }
+    },
+    {
+      <span class="hljs-attr">&quot;test&quot;</span>: {
+        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Et velit et reiciendis. Qui eius nulla nostrum. Culpa velit aut porro enim. Autem itaque nobis repellendus tenetur. Dicta qui est dicta magni. Est perferendis quia voluptatem a repellat tempore. Aperiam impedit quisquam est incidunt ullam debitis ratione totam. Excepturi nam quia occaecati voluptatem dolore sit similique. Repellendus autem veritatis incidunt est dolorem. Beatae minus quaerat recusandae dolores eos dolorum facilis odio maiores.&quot;</span>
+      }
+    }
+  ]
+}</pre>
             
         
     </code>
@@ -292,7 +322,11 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;maincontent&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Generic Page<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Eos vitae iusto, perferendis sunt distinctio ipsam necessitatibus nemo, iste, temporibus id numquam rerum facere consectetur natus rem blanditiis. Velit autem odit labore cum numquam distinctio delectus excepturi quae. Doloremque consequuntur quis et eligendi explicabo nam quisquam modi autem, voluptatem labore porro amet ducimus tempora eum natus odit dolores iure in voluptate. Illo repellat magni excepturi delectus nesciunt error facilis expedita, ipsa suscipit repellendus omnis fuga ab assumenda quibusdam sed necessitatibus dolore sequi quos ad voluptatibus, vel facere atque corrupti tempora? Non officiis veritatis ab cum minus, exercitationem minima consequuntur voluptatum ipsum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Voluptatem aut quasi ullam accusantium id asperiores sit. Voluptatem reiciendis ut quia quo ut labore deserunt repudiandae aut. A similique sed similique facere fuga sed aliquid delectus reprehenderit. Temporibus voluptas esse dignissimos unde. Explicabo mollitia aut possimus numquam quidem sequi voluptas ratione quos. Iste dolorem sunt. Facere qui voluptates aliquam iure sapiente atque mollitia expedita. Est est aut repellat repudiandae autem similique ut. Beatae accusantium tempore nisi ex consequuntur accusantium eius. Et esse asperiores.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Porro molestiae dignissimos voluptatem. Ea quaerat voluptas molestias at animi et pariatur officia. Delectus libero corporis optio accusamus molestiae aut dolor. Quis possimus rerum perferendis at fugiat sunt inventore. Ad aut laudantium et dolorem quia iste sit asperiores. Ut ut veniam nam porro perferendis. Unde asperiores architecto. Tempore nesciunt sapiente rerum laudantium. Voluptatem dolor illum est autem optio ut. Repudiandae reprehenderit accusantium adipisci ipsa laboriosam occaecati minus. Qui ipsa rerum occaecati et quam enim rerum. Nam earum debitis natus assumenda necessitatibus pariatur officiis.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Unde libero quia harum quo dolorem. Voluptatum eum ut illum quas. Inventore expedita consequatur nesciunt aut possimus cumque. Corrupti vel ad voluptas atque aspernatur et. Asperiores distinctio nisi veritatis ducimus ipsa. Magni molestiae repellendus incidunt. Nihil laudantium quidem itaque odio. Aperiam consequatur sit voluptatem necessitatibus et voluptates pariatur dolores. Minima error eos sint. Quam autem nihil quas qui repellat quaerat voluptatum dicta.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Dolore nihil maiores iusto. Ipsam quia est quae voluptas. Quas necessitatibus possimus officiis ratione dolorum. Eum qui est quae consequuntur suscipit earum itaque distinctio. Qui quas iusto voluptates hic. Ratione saepe et ut. Eaque soluta explicabo optio. Cupiditate laborum enim voluptatibus quos necessitatibus ea. Reprehenderit temporibus earum et velit molestiae reprehenderit qui. Dolorum modi unde quo magnam quibusdam. Molestiae hic labore. Velit doloremque non culpa quos doloremque laudantium.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Et velit et reiciendis. Qui eius nulla nostrum. Culpa velit aut porro enim. Autem itaque nobis repellendus tenetur. Dicta qui est dicta magni. Est perferendis quia voluptatem a repellat tempore. Aperiam impedit quisquam est incidunt ullam debitis ratione totam. Excepturi nam quia occaecati voluptatem dolore sit similique. Repellendus autem veritatis incidunt est dolorem. Beatae minus quaerat recusandae dolores eos dolorum facilis odio maiores.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-footer&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-logo-cdl&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://cdlib.org&quot;</span>&gt;</span>
@@ -1043,7 +1077,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-06-10T21:59:23.763Z">
+                            <time datetime="2021-06-10T22:12:38.760Z">
                                 6/10/2021
                             </time>
                         
