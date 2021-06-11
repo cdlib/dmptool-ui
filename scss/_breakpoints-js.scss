@@ -1,0 +1,9 @@
+/* Media Query Breakpoints to JS */
+
+@import 'variables';
+
+// Copy the minwidth SCSS variable to the --breakpoints CSS variable so that it can be read by js/breakpoints.js:
+
+:root {
+  --breakpoints: #{$minwidth};
+}

@@ -1,0 +1,32 @@
+/* Social Component */
+
+@import 'utilities';
+@import 'variables';
+
+.c-social {
+  @include resetlist;
+
+  a {
+    display: block;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    background-color: $color-white;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.c-social__sr-only {
+  @include hide;
+}
+
+.c-social__icon-rss {
+  background-image: url('solid.svg#rss');
+  background-size: 1rem;
+}
+
+.c-social__icon-twitter {
+  background-image: url('brands.svg#twitter');
+  background-size: 1.3rem;
+}

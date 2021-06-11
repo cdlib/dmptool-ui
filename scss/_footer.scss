@@ -1,0 +1,52 @@
+/* Footer Component */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.c-footer {
+  display: grid;
+  gap: $space-base $space-lg;
+  padding: $space-base;
+  background-color: $color-gray-light;
+  font-size: 0.8rem;
+
+  .c-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-inline: -$space-base;
+    padding: 1rem;
+    background-color: $color-gray-medium;
+  }
+}
+
+@include minwidth1 {
+
+  .c-footer {
+    grid-template-columns: auto 2fr auto 2fr;
+
+    .c-logo-cdl {
+      grid-row: 1 / 3;
+    }
+
+    .c-footernav {
+      grid-column: 2;
+    }
+
+    .c-copyright {
+      grid-column: 2;
+    }
+
+    .c-social {
+      grid-column: 3;
+      grid-row: 1 / 3;
+      flex-direction: column;
+      margin: -$space-base 0;
+    }
+
+    .c-blog {
+      grid-column: 4;
+      grid-row: 1 / 3;
+    }
+  }
+}

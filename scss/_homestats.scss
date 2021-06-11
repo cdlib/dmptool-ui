@@ -1,0 +1,45 @@
+/* Home Stats Component */
+
+@import 'variables';
+@import 'utilities';
+
+.c-home-stats {
+  --icon-base-size: 4rem;
+
+  padding-inline-start: $space-base;
+  padding-inline-end: $space-base;
+
+  ul {
+    @include resetlist;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: $space-base;
+  }
+}
+
+.c-home-stats__users,
+.c-home-stats__participants,
+.c-home-stats__plans {
+  padding-block-start: 4.5rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+  font-weight: bold;
+  text-align: center;
+}
+
+.c-home-stats__users {
+  background-image: url('light.svg#users' param(--color $color-dmp-blue));
+  background-size: calc(var(--icon-base-size) * 1.25);
+}
+
+.c-home-stats__participants {
+  background-image: url('light.svg#university' param(--color $color-dmp-blue));
+  background-size: var(--icon-base-size);
+}
+
+.c-home-stats__plans {
+  background-image: url('light.svg#edit' param(--color $color-dmp-blue));
+  background-size: calc(var(--icon-base-size) * 1.05);
+}

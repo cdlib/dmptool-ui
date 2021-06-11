@@ -1,0 +1,48 @@
+/* Home Page */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.t-home {
+  display: grid;
+  gap: $space-base;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+
+  main {
+    display: grid;
+    gap: $space-base;
+  }
+
+  .c-login {
+    margin-inline-start: $space-lg;
+  }
+}
+
+@include minwidth1 {
+
+  .t-home {
+    max-width: 1500px;
+    margin: 0 auto;
+
+    main {
+      grid-template-columns: 1fr auto;
+      grid-template-rows: 1fr auto;
+    }
+
+    .c-calltoaction {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
+    .c-login {
+      grid-column: 2;
+      grid-row: 1;
+      margin: $space-base;
+    }
+
+    .c-home-stats {
+      grid-column: 1 / 3;
+    }
+  }
+}

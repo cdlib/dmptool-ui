@@ -1,0 +1,57 @@
+/* Header Component */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.c-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: $space-base;
+
+  .c-logo-dmptool {
+    margin-block-start: $space-base;
+    margin-inline-start: $space-base;
+  }
+
+  .c-navtoggle {
+    margin-block-start: $space-base;
+    margin-inline-end: $space-base;
+  }
+
+  .c-headernav {
+    grid-column: 1 / 3;
+  }
+
+  .c-language {
+    grid-column: 1 / 3;
+    margin-inline-start: $space-base;
+  }
+}
+
+@include minwidth1 {
+
+  .c-header {
+    grid-template-columns: auto 1fr auto;
+    gap: $space-lg;
+
+    .c-navtoggle {
+      display: none;
+    }
+
+    .c-headernav {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: end;
+    }
+
+    .c-language {
+      grid-column: 3;
+      margin-block-end: -$space-sm; // (1)
+      margin-inline-start: 0;
+      margin-inline-end: $space-base;
+      align-self: end;
+    }
+  }
+}
+
+// (1) subtract c-language bottom margin to compensate for c-language__button bottom padding so that button text aligns with c-headernav links

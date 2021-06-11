@@ -1,0 +1,13 @@
+@mixin hide {
+  position: absolute;
+  inset-inline-start: -9999px;
+}
+
+@mixin resetlist {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}

@@ -1,0 +1,36 @@
+/* Call To Action Component */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.c-calltoaction {
+  // background-image is set in /js/random-home-image.js
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: screen;
+}
+
+.c-calltoaction__content {
+  padding: 3rem 0 0 $space-lg;
+  font-size: 1.3rem;
+
+  h1 {
+    margin-inline-start: -$space-lg;
+    padding: $space-base $space-lg;
+    background-color: hsla(hue($color-dmp-blue), saturation($color-dmp-blue), lightness($color-dmp-blue), 0.85);
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
+
+@include minwidth1 {
+
+  .c-calltoaction {
+
+    h1 {
+      padding: $space-base 340px $space-base $space-lg;
+    }
+  }
+}

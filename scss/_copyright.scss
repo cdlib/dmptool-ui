@@ -1,0 +1,13 @@
+/* Copyright Component */
+
+@import 'variables';
+
+.c-copyright {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  p {
+    margin: 0;
+  }
+}

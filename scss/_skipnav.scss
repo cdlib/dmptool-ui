@@ -1,0 +1,24 @@
+/* Skip Navigation Component */
+
+@import 'utilities';
+@import 'variables';
+
+.c-skipnav {
+  @include hide;
+
+  z-index: 1;
+  padding: $space-sm;
+  transition: opacity 0.5s;
+  border: 2px solid $color-dmp-blue;
+  border-radius: 8px;
+  opacity: 0;
+  background-color: $color-dmp-blue;
+  color: $color-white;
+  font-size: 1.1rem;
+
+  &:focus {
+    inset-block-start: $space-base;
+    inset-inline-start: $space-base;
+    opacity: 1;
+  }
+}

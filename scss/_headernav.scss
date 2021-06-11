@@ -1,0 +1,52 @@
+/* Header Navigation Component */
+
+@import 'breakpoints-scss';
+@import 'utilities';
+@import 'variables';
+
+.c-headernav {
+
+  ul {
+    @include resetlist;
+  }
+
+  li {
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-dmp-blue;
+    }
+  }
+
+  a {
+    display: block;
+    padding: $space-sm $space-base;
+    font-size: 1.1rem;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+@include minwidth1 {
+
+  .c-headernav {
+
+    ul {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    li {
+
+      &:not(:last-child) {
+        margin-inline-end: 1.5rem;
+        border-style: none;
+      }
+    }
+
+    a {
+      padding: 0;
+    }
+  }
+}

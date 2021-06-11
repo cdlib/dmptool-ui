@@ -1,0 +1,23 @@
+/* Media Query Breakpoints to SCSS */
+
+@import 'variables';
+
+@mixin minwidth1 {
+  @media (min-width: nth($minwidth, 1)) {
+    @content;
+  }
+}
+
+@mixin minwidth2 {
+  @media (min-width: nth($minwidth, 2)) {
+    @content;
+  }
+}
+
+/* Apply the above media query in SCSS like this:
+
+@include minwidth1 {
+  [styles]
+}
+
+*/

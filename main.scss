@@ -2,6 +2,7 @@
 
 @use 'node_modules/modern-normalize/modern-normalize.css';
 @use 'scss/fonts';
+@use 'scss/breakpoints-js';
 
 /* Elements */
 
@@ -10,6 +11,22 @@
 @use 'scss/link';
 
 /* Components */
+
+@use 'scss/blog';
+@use 'scss/calltoaction';
+@use 'scss/copyright';
+@use 'scss/footer';
+@use 'scss/footernav';
+@use 'scss/header';
+@use 'scss/headernav';
+@use 'scss/homestats';
+@use 'scss/language';
+@use 'scss/login';
+@use 'scss/logo-cdl';
+@use 'scss/logo-dmptool';
+@use 'scss/navtoggle';
+@use 'scss/skipnav';
+@use 'scss/social';
 
 /* Pages */
 

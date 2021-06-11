@@ -1,0 +1,15 @@
+/* Footer Navigation Component */
+
+@import 'utilities';
+@import 'variables';
+
+.c-footernav {
+
+  ul {
+    @include resetlist;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm $space-base;
+  }
+}

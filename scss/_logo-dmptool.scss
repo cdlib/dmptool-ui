@@ -1,0 +1,34 @@
+/* DMPTool Logo */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.c-logo-dmptool {
+
+  img {
+    display: block;
+    width: 13rem;
+    height: auto;
+    background-color: $color-white;
+  }
+}
+
+@include minwidth1 {
+
+  .c-logo-dmptool {
+
+    img {
+      width: 26vw;
+    }
+  }
+}
+
+@include minwidth2 {
+
+  .c-logo-dmptool {
+
+    img {
+      width: 17rem;
+    }
+  }
+}
