@@ -1,0 +1,11 @@
+/* Heading Elements */
+
+@import 'variables';
+
+h1 {
+  margin-block-start: 0;
+  margin-block-end: $space-base;
+  color: $color-dmp-blue;
+  font-size: 1.9rem;
+  font-weight: 400;
+}

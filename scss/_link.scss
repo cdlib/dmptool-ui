@@ -1,0 +1,13 @@
+/* Link Element */
+
+@import 'variables';
+
+a {
+  color: $color-dmp-blue;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
