@@ -14,7 +14,7 @@
     "watchimages": "onchange -i images -- npm run minifyimages",
     "watchstyles": "onchange -i main.scss scss/* -- npm run lintstyles",
     "watchjs": "onchange -i main.js js/* -- npm run lintjs",
-    "minifyimages": "imagemin images/* --out-dir=ui-assets/images",
+    "minifyimages": "imagemin images/* --out-dir=ui-assets",
     "lintstyles": "stylelint main.scss scss/*",
     "lintjs": "standard main.js js/* --verbose | snazzy || exit 0",
     "postinstall": "echo Adding style attributes to Font Awesome sprite paths ... && replace-in-file --configFile=replace-in-file.config.js",

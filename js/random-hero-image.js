@@ -12,7 +12,7 @@ if (document.querySelector('.t-home')) {
   const heroImgEl = document.querySelector('.js-heroimage')
   const imgLightness = 60
   const randomImg = imgArr[randomNum]
-  const compositeImg = `linear-gradient(hsl(0, 0%, ${imgLightness}%), hsl(0, 0%, ${imgLightness}%)), url('../../ui-assets/images/${randomImg}')`
+  const compositeImg = `linear-gradient(hsl(0, 0%, ${imgLightness}%), hsl(0, 0%, ${imgLightness}%)), url('${randomImg}')`
 
   heroImgEl.style.setProperty('--hero-image', compositeImg)
 }
