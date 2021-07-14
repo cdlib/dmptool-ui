@@ -191,6 +191,11 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;t-home&quot;</span>&gt;</span>
     </span><span class="hljs-template-variable">{{{ <span class="hljs-name"><span class="hljs-builtin-name">yield</span></span> }}}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.c-header&#x27;</span>)) {
+        <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;#js-headernav&#x27;</span>).hidden = <span class="hljs-literal">true</span>
+      }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">path</span> <span class="hljs-string">&#x27;/ui-assets/main.js&#x27;</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span></pre>
@@ -266,6 +271,11 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;t-home&quot;</span>&gt;</span>
 
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.c-header&#x27;</span>)) {
+            <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;#js-headernav&#x27;</span>).hidden = <span class="hljs-literal">true</span>
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../ui-assets/main.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 
@@ -979,8 +989,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-07-13T00:29:32.435Z">
-                                7/12/2021
+                            <time datetime="2021-07-14T19:20:34.928Z">
+                                7/14/2021
                             </time>
                         
                     </dd>
