@@ -9,6 +9,11 @@
   </head>
   <body class="t-home">
     {{{ yield }}}
+    <script>
+      if (document.querySelector('.c-header')) {
+        document.querySelector('#js-headernav').hidden = true
+      }
+    </script>
     <script src="{{ path '/ui-assets/main.js' }}"></script>
   </body>
 </html>
