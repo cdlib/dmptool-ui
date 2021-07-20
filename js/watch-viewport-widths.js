@@ -3,7 +3,7 @@
 import { headerNavOpen, headerNavClosed } from './navtoggle.js'
 import { minwidth1 } from './breakpoints.js'
 
-function watchViewportWidth (viewportWidth) {
+const watchViewportWidth = viewportWidth => {
   if (viewportWidth.matches) {
     headerNavOpen()
   } else {

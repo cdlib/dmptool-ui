@@ -1,13 +1,13 @@
 // Navigation Toggle Component //
 
-function headerNavOpen () {
+const headerNavOpen = () => {
   if (inHeader) {
     headerNav.hidden = false
     navToggleButton.setAttribute('aria-expanded', true)
   }
 }
 
-function headerNavClosed () {
+const headerNavClosed = () => {
   if (inHeader) {
     headerNav.hidden = true
     navToggleButton.setAttribute('aria-expanded', false)
@@ -19,7 +19,7 @@ const navToggleButton = document.querySelector('#js-navtoggle')
 const headerNav = document.querySelector('#js-headernav')
 
 if (inHeader) {
-  navToggleButton.addEventListener('click', function () {
+  navToggleButton.addEventListener('click', () => {
     if (headerNav.hidden === true) {
       headerNavOpen()
     } else {
