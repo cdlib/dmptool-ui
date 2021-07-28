@@ -18,6 +18,14 @@
     padding: 1rem;
     background-color: $color-gray-medium;
   }
+
+  footer {
+    position: relative;
+    bottom: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: auto;
+  }
 }
 
 @include minwidth1 {

@@ -1,0 +1,53 @@
+/* System messages: noticiations/alerts/warnings/errors */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.c-notification-area,
+.c-global-notification-area {
+  padding: $space-sm;
+}
+
+.c-notification-area__info {
+  background-color: $color-green;
+  color: $color-white;
+}
+
+.c-notification-area__warning {
+  background-color: $color-red;
+  color: $color-white;
+}
+
+.c-global-notification-area__info {
+  background-color: $color-dmp-blue-light;
+  border-color: $color-dmp-blue;
+  color: $color-dmp-blue;
+
+  /* Override the color of the notification area's close/dismiss button */
+  button[data-dismiss="alert"] {
+    color: $color-dmp-blue;
+    opacity: 1;
+  }
+}
+
+.c-global-notification-area__warning {
+  background-color: $color-yellow-light;
+  color: $color-yellow-dark;
+
+  /* Override the color of the notification area's close/dismiss button */
+  button[data-dismiss="alert"] {
+    color: $color-yellow-dark;
+    opacity: 1;
+  }
+}
+
+.c-global-notification-area__danger {
+  background-color: $color-pink-light;
+  color: $color-pink-dark;
+
+  /* Override the color of the notification area's close/dismiss button */
+  button[data-dismiss="alert"] {
+    color: $color-pink-dark;
+    opacity: 1;
+  }
+}

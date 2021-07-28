@@ -1,7 +1,2 @@
-import './js/breakpoints.js'
-import './js/call-to-action.js'
-import './js/language-menu.js'
-import './js/navtoggle.js'
-import './js/random-hero-image.js'
-import './js/watch-viewport-widths.js'
+import './js/rails-initializer.js'
 import './js/tests.js'

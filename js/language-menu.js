@@ -1,33 +1,36 @@
 // Language Menu Toggle
+const initLanguageMenu = () => {
+  const langMenu = document.querySelector('#js-language')
+  const langMenuToggle = document.querySelector('#js-language__button')
+  const langMenuGroup = document.querySelector('#js-language__menu')
 
-const langMenu = document.querySelector('#js-language')
-const langMenuToggle = document.querySelector('#js-language__button')
-const langMenuGroup = document.querySelector('#js-language__menu')
-
-const langMenuClose = () => {
-  langMenuGroup.hidden = true
-  langMenuToggle.setAttribute('aria-expanded', false)
-}
-
-const langMenuTarget = event => {
-  if (!langMenu.contains(event.target)) {
-    langMenuClose()
+  const langMenuClose = () => {
+    langMenuGroup.hidden = true
+    langMenuToggle.setAttribute('aria-expanded', false)
   }
-}
 
-if (document.querySelector('#js-language')) {
-  langMenuToggle.addEventListener('click', () => {
-    if (langMenuGroup.hidden === true) {
-      langMenuGroup.hidden = false
-      langMenuToggle.setAttribute('aria-expanded', true)
-    } else {
+  const langMenuTarget = event => {
+    if (!langMenu.contains(event.target)) {
       langMenuClose()
     }
-  })
+  }
 
-  // Clicking outside of menu closes it:
-  window.addEventListener('click', langMenuTarget)
+  if (document.querySelector('#js-language')) {
+    langMenuToggle.addEventListener('click', () => {
+      if (langMenuGroup.hidden === true) {
+        langMenuGroup.hidden = false
+        langMenuToggle.setAttribute('aria-expanded', true)
+      } else {
+        langMenuClose()
+      }
+    })
 
-  // Tabbing outside of menu closes it:
-  window.addEventListener('focusin', langMenuTarget)
-}
+    // Clicking outside of menu closes it:
+    window.addEventListener('click', langMenuTarget)
+
+    // Tabbing outside of menu closes it:
+    window.addEventListener('focusin', langMenuTarget)
+  }
+};
+
+export default () => initLanguageMenu()

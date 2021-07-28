@@ -1,6 +1,6 @@
 // Viewport Width Media Queries //
 
-import { headerNavOpen, headerNavClosed } from './navtoggle.js'
+import { headerNavOpen, headerNavClosed, initNavToggle } from './navtoggle.js'
 import { minwidth1 } from './breakpoints.js'
 
 const watchViewportWidth = viewportWidth => {
@@ -11,9 +11,14 @@ const watchViewportWidth = viewportWidth => {
   }
 }
 
-const viewportWidth = window.matchMedia(`(min-width: ${minwidth1})`)
+const initWatchViewportWidth = () => {
+  const viewportWidth = window.matchMedia(`(min-width: ${minwidth1})`)
 
-// Listen on watchViewportWidth function for changes to viewportWidth:
+  initNavToggle();
 
-watchViewportWidth(viewportWidth)
-viewportWidth.addListener(watchViewportWidth)
+  // Listen on watchViewportWidth function for changes to viewportWidth:
+  watchViewportWidth(viewportWidth)
+  viewportWidth.addListener(watchViewportWidth)
+}
+
+export default () => initWatchViewportWidth()

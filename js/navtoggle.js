@@ -1,31 +1,36 @@
 // Navigation Toggle Component //
 
+const navToggleButton = () => document.querySelector('#js-navtoggle')
+const headerNav = () => document.querySelector('#js-headernav')
+
 const headerNavOpen = () => {
-  if (inHeader) {
-    headerNav.hidden = false
-    navToggleButton.setAttribute('aria-expanded', true)
-  }
+  headerNav().hidden = false
+  navToggleButton().setAttribute('aria-expanded', true)
 }
 
 const headerNavClosed = () => {
-  if (inHeader) {
-    headerNav.hidden = true
-    navToggleButton.setAttribute('aria-expanded', false)
-  }
+  headerNav().hidden = true
+  navToggleButton().setAttribute('aria-expanded', false)
 }
 
-const inHeader = document.querySelector('.c-header')
-const navToggleButton = document.querySelector('#js-navtoggle')
-const headerNav = document.querySelector('#js-headernav')
+const initNavToggle = () => {
+  const inHeader = document.querySelector('.c-header')
 
-if (inHeader) {
-  navToggleButton.addEventListener('click', () => {
-    if (headerNav.hidden === true) {
+  if (inHeader) {
+    navToggleButton().addEventListener('click', () => {
+      if (headerNav().hidden === true) {
+        headerNavOpen()
+      } else {
+        headerNavClosed()
+      }
+    })
+
+    if (headerNav().hidden === true) {
       headerNavOpen()
     } else {
       headerNavClosed()
     }
-  })
+  }
 }
 
-export { headerNavOpen, headerNavClosed }
+export { headerNavOpen, headerNavClosed, initNavToggle}

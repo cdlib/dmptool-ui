@@ -1,9 +1,11 @@
-/* Language Component */
+/* Dropdown navigation menus */
 
 @import 'utilities';
 @import 'variables';
 
-.c-language {
+.c-language,
+.c-user-profile,
+.c-admin {
   position: relative;
   width: 10rem;
 
@@ -12,7 +14,9 @@
   }
 }
 
-.c-language__button {
+.c-language__button,
+.c-user-profile__button,
+.c-admin__button {
   display: flex;
   align-items: center;
   padding: 0 0 $space-sm 0;
@@ -31,7 +35,9 @@
   }
 }
 
-.c-language__menu {
+.c-language__menu,
+.c-user-profile__menu,
+.c-admin__menu {
   position: absolute;
   z-index: 2;
   inset-inline: 0;

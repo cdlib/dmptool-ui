@@ -3,5 +3,6 @@
 @import 'variables';
 
 .c-login {
+  min-width: 350px;
   filter: drop-shadow(0 0 0.7rem hsla(hue($color-black), saturation($color-black), lightness($color-black), 0.4));
 }
