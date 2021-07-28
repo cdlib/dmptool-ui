@@ -1,6 +1,13 @@
 {{ render '@skip-nav' }}
 {{ render '@header' }}
 <main id="maincontent" class="js-heroimage">
+  <input type="hidden" id="js-heroimage__images"
+         value="[\"../assets/images/hero/1-large.jpg\",
+                 \"../assets/images/hero/2-large.jpg\",
+                 \"../assets/images/hero/3-large.jpg\",
+                 \"../assets/images/hero/4-large.jpg\",
+                 \"../assets/images/hero/5-large.jpg\"]"/>
+
   {{ render '@call-to-action' }}
   {{ render '@login' }}
   {{ render '@home-stats' }}

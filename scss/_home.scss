@@ -11,6 +11,7 @@
 
   main {
     display: grid;
+    grid-template-columns: 1fr auto;
     gap: $space-base;
   }
 

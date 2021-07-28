@@ -13,20 +13,27 @@
 /* Components */
 
 @use 'scss/blog';
+@use 'scss/button';
 @use 'scss/calltoaction';
 @use 'scss/copyright';
+@use 'scss/dropdownnav';
 @use 'scss/footer';
 @use 'scss/footernav';
 @use 'scss/header';
 @use 'scss/headernav';
 @use 'scss/homestats';
-@use 'scss/language';
+@use 'scss/html';
+@use 'scss/links-org';
 @use 'scss/login';
 @use 'scss/logo-cdl';
 @use 'scss/logo-dmptool';
+@use 'scss/logo-org';
 @use 'scss/navtoggle';
+@use 'scss/notification';
+@use 'scss/sign-in-link';
 @use 'scss/skipnav';
 @use 'scss/social';
+@use 'scss/tables';
 
 /* Pages */
 

@@ -1,0 +1,11 @@
+/* Organization Logo */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.c-links-org {
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}

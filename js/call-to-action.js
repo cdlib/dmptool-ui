@@ -2,14 +2,18 @@
 
 // Set the second CTA grid column to width of login component if CSS subgrid not supported:
 
-const calltoactionComp = document.querySelector('#js-calltoaction')
+const initCallToAction = () => {
+  const calltoactionComp = document.querySelector('#js-calltoaction')
 
-if (calltoactionComp) {
-  const loginComp = document.querySelector('#js-login')
-  const loginCompStyle = window.getComputedStyle(loginComp)
-  const loginCompWidth = parseInt(loginCompStyle.width) + parseInt(loginCompStyle.margin)
+  if (calltoactionComp) {
+    const loginComp = document.querySelector('#js-login')
+    const loginCompStyle = window.getComputedStyle(loginComp)
+    const loginCompWidth = parseInt(loginCompStyle.width) + parseInt(loginCompStyle.margin)
 
-  if (!window.CSS.supports('grid-template-columns: subgrid')) {
-    calltoactionComp.style.setProperty('--calltoaction-grid-columns', `auto ${loginCompWidth}px`)
+    if (!window.CSS.supports('grid-template-columns: subgrid')) {
+      calltoactionComp.style.setProperty('--calltoaction-grid-columns', `auto ${loginCompWidth}px`)
+    }
   }
 }
+
+export default () => initCallToAction()
