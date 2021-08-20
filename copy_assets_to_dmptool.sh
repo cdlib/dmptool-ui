@@ -14,10 +14,7 @@ cp dist/ui-assets/4-large.*.jpg ../dmptool/app/assets/images/hero/4-large.jpg
 cp dist/ui-assets/5-large.*.jpg ../dmptool/app/assets/images/hero/5-large.jpg
 
 # Copy all fonts over to the DMPTool assets directory
-cp dist/ui-assets/*.wof* ../dmptool/app/assets/fonts
-
-# Rails needs the fonts available in scss socopy over the font definitions
-cp scss/_fonts.scss ../dmptool/app/assets/stylesheets/variables/_typography.scss
+# cp dist/ui-assets/*.wof* ../dmptool/app/assets/fonts
 
 # Copy all stylesheets over to the DMPTool assets directory
 cp dist/ui-assets/*.css ../dmptool/app/assets/stylesheets/vendor/dmptool-ui.css
