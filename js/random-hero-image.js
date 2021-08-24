@@ -9,9 +9,6 @@ import heroImg5 from 'url:../images/hero/5-large.jpg?as=jpg&quality=30&width=100
 // Transform source images to reduce file sizes via Parcel (see: https://v2.parceljs.org/recipes/image/):
 const initRandomHeroImage = () => {
   if (document.querySelector('.t-home')) {
-    // Rails adds it's thumb printed links to the images into a JSON array
-    images = document.querySelector('#js-heroimage__images').value
-
     const imgArr = [
       heroImg1,
       heroImg2,
