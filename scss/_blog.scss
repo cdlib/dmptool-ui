@@ -1,11 +1,13 @@
 /* Blog Component */
 
+@import 'breakpoints-scss';
 @import 'variables';
 
 .c-blog {
   display: flex;
   flex-direction: column;
   gap: $space-base;
+  padding-inline: $space-base;
 
   h2 {
     margin: 0;
@@ -13,10 +15,20 @@
   }
 
   footer {
-    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-base;
   }
 }
 
 .c-blog__content {
   margin-block-end: auto;
+}
+
+@include minwidth1 {
+
+  .c-blog {
+    padding-inline-start: 0;
+  }
 }
