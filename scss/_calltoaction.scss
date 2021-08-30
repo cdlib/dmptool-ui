@@ -2,10 +2,38 @@
 
 @import 'variables';
 
+body > .c-calltoaction {
+  // reveals hero image background when testing standalone component in Fractal:
+  min-height: 400px;
+}
+
 .c-calltoaction {
-  padding: $space-base $space-lg;
-  background-color: hsla(hue($color-dmp-blue), saturation($color-dmp-blue), lightness($color-dmp-blue), 0.85);
-  color: $color-white;
-  font-size: 2rem;
-  font-weight: 300;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: $color-white;
+
+  // hero image:
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--hero-image); // set via random-hero-image.js
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: opacity(40%);
+  }
+
+  h1 {
+    position: relative; // positions <h1> above hero image
+    margin-block-start: auto;
+    margin-block-end: $space-lg;
+    padding: $space-base $space-lg;
+    background-color: hsla(hue($color-dmp-blue), saturation($color-dmp-blue), lightness($color-dmp-blue), 0.85);
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: 300;
+  }
 }
