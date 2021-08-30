@@ -9,29 +9,12 @@
   padding: $space-base;
   background-color: $color-gray-light;
   font-size: 0.8rem;
-
-  .c-social {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-inline: -$space-base;
-    padding: 1rem;
-    background-color: $color-gray-medium;
-  }
-
-  footer {
-    position: relative;
-    bottom: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: auto;
-  }
 }
 
 @include minwidth1 {
 
   .c-footer {
-    grid-template-columns: auto 2fr auto 2fr;
+    grid-template-columns: auto 1fr;
 
     .c-logo-cdl {
       grid-row: 1 / 3;
@@ -43,18 +26,6 @@
 
     .c-copyright {
       grid-column: 2;
-    }
-
-    .c-social {
-      grid-column: 3;
-      grid-row: 1 / 3;
-      flex-direction: column;
-      margin: -$space-base 0;
-    }
-
-    .c-blog {
-      grid-column: 4;
-      grid-row: 1 / 3;
     }
   }
 }
