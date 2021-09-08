@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DMPTool Build Tool Tests</title>
+    <link href="../../ui-assets/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../ui-assets/main.css">
+  </head>
+  <body class="t-tests">
+    <div class="c-headermenugroup">
+  <a class="c-signin" href="path/to/home">Sign In</a>
+ <!-- This should only show when on a template-generic page -->
+  <div id="js-language" class="c-language c-headermenu">
+  <button id="js-language__button" class="c-headermenu__button" aria-haspopup="true">Language</button>
+  <ul id="js-language__menu" class="c-headermenu__menu" hidden>
+    <li><a role="menuitem" href="https://dmptool.org/locale/en-US">English (US)</a></li>
+    <li lang="pt"><a role="menuitem" href="https://dmptool.org/locale/pt-BR">Português (Brasil)</a></li>
+  </ul>
+</div>
+
+</div>
+
+    <script>
+      if (document.querySelector('.c-header')) {
+        document.querySelector('#js-headernav').hidden = true
+      }
+    </script>
+    <script src="../../ui-assets/main.js"></script>
+  </body>
+</html>
+
