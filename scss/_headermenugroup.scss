@@ -1,0 +1,11 @@
+/* Header Menu Group */
+
+@import 'variables';
+
+.c-headermenugroup {
+  display: flex;
+  position: relative; // to .c-headermenu
+  gap: $space-base;
+  min-width: 10rem;
+  margin-inline-end: $space-base;
+}

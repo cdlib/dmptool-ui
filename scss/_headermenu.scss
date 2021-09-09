@@ -1,22 +1,16 @@
-/* Dropdown navigation menus */
+/* Header Menus */
 
 @import 'utilities';
 @import 'variables';
 
-.c-language,
-.c-user-profile,
-.c-admin {
-  position: relative;
-  width: 10rem;
+.c-headermenu {
 
   ul {
     @include resetlist;
   }
 }
 
-.c-language__button,
-.c-user-profile__button,
-.c-admin__button {
+.c-headermenu__button {
   display: flex;
   align-items: center;
   padding: 0 0 $space-sm 0;
@@ -33,12 +27,14 @@
     margin-inline-start: $space-sm;
     background: url('solid.svg#caret-down' param(--color $color-dmp-blue)) center / 0.8rem no-repeat;
   }
+
+  &[aria-expanded='true'] {
+    color: $color-dmp-blue;
+  }
 }
 
-.c-language__menu,
-.c-user-profile__menu,
-.c-admin__menu {
-  position: absolute;
+.c-headermenu__menu {
+  position: absolute; // relative to .c-headermenugroup
   z-index: 2;
   inset-inline: 0;
   border: 1px solid $color-dmp-blue;

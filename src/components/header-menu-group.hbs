@@ -1,0 +1,10 @@
+<div class="c-headermenugroup">
+  {{#if logged_in}}
+      {{ render '@profile' }}
+  {{else}}
+    {{#unless template_home}}
+      {{ render '@sign-in' }}
+    {{/unless}}
+  {{/if}}
+  {{ render '@language' }}
+</div>
