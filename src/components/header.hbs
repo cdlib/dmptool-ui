@@ -1,8 +1,6 @@
 <header class="c-header">
   {{ render '@logo-dmptool' }}
+  {{> @header-menu-group }}
   {{ render '@nav-toggle' }}
-  {{ render '@header-nav' }}
-  {{ render '@user-profile' }} <!-- This should only show when user is logged in-->
-  {{ render '@sign-in-link' }} <!-- This should only show when on a template-generic page -->
-  {{ render '@language' }}
+  {{> @header-nav }}
 </header>
