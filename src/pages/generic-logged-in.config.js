@@ -3,7 +3,7 @@ const fakerData = [];
 
 for (let i = 0; i < 5; i++) {
   fakerData.push({
-    test: {
+    paragraph: {
       lorem: faker.lorem.paragraph(10)
     }
   });
@@ -12,6 +12,8 @@ for (let i = 0; i < 5; i++) {
 module.exports = {
   preview: '@template-generic',
   context: {
-    loop: fakerData
+    template_home: false,
+    logged_in: true,
+    faker_data: fakerData
   }
 }
