@@ -2,11 +2,6 @@
 
 @import 'variables';
 
-body > .c-calltoaction {
-  // reveals hero image background when testing standalone component in Fractal:
-  min-height: 400px;
-}
-
 .c-calltoaction {
   display: flex;
   position: relative;
@@ -35,5 +30,12 @@ body > .c-calltoaction {
     color: $color-white;
     font-size: 2rem;
     font-weight: 300;
+    line-height: 1.25;
+    word-spacing: 0.25rem;
   }
+}
+
+body > .c-calltoaction {
+  // reveals hero image background when testing standalone component in Fractal:
+  min-height: 400px;
 }

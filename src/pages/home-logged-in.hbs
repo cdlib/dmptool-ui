@@ -1,8 +1,9 @@
 {{ render '@skip-nav' }}
-{{ render '@header' }}
-<main id="maincontent" class="js-heroimage">
+{{> @header }}
+<main id="maincontent">
   {{ render '@call-to-action' }}
   {{ render '@login' }}
   {{ render '@home-stats' }}
+  {{ render '@blog' }}
 </main>
 {{ render '@footer' }}
