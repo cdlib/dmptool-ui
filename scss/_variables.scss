@@ -25,3 +25,7 @@ $color-yellow-dark: hsl(46, 100%, 25%);
 $space-base: 1rem;
 $space-sm: $space-base * 0.5;
 $space-lg: $space-base * 2;
+
+// Header/Subheader Logos:
+
+$logo-width: clamp(13rem, 26vw, 17rem);

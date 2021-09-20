@@ -22,13 +22,16 @@
     grid-column: 1 / 3;
     margin-inline: -$space-base;
   }
+
+  .c-subheader {
+    grid-column: 1 / 3;
+  }
 }
 
 @include minwidth1 {
 
   .c-header {
     grid-template-columns: auto 1fr;
-    gap: 0 $space-base;
 
     .c-logo-dmptool {
       grid-row: 1 / 3;

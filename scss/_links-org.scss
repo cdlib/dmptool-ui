@@ -1,11 +1,32 @@
-/* Organization Logo */
+/* Organization Links */
 
-@import 'breakpoints-scss';
+@import 'utilities';
 @import 'variables';
 
 .c-links-org {
-  ul {
-    list-style: none;
-    padding-left: 0;
+  @include resetlist;
+
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  // all org links:
+
+  a {
+    display: inline-block;
+    padding-inline-start: 1.1rem;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0.8rem;
   }
+}
+
+// specific org links:
+
+.c-links-org__ucop {
+  background-image: url('solid.svg#globe' param(--color $color-dmp-blue));
+}
+
+.c-links-org__uc3-helpdesk {
+  background-image: url('solid.svg#envelope' param(--color $color-dmp-blue));
 }

@@ -1,0 +1,26 @@
+/* Subheader Component */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.c-subheader {
+  display: grid;
+  gap: $space-base;
+}
+
+@include minwidth1 {
+
+  .c-subheader {
+    grid-template-columns: auto 1fr auto;
+    margin-block-start: $space-lg;
+
+    .c-headermenugroup {
+      grid-column: 3;
+    }
+
+    .c-links-org {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+}
