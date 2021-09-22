@@ -181,11 +181,11 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-5d006a19297ab99ec1f07f00f55d0536-panel-view">
     <code class="Code Code--lang-handlebars hljs">
         <pre><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="skip-nav.html">@skip-nav</a>&#x27;</span> }}</span><span class="xml">
-</span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="header-logged-out-generic.html">@header-logged-out-generic</a>&#x27;</span> }}</span><span class="xml">
+</span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">header</span> }}</span><span class="xml">
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;maincontent&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Generic Page<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-  </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> loop}}</span><span class="xml">
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">test.lorem</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> faker_data}}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">paragraph.lorem</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
 </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="footer.html">@footer</a>&#x27;</span> }}</span></pre>
@@ -198,30 +198,32 @@
         
             
             <pre>{
-  <span class="hljs-attr">&quot;loop&quot;</span>: [
+  <span class="hljs-attr">&quot;template_home&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">&quot;logged_in&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">&quot;faker_data&quot;</span>: [
     {
-      <span class="hljs-attr">&quot;test&quot;</span>: {
-        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Sed accusantium dolor occaecati in eum consectetur quia expedita dolorum. Magnam modi sit ut adipisci. Consequatur labore ut repudiandae vitae facere aut magnam eaque ratione. Ad id corrupti. Quaerat eum sapiente sint consectetur. Non nihil maiores sint vel voluptatum velit maxime. Excepturi qui tempore natus quo molestiae est eos. Alias officiis mollitia. Veniam explicabo ducimus delectus maxime nulla doloribus eaque et iure. Ut id similique. Amet nobis eos inventore fuga cupiditate excepturi velit dolorem consequatur.&quot;</span>
+      <span class="hljs-attr">&quot;paragraph&quot;</span>: {
+        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Sequi et consequatur non possimus quia pariatur ea aut. Debitis cupiditate non dolorem tempora et. Maiores qui nihil aut assumenda vero. Et nihil quas quo itaque et nisi. Saepe porro expedita laboriosam et deserunt. Quia veniam autem aspernatur voluptatum non cum minima nihil. Beatae sed corrupti velit iste est. Laborum sunt optio et est. Placeat esse voluptas dolorum eum facere id quidem. Dolore odit repudiandae voluptas ipsum velit et ut.&quot;</span>
       }
     },
     {
-      <span class="hljs-attr">&quot;test&quot;</span>: {
-        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Accusamus beatae quod laboriosam amet omnis nobis voluptatem. Error quis accusamus. Illum nulla iure molestias qui et corporis consectetur. Doloremque nobis harum omnis veniam nulla. Soluta sit magnam et reiciendis reprehenderit quasi explicabo ratione. Et quos beatae est enim non et. Laboriosam facilis sint impedit incidunt aliquam. Facere sed quisquam. Laudantium vero voluptatem qui inventore dolorem voluptates. Eligendi similique earum voluptate est ex. Repellendus natus quaerat quaerat. Ut delectus sunt.&quot;</span>
+      <span class="hljs-attr">&quot;paragraph&quot;</span>: {
+        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Consequatur laborum eos et aut ipsa omnis repellat laudantium at. Vitae reiciendis ab autem omnis repudiandae aut quo eos aut. Sequi laborum nesciunt reiciendis. Architecto vitae soluta et. Aut cumque aspernatur. Perspiciatis omnis maiores minus eligendi reprehenderit consectetur ut quidem. Cupiditate qui est commodi velit at ea iusto sit minima. Dolores aut ad debitis consequuntur iure adipisci nemo deleniti illum. Quia itaque suscipit voluptatem repellat quas eum. Aut quia est corrupti rerum.&quot;</span>
       }
     },
     {
-      <span class="hljs-attr">&quot;test&quot;</span>: {
-        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Voluptas nobis aliquam eveniet doloribus ipsa nesciunt. Sit non accusantium ea ut voluptas. Ut veniam hic repudiandae cupiditate vitae placeat quaerat omnis maxime. Accusantium enim quod ullam cumque. Porro sed ratione autem veritatis consequatur. Nam hic dolor dolores exercitationem sed. Eos sit ut velit quia ipsam. Quam laborum ea. Qui officia autem aut qui deleniti eaque. Earum sint sunt.&quot;</span>
+      <span class="hljs-attr">&quot;paragraph&quot;</span>: {
+        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Enim beatae architecto odit iusto. Et praesentium qui sequi excepturi. Necessitatibus quo autem voluptatem molestiae distinctio ipsam perspiciatis iusto aperiam. Et sint labore et aut magnam. Dolores quasi non. Omnis voluptas dolorum dolorem molestiae eaque. Cupiditate voluptates odio omnis minima fuga quia debitis. Sit voluptatem voluptas eum qui et est sed. Est iure quia nobis sequi. Veniam et qui error. Eveniet voluptas ipsum voluptatem est dolor dolores occaecati similique.&quot;</span>
       }
     },
     {
-      <span class="hljs-attr">&quot;test&quot;</span>: {
-        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Eveniet id laborum. Officia odio error consectetur qui harum sunt architecto. Velit animi nisi reprehenderit. Ipsa ducimus est repellat aut sunt est. Sit iste rerum dolor voluptatem sapiente quia sed optio quos. Est officiis voluptatem nemo rem. Et et possimus facere corporis velit omnis. Inventore velit et ut sapiente possimus. Neque dignissimos sint perspiciatis voluptatem similique dolores sequi. Esse saepe maiores. Maiores eligendi ducimus.&quot;</span>
+      <span class="hljs-attr">&quot;paragraph&quot;</span>: {
+        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Tempora non nobis incidunt fuga asperiores est dolorem molestiae maxime. Voluptatum odio quo earum explicabo. Tempora unde occaecati consectetur est molestiae id aspernatur qui dolorum. Fugiat enim est nesciunt consectetur officiis eos. Exercitationem rem magni. Dolore ducimus et vel et doloremque. Sed id magnam et vel quia libero neque. Vitae non repellendus veniam perferendis quia rerum. Voluptatum molestiae corrupti ex facilis tempore sed voluptatem eligendi excepturi. Sapiente nobis asperiores unde qui qui atque. Eum sequi officiis atque est ut repellendus. Qui nihil quo illum veniam quis eum sunt provident.&quot;</span>
       }
     },
     {
-      <span class="hljs-attr">&quot;test&quot;</span>: {
-        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Quas dolorum maiores odio deleniti. Ab assumenda earum laudantium modi ut ut et est cum. Sunt dolorum dignissimos maxime corrupti et voluptatum. Voluptatem facere et. Molestias doloremque optio quis soluta. Impedit qui distinctio repudiandae. Doloremque minima ad aut blanditiis ut. Et adipisci tenetur nemo eos error molestiae accusantium. Ut sit autem libero dolore. Facilis consequuntur ea excepturi molestiae maxime eaque sit. Est dicta quibusdam vel qui possimus excepturi aut sunt rerum. Sed sunt ipsam et voluptate qui.&quot;</span>
+      <span class="hljs-attr">&quot;paragraph&quot;</span>: {
+        <span class="hljs-attr">&quot;lorem&quot;</span>: <span class="hljs-string">&quot;Quas laborum fugiat. Et qui perferendis incidunt ipsam ut vel odit minima consectetur. Et quibusdam consequuntur quaerat voluptas eius soluta fugiat. Et corporis delectus consequatur est blanditiis fugit suscipit id. Ipsum eveniet voluptas nobis id sed. Praesentium optio tempora quos debitis ut totam officiis debitis suscipit. Fugiat ipsam officiis facere quasi est. Cupiditate ullam consequatur. Et et ut architecto eveniet voluptatibus architecto optio sint. Voluptatum quia corrupti atque. Vero corporis in consequuntur cupiditate nobis enim voluptate excepturi earum. Dolorum at quos quia.&quot;</span>
       }
     }
   ]
@@ -273,7 +275,7 @@
             
                 <a href="skip-nav.html">@<span>skip-nav</span></a>, 
             
-                <a href="header-logged-out-generic.html">@<span>header-logged-out-generic</span></a>, 
+                <a href="header.html">@<span>header</span></a>, 
             
                 <a href="footer.html">@<span>footer</span></a>
             
@@ -301,7 +303,9 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-headermenugroup&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-signin&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;path/to/home&quot;</span>&gt;</span>Sign In<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-comment">&lt;!-- This should only show when on a template-generic page --&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- This menu uses accessibility techniques from: https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-links.html --&gt;</span>
+
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-language&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-language c-headermenu&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-language__button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-headermenu__button&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Language<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-language__menu&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-headermenu__menu&quot;</span> <span class="hljs-attr">hidden</span>&gt;</span>
@@ -311,7 +315,6 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-navtoggle&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-navtoggle&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;main navigation&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;main&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-headernav&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-headernav&quot;</span>&gt;</span>
@@ -321,16 +324,14 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
-
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;maincontent&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Generic Page<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Sed accusantium dolor occaecati in eum consectetur quia expedita dolorum. Magnam modi sit ut adipisci. Consequatur labore ut repudiandae vitae facere aut magnam eaque ratione. Ad id corrupti. Quaerat eum sapiente sint consectetur. Non nihil maiores sint vel voluptatum velit maxime. Excepturi qui tempore natus quo molestiae est eos. Alias officiis mollitia. Veniam explicabo ducimus delectus maxime nulla doloribus eaque et iure. Ut id similique. Amet nobis eos inventore fuga cupiditate excepturi velit dolorem consequatur.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Accusamus beatae quod laboriosam amet omnis nobis voluptatem. Error quis accusamus. Illum nulla iure molestias qui et corporis consectetur. Doloremque nobis harum omnis veniam nulla. Soluta sit magnam et reiciendis reprehenderit quasi explicabo ratione. Et quos beatae est enim non et. Laboriosam facilis sint impedit incidunt aliquam. Facere sed quisquam. Laudantium vero voluptatem qui inventore dolorem voluptates. Eligendi similique earum voluptate est ex. Repellendus natus quaerat quaerat. Ut delectus sunt.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Voluptas nobis aliquam eveniet doloribus ipsa nesciunt. Sit non accusantium ea ut voluptas. Ut veniam hic repudiandae cupiditate vitae placeat quaerat omnis maxime. Accusantium enim quod ullam cumque. Porro sed ratione autem veritatis consequatur. Nam hic dolor dolores exercitationem sed. Eos sit ut velit quia ipsam. Quam laborum ea. Qui officia autem aut qui deleniti eaque. Earum sint sunt.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Eveniet id laborum. Officia odio error consectetur qui harum sunt architecto. Velit animi nisi reprehenderit. Ipsa ducimus est repellat aut sunt est. Sit iste rerum dolor voluptatem sapiente quia sed optio quos. Est officiis voluptatem nemo rem. Et et possimus facere corporis velit omnis. Inventore velit et ut sapiente possimus. Neque dignissimos sint perspiciatis voluptatem similique dolores sequi. Esse saepe maiores. Maiores eligendi ducimus.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Quas dolorum maiores odio deleniti. Ab assumenda earum laudantium modi ut ut et est cum. Sunt dolorum dignissimos maxime corrupti et voluptatum. Voluptatem facere et. Molestias doloremque optio quis soluta. Impedit qui distinctio repudiandae. Doloremque minima ad aut blanditiis ut. Et adipisci tenetur nemo eos error molestiae accusantium. Ut sit autem libero dolore. Facilis consequuntur ea excepturi molestiae maxime eaque sit. Est dicta quibusdam vel qui possimus excepturi aut sunt rerum. Sed sunt ipsam et voluptate qui.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Sequi et consequatur non possimus quia pariatur ea aut. Debitis cupiditate non dolorem tempora et. Maiores qui nihil aut assumenda vero. Et nihil quas quo itaque et nisi. Saepe porro expedita laboriosam et deserunt. Quia veniam autem aspernatur voluptatum non cum minima nihil. Beatae sed corrupti velit iste est. Laborum sunt optio et est. Placeat esse voluptas dolorum eum facere id quidem. Dolore odit repudiandae voluptas ipsum velit et ut.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Consequatur laborum eos et aut ipsa omnis repellat laudantium at. Vitae reiciendis ab autem omnis repudiandae aut quo eos aut. Sequi laborum nesciunt reiciendis. Architecto vitae soluta et. Aut cumque aspernatur. Perspiciatis omnis maiores minus eligendi reprehenderit consectetur ut quidem. Cupiditate qui est commodi velit at ea iusto sit minima. Dolores aut ad debitis consequuntur iure adipisci nemo deleniti illum. Quia itaque suscipit voluptatem repellat quas eum. Aut quia est corrupti rerum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Enim beatae architecto odit iusto. Et praesentium qui sequi excepturi. Necessitatibus quo autem voluptatem molestiae distinctio ipsam perspiciatis iusto aperiam. Et sint labore et aut magnam. Dolores quasi non. Omnis voluptas dolorum dolorem molestiae eaque. Cupiditate voluptates odio omnis minima fuga quia debitis. Sit voluptatem voluptas eum qui et est sed. Est iure quia nobis sequi. Veniam et qui error. Eveniet voluptas ipsum voluptatem est dolor dolores occaecati similique.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Tempora non nobis incidunt fuga asperiores est dolorem molestiae maxime. Voluptatum odio quo earum explicabo. Tempora unde occaecati consectetur est molestiae id aspernatur qui dolorum. Fugiat enim est nesciunt consectetur officiis eos. Exercitationem rem magni. Dolore ducimus et vel et doloremque. Sed id magnam et vel quia libero neque. Vitae non repellendus veniam perferendis quia rerum. Voluptatum molestiae corrupti ex facilis tempore sed voluptatem eligendi excepturi. Sapiente nobis asperiores unde qui qui atque. Eum sequi officiis atque est ut repellendus. Qui nihil quo illum veniam quis eum sunt provident.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Quas laborum fugiat. Et qui perferendis incidunt ipsam ut vel odit minima consectetur. Et quibusdam consequuntur quaerat voluptas eius soluta fugiat. Et corporis delectus consequatur est blanditiis fugit suscipit id. Ipsum eveniet voluptas nobis id sed. Praesentium optio tempora quos debitis ut totam officiis debitis suscipit. Fugiat ipsam officiis facere quasi est. Cupiditate ullam consequatur. Et et ut architecto eveniet voluptatibus architecto optio sint. Voluptatum quia corrupti atque. Vero corporis in consequuntur cupiditate nobis enim voluptate excepturi earum. Dolorum at quos quia.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-footer&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-logo-cdl&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://cdlib.org&quot;</span>&gt;</span>
@@ -553,8 +554,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="admin-nav.html" data-role="tree-link" data-pjax data-handle="admin-nav">
-                <span>Admin Nav</span>
+            <a class="Tree-entityLink" href="admin.html" data-role="tree-link" data-pjax data-handle="admin">
+                <span>Admin</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -709,8 +710,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-logged-in.html" data-role="tree-link" data-pjax data-handle="header-logged-in">
-                <span>Header Logged In</span>
+            <a class="Tree-entityLink" href="header.html" data-role="tree-link" data-pjax data-handle="header">
+                <span>Header</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -735,8 +736,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-logged-out-generic.html" data-role="tree-link" data-pjax data-handle="header-logged-out-generic">
-                <span>Header Logged Out Generic</span>
+            <a class="Tree-entityLink" href="header-menu-group.html" data-role="tree-link" data-pjax data-handle="header-menu-group">
+                <span>Header Menu Group</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -761,138 +762,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-logged-out-home.html" data-role="tree-link" data-pjax data-handle="header-logged-out-home">
-                <span>Header Logged Out Home</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-menu-group-logged-in.html" data-role="tree-link" data-pjax data-handle="header-menu-group-logged-in">
-                <span>Header Menu Group Logged In</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-menu-group-logged-out-generic.html" data-role="tree-link" data-pjax data-handle="header-menu-group-logged-out-generic">
-                <span>Header Menu Group Logged Out Generic</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-menu-group-logged-out-home.html" data-role="tree-link" data-pjax data-handle="header-menu-group-logged-out-home">
-                <span>Header Menu Group Logged Out Home</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-nav-logged-in.html" data-role="tree-link" data-pjax data-handle="header-nav-logged-in">
-                <span>Header Nav Logged In</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-nav-logged-out.html" data-role="tree-link" data-pjax data-handle="header-nav-logged-out">
-                <span>Header Nav Logged Out</span>
+            <a class="Tree-entityLink" href="header-nav.html" data-role="tree-link" data-pjax data-handle="header-nav">
+                <span>Header Nav</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -919,32 +790,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="home-stats.html" data-role="tree-link" data-pjax data-handle="home-stats">
                 <span>Home Stats</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="home-title.html" data-role="tree-link" data-pjax data-handle="home-title">
-                <span>Home Title</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1152,7 +997,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="notification.html" data-role="tree-link" data-pjax data-handle="notification">
-                <span>Notification</span>
+                <span>Notifications</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1281,8 +1126,34 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="sub-header.html" data-role="tree-link" data-pjax data-handle="sub-header">
-                <span>Sub Header</span>
+            <a class="Tree-entityLink" href="subheader.html" data-role="tree-link" data-pjax data-handle="subheader">
+                <span>Subheader</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="subheader-menu-group.html" data-role="tree-link" data-pjax data-handle="subheader-menu-group">
+                <span>Subheader Menu Group</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1455,8 +1326,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-09-08T18:54:54.658Z">
-                                9/8/2021
+                            <time datetime="2021-09-22T21:57:23.412Z">
+                                9/22/2021
                             </time>
                         
                     </dd>
@@ -1526,15 +1397,104 @@
         
     
         
-    
+            
+            <div class="Navigation-group" data-role="variant-group" data-component="notification">
+                
+<div class="Tree" data-behaviour="tree" id="tree-notification-variants">
+    <div class="Tree-header">
+        <h3 class="Tree-title">Notification Variants</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
+    <ul class="Tree-items Tree-depth-1">
         
     
         
-    
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="notification--info.html" data-role="tree-link" data-pjax data-handle="notification">
+                <span>Info</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
         
     
         
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="notification--danger.html" data-role="tree-link" data-pjax data-handle="notification">
+                <span>Danger</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="notification--warning.html" data-role="tree-link" data-pjax data-handle="notification">
+                <span>Warning</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+            </div>
         
     
         

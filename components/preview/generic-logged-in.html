@@ -21,7 +21,9 @@
 </a>
 
   <div class="c-headermenugroup">
-  <div id="js-user-profile" class="c-profile c-headermenu">
+        <!-- This menu uses accessibility techniques from: https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-links.html -->
+
+<div id="js-user-profile" class="c-profile c-headermenu">
   <button id="js-user-profile__button" class="c-headermenu__button" aria-label="Jane Doe profile" aria-haspopup="true">Jane Doe</button>
   <ul id="js-user-profile__menu" class="c-headermenu__menu" hidden>
     <li><a role="menuitem" href="https://dmptool.org/users/edit">Edit profile</a></li>
@@ -30,8 +32,10 @@
     <li><a role="menuitem" href="https://dmptool.org/users/sign_out">Sign out</a></li>
   </ul>
 </div>
- <!-- This should only show when user is logged in -->
-  <div id="js-language" class="c-language c-headermenu">
+
+    <!-- This menu uses accessibility techniques from: https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-links.html -->
+
+<div id="js-language" class="c-language c-headermenu">
   <button id="js-language__button" class="c-headermenu__button" aria-haspopup="true">Language</button>
   <ul id="js-language__menu" class="c-headermenu__menu" hidden>
     <li><a role="menuitem" href="https://dmptool.org/locale/en-US">English (US)</a></li>
@@ -39,28 +43,62 @@
   </ul>
 </div>
 
-</div>
-
+  </div>
   <button id="js-navtoggle" class="c-navtoggle" aria-label="main navigation"></button>
 
   <nav aria-label="main" id="js-headernav" class="c-headernav">
-  <ul>
-    <li><a href="">Dashboard</a></li>
-    <li><a href="">Funder Requirements</a></li>
-    <li><a href="">Public DMPs</a></li>
-    <li><a href="">Help</a></li>
+    <ul>
+        <li><a href="">Dashboard</a></li>
+      <li><a href="">Funder Requirements</a></li>
+      <li><a href="">Public DMPs</a></li>
+      <li><a href="">Help</a></li>
+    </ul>
+  </nav>
+    <div class="c-subheader">
+      <a class="c-logo-org" href="https://www.ucmerced.edu">
+    <img src="../../ui-assets/logo-ucm.svg" alt="UC Merced logo" width="104" height="39">
+</a>
+
+      <div class="c-headermenugroup">
+  <!-- This menu uses accessibility techniques from: https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-links.html -->
+
+<div id="js-admin" class="c-admin c-headermenu">
+  <button id="js-admin__button" class="c-headermenu__button" aria-haspopup="true" aria-label="administrator menu">
+    Admin
+  </button>
+  <ul id="js-admin__menu" class="c-headermenu__menu" hidden>
+    <li><a role="menuitem" href="/super_admin/api_clients">Api Clients</a></li>
+    <li><a role="menuitem" href="/org/admin/guidance/15/admin_index">Guidance</a></li>
+    <li><a role="menuitem" href="/super_admin/notifications">Notifications</a></li>
+    <li><a role="menuitem" href="/org/admin/15/admin_edit">Organization details</a></li>
+    <li><a role="menuitem" href="/org_admin/plans">Plans</a></li>
+    <li><a role="menuitem" href="/org_admin/templates">Templates</a></li>
+    <li><a role="menuitem" href="/super_admin/themes">Themes</a></li>
+    <li><a role="menuitem" href="/usage">Usage</a></li>
+    <li><a role="menuitem" href="/org/admin/users/admin_index">Users</a></li>
   </ul>
-</nav>
+</div>
 
+</div>
+
+      <ul class="c-links-org">
+  <li>
+    <a class="c-links-org__ucop" target="_blank" href="http://www.ucop.edu/">UCOP website</a>
+  </li>
+  <li>
+    <a class="c-links-org__uc3-helpdesk" href="mailto:uc3@ucop.edu">UC3 Helpdesk</a>
+  </li>
+</ul>
+
+    </div>
 </header>
-
 <main id="maincontent">
   <h1>Generic Page</h1>
-  <p>Quibusdam quas modi quis unde praesentium. Veniam et a. Sed blanditiis vero totam. Et dolor dolor est nesciunt in qui. Nemo et suscipit temporibus pariatur delectus quo officiis. Aperiam sint incidunt et. Iste et ullam non rerum. Autem voluptas et. Qui nihil veniam est assumenda rerum dolor animi nihil accusantium. Commodi error sint velit. Vel et quae ex quia est minima in et. Iure mollitia modi sequi. Fugit in odio eaque reiciendis ut dolores dignissimos fuga dignissimos.</p>
-  <p>Perspiciatis accusamus mollitia ea velit consectetur. Blanditiis harum in reiciendis assumenda culpa voluptatum. Qui aliquam id est et commodi dolor. Quis pariatur nulla dolorem totam quos nihil. Eligendi dolore consequuntur molestias quae maiores quia ab. Alias omnis ullam ut repudiandae. Et numquam aperiam cum praesentium eaque cupiditate ad alias. Sequi quibusdam in ratione est dolor quia praesentium. Possimus accusamus sapiente commodi voluptatibus dolores. Suscipit quo deserunt corporis dicta esse molestias consequatur.</p>
-  <p>Voluptatem minus voluptatem. Eveniet eos harum et eos. Amet eos et illo adipisci at. Ut corporis maiores officiis possimus est. Deleniti et minima sit eligendi voluptate et consequatur. Sunt doloribus consequuntur et ab velit. Voluptate rerum ratione possimus dolore earum placeat. Minus sunt vitae unde laudantium eius iusto maiores. Rerum repellendus est et soluta repellat. Eveniet et omnis veniam voluptatum provident temporibus qui esse delectus. Quidem quam non ut saepe. Blanditiis odio velit omnis. Error non consequuntur deserunt.</p>
-  <p>Omnis officia et aut esse qui culpa ratione. Consequatur nulla deserunt qui sit id. Nam at ex esse explicabo qui dicta. Nam dignissimos minus sint illum. Eos libero sapiente necessitatibus assumenda enim libero deleniti ipsam. Omnis eos voluptatum dolor quia qui. Quis distinctio perspiciatis libero debitis quas quidem. Non natus optio qui fuga incidunt. Debitis vel saepe doloribus. Deleniti iure molestias aspernatur molestias molestias mollitia molestias nobis. Sunt repellendus qui voluptas magnam inventore vel assumenda hic est. Officiis aut laborum voluptate libero dolorem soluta vero aspernatur. Hic occaecati consectetur necessitatibus vel eos accusamus.</p>
-  <p>Dolor dolorem voluptas facere quo. Laborum labore nam necessitatibus quam laborum sit totam ut. Voluptatibus veritatis maiores suscipit deleniti minus fuga at voluptas dolor. Est occaecati porro magni repellat. Iusto cum aut. Est quis corrupti explicabo aut ea vero nihil. Dolorum molestias deleniti autem exercitationem nihil quia nostrum molestiae. Ducimus omnis voluptatem molestiae rem quod qui. Et ea omnis iure assumenda magni nemo. Voluptatibus deleniti odit et sunt tempore. Ut non nihil nam aspernatur eos. Corrupti ipsa rerum ipsa.</p>
+    <p>In tempora possimus fugit. Qui et vel quidem reprehenderit non dignissimos facere recusandae quia. Vel optio id accusamus et. Illo iste perferendis ea ea sed. Quia itaque libero nemo dolorem veniam molestias quia nesciunt voluptatem. Aut repellendus cumque et nihil quia molestias dolorum. Et at velit error et aut autem fugiat. Incidunt adipisci est in nihil quaerat ab totam. Sed aspernatur eum assumenda aperiam ut. Illo sequi corrupti quos voluptatem ullam aliquam saepe nemo. Aliquam tenetur neque quia et molestiae quo ut. Animi error eveniet est qui distinctio dolores consequatur delectus.</p>
+    <p>Dolores incidunt error non neque inventore ut corporis facilis architecto. Reprehenderit qui consequatur natus est recusandae vitae tenetur sed et. Et et aliquam. Inventore inventore omnis ad vitae doloremque mollitia molestias cupiditate. Error cupiditate recusandae nihil. Maiores accusamus consequatur ab voluptatem. Quae adipisci ullam id nam quia labore explicabo minus. Minima tempore quis. Recusandae rem dolores. Est et sit et odit unde totam consequatur sit. Nisi architecto eaque unde itaque dolor tempora commodi. Perferendis impedit assumenda vitae. Non necessitatibus nobis soluta at dolor eos.</p>
+    <p>Fugit repudiandae nostrum voluptas est consequatur. Et temporibus doloremque voluptatem a dolor earum aperiam ex. Ducimus ea eveniet recusandae perspiciatis. Dicta natus aut modi dignissimos. Qui at expedita quod porro ut quae nisi doloribus voluptatum. Et voluptatem ut. Distinctio voluptas ea mollitia ipsa perferendis porro. Voluptas et fugiat aut aut vero esse. Voluptatum voluptate nesciunt optio doloremque rem ut perferendis aut. Quo animi delectus corrupti ea voluptatem voluptatem. Hic numquam et eligendi.</p>
+    <p>Quia et et iure qui illum dicta nulla nisi. Tempore voluptatem et nihil reiciendis mollitia ut. Porro ipsa corrupti veritatis quasi unde assumenda. Dolor nam cupiditate impedit asperiores placeat consequatur. Perferendis quia itaque nemo. Quas tempore vel temporibus illum doloribus praesentium qui. Ducimus eveniet vitae qui doloremque amet. Autem nihil corrupti. Quasi consequuntur quia vel debitis velit veritatis quas sunt dolor. Earum vero reprehenderit.</p>
+    <p>Tempora sunt quidem magnam praesentium esse. Sed porro cum voluptatem in. Corporis natus aut quas aut corrupti nihil. Magni necessitatibus quo qui magnam ut. Aut illo architecto quidem magni accusamus corporis. Velit illo nisi. Amet sunt autem. Optio animi cum aliquid totam voluptas. Consequatur porro repellat optio. Vitae deleniti eos. Nulla et non. Illum ipsum laborum. Id quia hic.</p>
 </main>
 <footer class="c-footer">
   <a class="c-logo-cdl" href="https://cdlib.org">

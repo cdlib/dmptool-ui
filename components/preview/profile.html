@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="../../ui-assets/main.css">
   </head>
   <body class="t-tests">
-    <div id="js-user-profile" class="c-profile c-headermenu">
+    <!-- This menu uses accessibility techniques from: https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-links.html -->
+
+<div id="js-user-profile" class="c-profile c-headermenu">
   <button id="js-user-profile__button" class="c-headermenu__button" aria-label="Jane Doe profile" aria-haspopup="true">Jane Doe</button>
   <ul id="js-user-profile__menu" class="c-headermenu__menu" hidden>
     <li><a role="menuitem" href="https://dmptool.org/users/edit">Edit profile</a></li>

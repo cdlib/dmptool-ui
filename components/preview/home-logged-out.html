@@ -21,7 +21,9 @@
 </a>
 
   <div class="c-headermenugroup">
-  <div id="js-language" class="c-language c-headermenu">
+    <!-- This menu uses accessibility techniques from: https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-links.html -->
+
+<div id="js-language" class="c-language c-headermenu">
   <button id="js-language__button" class="c-headermenu__button" aria-haspopup="true">Language</button>
   <ul id="js-language__menu" class="c-headermenu__menu" hidden>
     <li><a role="menuitem" href="https://dmptool.org/locale/en-US">English (US)</a></li>
@@ -29,20 +31,17 @@
   </ul>
 </div>
 
-</div>
-
+  </div>
   <button id="js-navtoggle" class="c-navtoggle" aria-label="main navigation"></button>
 
   <nav aria-label="main" id="js-headernav" class="c-headernav">
-  <ul>
-    <li><a href="">Funder Requirements</a></li>
-    <li><a href="">Public DMPs</a></li>
-    <li><a href="">Help</a></li>
-  </ul>
-</nav>
-
+    <ul>
+      <li><a href="">Funder Requirements</a></li>
+      <li><a href="">Public DMPs</a></li>
+      <li><a href="">Help</a></li>
+    </ul>
+  </nav>
 </header>
-
 <main id="maincontent">
   <div class="c-calltoaction js-heroimage">
   <h1>Create Data Management Plans that meet requirements and promote your research</h1>

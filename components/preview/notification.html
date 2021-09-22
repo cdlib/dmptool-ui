@@ -10,21 +10,27 @@
     <link rel="stylesheet" href="../../ui-assets/main.css">
   </head>
   <body class="t-tests">
-    <div id="notification-area"
-     class="c-notification-area c-notification-area__info  hide"
-     role="">
-  <i class="fas fa-check-circle" aria-hidden="true"></i>
-  <span class="aria-only">Notice:</span>
-  <span>Successfully saved your changes</span>
+    <!-- Start: @notification--info -->
+<div id="js-notification-info" class="c-notification--info" role="alert" >
+  Successfully saved your changes.
+  <button id="js-notification-close" class="c-notification__close"><span>Close</span></button>
 </div>
+<!-- End: @notification--info -->
 
-<div id="global-notification-area" class="c-global-notification-area">
-  <div class="alert c-global-notification-area__warning">
-    <span class="fas fa-exclamation-circle"></span>
-    <span class="aria-only"><strong>Warning:</strong></span>
-    <span>The system will be down for maintenance starting 12/31/2025</span>
-  </div>
+<!-- Start: @notification--danger -->
+<div id="js-notification-danger" class="c-notification--danger" role="alert" >
+  You are about to close your account.
+  <button id="js-notification-close" class="c-notification__close"><span>Close</span></button>
 </div>
+<!-- End: @notification--danger -->
+
+<!-- Start: @notification--warning -->
+<div id="js-notification-warning" class="c-notification--warning" role="alert" >
+  The system will be down for maintenance starting 12/31/2025.
+  <button id="js-notification-close" class="c-notification__close"><span>Close</span></button>
+</div>
+<!-- End: @notification--warning -->
+
     <script>
       if (document.querySelector('.c-header')) {
         document.querySelector('#js-headernav').hidden = true

@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DMPTool Build Tool Tests</title>
+    <link href="../../ui-assets/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../ui-assets/main.css">
+  </head>
+  <body class="t-tests">
+    <div class="c-subheader">
+  <a class="c-logo-org" href="https://www.ucmerced.edu">
+    <img src="../../ui-assets/logo-ucm.svg" alt="UC Merced logo" width="104" height="39">
+</a>
+
+  <div class="c-headermenugroup">
+  <!-- This menu uses accessibility techniques from: https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-links.html -->
+
+<div id="js-admin" class="c-admin c-headermenu">
+  <button id="js-admin__button" class="c-headermenu__button" aria-haspopup="true" aria-label="administrator menu">
+    Admin
+  </button>
+  <ul id="js-admin__menu" class="c-headermenu__menu" hidden>
+    <li><a role="menuitem" href="/super_admin/api_clients">Api Clients</a></li>
+    <li><a role="menuitem" href="/org/admin/guidance/15/admin_index">Guidance</a></li>
+    <li><a role="menuitem" href="/super_admin/notifications">Notifications</a></li>
+    <li><a role="menuitem" href="/org/admin/15/admin_edit">Organization details</a></li>
+    <li><a role="menuitem" href="/org_admin/plans">Plans</a></li>
+    <li><a role="menuitem" href="/org_admin/templates">Templates</a></li>
+    <li><a role="menuitem" href="/super_admin/themes">Themes</a></li>
+    <li><a role="menuitem" href="/usage">Usage</a></li>
+    <li><a role="menuitem" href="/org/admin/users/admin_index">Users</a></li>
+  </ul>
+</div>
+
+</div>
+
+  <ul class="c-links-org">
+  <li>
+    <a class="c-links-org__ucop" target="_blank" href="http://www.ucop.edu/">UCOP website</a>
+  </li>
+  <li>
+    <a class="c-links-org__uc3-helpdesk" href="mailto:uc3@ucop.edu">UC3 Helpdesk</a>
+  </li>
+</ul>
+
+</div>
+
+    <script>
+      if (document.querySelector('.c-header')) {
+        document.querySelector('#js-headernav').hidden = true
+      }
+    </script>
+    <script src="../../ui-assets/main.js"></script>
+  </body>
+</html>
+

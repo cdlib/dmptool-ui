@@ -180,14 +180,13 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-356d947c6a6cc9fe68f49371db54f5f4-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-logo-org&quot;</span>&gt;</span>
-  <span class="hljs-comment">&lt;!-- This section will display the organization name if no logo is loaded.
-       For example: --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>University of California, Office of the President (UCOP)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-  <span class="hljs-comment">&lt;!-- Example logo for UC Merced: /media/W1siZiIsIjIwMTgvMDYvMDYvNXB1c2FkOTdqa19VQ00ucG5nIl0sWyJwIiwidGh1bWIiLCIxMDB4MTAwJSJdXQ/UCM.png?sha=9478f6947e6452f9 --&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-logo-org&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.ucmerced.edu&quot;</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> org_logo}}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">path</span> <span class="hljs-string">&#x27;/ui-assets/logo-ucm.svg&#x27;</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;UC Merced logo&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;104&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;39&quot;</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{<span class="hljs-keyword">else</span>}}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>University of California, Merced<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -196,7 +195,9 @@
     <code class="Code Code--lang-json hljs">
         
             
-            <pre><span class="hljs-comment">/* No context defined. */</span></pre>
+            <pre>{
+  <span class="hljs-attr">&quot;org_logo&quot;</span>: <span class="hljs-literal">true</span>
+}</pre>
             
         
     </code>
@@ -243,7 +244,7 @@
             <strong class="Meta-key">Referenced by <em class="Meta-count">(1)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
-                <a href="sub-header.html">@<span>sub-header</span></a>
+                <a href="subheader.html">@<span>subheader</span></a>
             
             </span>
         </li>
@@ -256,14 +257,9 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-356d947c6a6cc9fe68f49371db54f5f4-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-logo-org&quot;</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- This section will display the organization name if no logo is loaded.
-       For example: --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>University of California, Office of the President (UCOP)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-    <span class="hljs-comment">&lt;!-- Example logo for UC Merced: /media/W1siZiIsIjIwMTgvMDYvMDYvNXB1c2FkOTdqa19VQ00ucG5nIl0sWyJwIiwidGh1bWIiLCIxMDB4MTAwJSJdXQ/UCM.png?sha=9478f6947e6452f9 --&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-logo-org&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.ucmerced.edu&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../ui-assets/logo-ucm.svg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;UC Merced logo&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;104&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;39&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -461,8 +457,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="admin-nav.html" data-role="tree-link" data-pjax data-handle="admin-nav">
-                <span>Admin Nav</span>
+            <a class="Tree-entityLink" href="admin.html" data-role="tree-link" data-pjax data-handle="admin">
+                <span>Admin</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -617,8 +613,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-logged-in.html" data-role="tree-link" data-pjax data-handle="header-logged-in">
-                <span>Header Logged In</span>
+            <a class="Tree-entityLink" href="header.html" data-role="tree-link" data-pjax data-handle="header">
+                <span>Header</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -643,8 +639,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-logged-out-generic.html" data-role="tree-link" data-pjax data-handle="header-logged-out-generic">
-                <span>Header Logged Out Generic</span>
+            <a class="Tree-entityLink" href="header-menu-group.html" data-role="tree-link" data-pjax data-handle="header-menu-group">
+                <span>Header Menu Group</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -669,138 +665,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-logged-out-home.html" data-role="tree-link" data-pjax data-handle="header-logged-out-home">
-                <span>Header Logged Out Home</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-menu-group-logged-in.html" data-role="tree-link" data-pjax data-handle="header-menu-group-logged-in">
-                <span>Header Menu Group Logged In</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-menu-group-logged-out-generic.html" data-role="tree-link" data-pjax data-handle="header-menu-group-logged-out-generic">
-                <span>Header Menu Group Logged Out Generic</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-menu-group-logged-out-home.html" data-role="tree-link" data-pjax data-handle="header-menu-group-logged-out-home">
-                <span>Header Menu Group Logged Out Home</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-nav-logged-in.html" data-role="tree-link" data-pjax data-handle="header-nav-logged-in">
-                <span>Header Nav Logged In</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header-nav-logged-out.html" data-role="tree-link" data-pjax data-handle="header-nav-logged-out">
-                <span>Header Nav Logged Out</span>
+            <a class="Tree-entityLink" href="header-nav.html" data-role="tree-link" data-pjax data-handle="header-nav">
+                <span>Header Nav</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -827,32 +693,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="home-stats.html" data-role="tree-link" data-pjax data-handle="home-stats">
                 <span>Home Stats</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="home-title.html" data-role="tree-link" data-pjax data-handle="home-title">
-                <span>Home Title</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1060,7 +900,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="notification.html" data-role="tree-link" data-pjax data-handle="notification">
-                <span>Notification</span>
+                <span>Notifications</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1189,8 +1029,34 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="sub-header.html" data-role="tree-link" data-pjax data-handle="sub-header">
-                <span>Sub Header</span>
+            <a class="Tree-entityLink" href="subheader.html" data-role="tree-link" data-pjax data-handle="subheader">
+                <span>Subheader</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="subheader-menu-group.html" data-role="tree-link" data-pjax data-handle="subheader-menu-group">
+                <span>Subheader Menu Group</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1363,8 +1229,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-09-08T18:54:54.658Z">
-                                9/8/2021
+                            <time datetime="2021-09-22T21:57:23.412Z">
+                                9/22/2021
                             </time>
                         
                     </dd>
@@ -1434,15 +1300,104 @@
         
     
         
-    
+            
+            <div class="Navigation-group" data-role="variant-group" data-component="notification">
+                
+<div class="Tree" data-behaviour="tree" id="tree-notification-variants">
+    <div class="Tree-header">
+        <h3 class="Tree-title">Notification Variants</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
+    <ul class="Tree-items Tree-depth-1">
         
     
         
-    
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="notification--info.html" data-role="tree-link" data-pjax data-handle="notification">
+                <span>Info</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
         
     
         
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="notification--danger.html" data-role="tree-link" data-pjax data-handle="notification">
+                <span>Danger</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="notification--warning.html" data-role="tree-link" data-pjax data-handle="notification">
+                <span>Warning</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+            </div>
         
     
         
