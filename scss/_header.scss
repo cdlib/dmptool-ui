@@ -26,12 +26,17 @@
   .c-subheader {
     grid-column: 1 / 3;
   }
+
+  .c-notificationgroup {
+    grid-column: 1 / 3;
+  }
 }
 
 @include minwidth1 {
 
   .c-header {
     grid-template-columns: auto 1fr;
+    gap: normal $space-base;
 
     .c-logo-dmptool {
       grid-row: 1 / 3;

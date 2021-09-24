@@ -6,4 +6,7 @@
   {{#if logged_in}}
     {{> @subheader }}
   {{/if}}
+  {{#if notifications}}
+    {{ render '@notification-group' }}
+  {{/if}}
 </header>

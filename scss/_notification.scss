@@ -1,53 +1,89 @@
 /* System messages: noticiations/alerts/warnings/errors */
 
-@import 'breakpoints-scss';
 @import 'variables';
+@import 'utilities';
 
-.c-notification-area,
-.c-global-notification-area {
+.c-notification--info,
+.c-notification--warning,
+.c-notification--danger {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
   padding: $space-sm;
-}
 
-.c-notification-area__info {
-  background-color: $color-green;
-  color: $color-white;
-}
+  &::before {
+    content: '';
+    flex: none;
+    inline-size: 1rem;
+    block-size: 1rem;
+    background: center / 1rem no-repeat;
+  }
 
-.c-notification-area__warning {
-  background-color: $color-red;
-  color: $color-white;
-}
+  p {
+    margin: 0;
+  }
 
-.c-global-notification-area__info {
-  background-color: $color-dmp-blue-light;
-  border-color: $color-dmp-blue;
-  color: $color-dmp-blue;
-
-  /* Override the color of the notification area's close/dismiss button */
-  button[data-dismiss="alert"] {
-    color: $color-dmp-blue;
-    opacity: 1;
+  &[hidden] {
+    display: none;
   }
 }
 
-.c-global-notification-area__warning {
+.c-notification__close {
+  flex: none;
+  inline-size: 1rem;
+  block-size: 1rem;
+  margin-inline-start: auto;
+  border-style: none;
+  background: center / 1rem no-repeat;
+
+  // hide 'close' button text except for screen readers:
+
+  span {
+    @include hide;
+  }
+}
+
+// Info notification colors and icons:
+
+.c-notification--info {
+  background-color: $color-green;
+  color: $color-white;
+
+  &::before {
+    background-image: url('solid.svg#check-circle' param(--color $color-white));
+  }
+
+  .c-notification__close {
+    background-image: url('solid.svg#times' param(--color $color-white));
+  }
+}
+
+// Warning notification colors and icons:
+
+.c-notification--warning {
   background-color: $color-yellow-light;
   color: $color-yellow-dark;
 
-  /* Override the color of the notification area's close/dismiss button */
-  button[data-dismiss="alert"] {
-    color: $color-yellow-dark;
-    opacity: 1;
+  &::before {
+    background-image: url('solid.svg#exclamation-circle' param(--color $color-yellow-dark));
+  }
+
+  .c-notification__close {
+    background-image: url('solid.svg#times' param(--color $color-yellow-dark));
   }
 }
 
-.c-global-notification-area__danger {
+// Danger notification colors and icons:
+
+.c-notification--danger {
   background-color: $color-pink-light;
   color: $color-pink-dark;
 
-  /* Override the color of the notification area's close/dismiss button */
-  button[data-dismiss="alert"] {
-    color: $color-pink-dark;
-    opacity: 1;
+  &::before {
+    background-image: url('solid.svg#exclamation-circle' param(--color $color-pink-dark));
+  }
+
+  .c-notification__close {
+    background-image: url('solid.svg#times' param(--color $color-pink-dark));
   }
 }

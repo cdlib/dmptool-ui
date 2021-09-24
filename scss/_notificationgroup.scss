@@ -1,0 +1,17 @@
+/* Notification Group */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.c-notificationgroup {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+@include minwidth1 {
+
+  .c-notificationgroup {
+    margin-block-start: $space-base;
+  }
+}
