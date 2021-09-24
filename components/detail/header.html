@@ -188,6 +188,10 @@
   </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> logged_in}}</span><span class="xml">
     </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">subheader</span> }}</span><span class="xml">
   </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+  </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> notifications}}</span><span class="xml">
+    </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="notification.html">@notification</a>&#x27;</span> }}</span><span class="xml">
+    </span><span class="hljs-template-variable">{{ <span class="hljs-name"><span class="hljs-builtin-name">render</span></span> <span class="hljs-string">&#x27;<a href="notification.html">@notification</a>--warning&#x27;</span> }}</span><span class="xml">
+  </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -240,7 +244,7 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(5)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(7)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="logo-dmptool.html">@<span>logo-dmptool</span></a>, 
@@ -251,19 +255,25 @@
             
                 <a href="header-nav.html">@<span>header-nav</span></a>, 
             
-                <a href="subheader.html">@<span>subheader</span></a>
+                <a href="subheader.html">@<span>subheader</span></a>, 
+            
+                <a href="notification.html">@<span>notification</span></a>, 
+            
+                <a href="notification--warning.html">@<span>notification--warning</span></a>
             
             </span>
         </li class="Meta-item">
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(4)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(5)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="generic-logged-in.html">@<span>generic-logged-in</span></a>, 
             
                 <a href="generic-logged-out.html">@<span>generic-logged-out</span></a>, 
+            
+                <a href="generic-with-notifications.html">@<span>generic-with-notifications</span></a>, 
             
                 <a href="home-logged-in.html">@<span>home-logged-in</span></a>, 
             
@@ -410,6 +420,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="generic-logged-out.html" data-role="tree-link" data-pjax data-handle="generic-logged-out">
                 <span>Generic Logged Out</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="generic-with-notifications.html" data-role="tree-link" data-pjax data-handle="generic-with-notifications">
+                <span>Generic With Notifications</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1281,8 +1317,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-09-22T21:57:23.412Z">
-                                9/22/2021
+                            <time datetime="2021-09-24T18:58:22.548Z">
+                                9/24/2021
                             </time>
                         
                     </dd>
@@ -1307,6 +1343,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         
