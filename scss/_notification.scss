@@ -6,17 +6,29 @@
 .c-notification--info,
 .c-notification--warning,
 .c-notification--danger {
+
+  // Default colors and icon if not set individually below:
+
+  --color-foreground: #{$color-black};
+  --color-background: #{$color-white};
+  --icon: '';
+
   display: flex;
   align-items: center;
   gap: $space-sm;
   padding: $space-sm;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 
   &::before {
     content: '';
     flex: none;
     inline-size: 1rem;
     block-size: 1rem;
-    background: center / 1rem no-repeat;
+    mask-size: 1rem;
+    mask-position: center;
+    mask-image: var(--icon);
+    background-color: var(--color-foreground);
   }
 
   p {
@@ -34,7 +46,8 @@
   block-size: 1rem;
   margin-inline-start: auto;
   border-style: none;
-  background: center / 1rem no-repeat;
+  background-color: var(--color-foreground);
+  mask: url('solid.svg#times') center / 1rem;
 
   // hide 'close' button text except for screen readers:
 
@@ -43,47 +56,22 @@
   }
 }
 
-// Info notification colors and icons:
+// Individual colors and icon:
 
 .c-notification--info {
-  background-color: $color-green;
-  color: $color-white;
-
-  &::before {
-    background-image: url('solid.svg#check-circle' param(--color $color-white));
-  }
-
-  .c-notification__close {
-    background-image: url('solid.svg#times' param(--color $color-white));
-  }
+  --color-foreground: #{$color-white};
+  --color-background: #{$color-green};
+  --icon: url('solid.svg#check-circle');
 }
-
-// Warning notification colors and icons:
 
 .c-notification--warning {
-  background-color: $color-yellow-light;
-  color: $color-yellow-dark;
-
-  &::before {
-    background-image: url('solid.svg#exclamation-circle' param(--color $color-yellow-dark));
-  }
-
-  .c-notification__close {
-    background-image: url('solid.svg#times' param(--color $color-yellow-dark));
-  }
+  --color-foreground: #{$color-yellow-dark};
+  --color-background: #{$color-yellow-light};
+  --icon: url('solid.svg#exclamation-circle');
 }
 
-// Danger notification colors and icons:
-
 .c-notification--danger {
-  background-color: $color-pink-light;
-  color: $color-pink-dark;
-
-  &::before {
-    background-image: url('solid.svg#exclamation-circle' param(--color $color-pink-dark));
-  }
-
-  .c-notification__close {
-    background-image: url('solid.svg#times' param(--color $color-pink-dark));
-  }
+  --color-foreground: #{$color-pink-dark};
+  --color-background: #{$color-pink-light};
+  --icon: url('solid.svg#exclamation-circle');
 }
