@@ -23,7 +23,23 @@
 }
 
 .c-blog__content {
+  min-block-size: 3em; // #1
   margin-block-end: auto;
+
+  @keyframes fadein { // #2
+
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  a {
+    animation: fadein 0.5s;
+  }
 }
 
 @include minwidth1 {
@@ -32,3 +48,7 @@
     padding-inline-start: 0;
   }
 }
+
+// #1: Allow link text to wrap to 2 lines without shifting t-home grid row
+
+// #2: Fade in link when it's updated in the DOM
