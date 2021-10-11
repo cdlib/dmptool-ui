@@ -1,6 +1,11 @@
 /* Buttons */
 
-.btn {
-  border-radius: 5px;
-  padding: 3px 12px 4px 12px;
+@import 'variables';
+
+button {
+  padding: $space-sm;
+  border: 1px solid $color-dmp-blue;
+  border-radius: 0.3rem;
+  background-color: $color-dmp-blue;
+  color: $color-white;
 }
