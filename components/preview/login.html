@@ -10,11 +10,120 @@
     <link rel="stylesheet" href="../../ui-assets/main.css">
   </head>
   <body class="t-tests">
-    <div id="js-login" class="c-login">
-  
+    <!-- Start: @login--step-a -->
+<section class="c-login">
+  <header class="c-login__header">
+    <h2>Sign In / Sign Up</h2>
+  </header>
+  <div id="c-textfield" class="c-textfield ">
+    <label for="email_1">Email address</label>
+    <input id="email_1" type="email" name="" value="" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby="note_1"    >
+      <div id="note_1" class="c-input__note">For SSO, use institutional address.</div>
+  </div>
+  <button type="button">Continue</button>
+  <footer class="c-login__footer">
+    <p>Problems signing in? <a href="">Contact us</a>.</p>
+  </footer>
+</section>
+<!-- End: @login--step-a -->
 
-  <img src="../../ui-assets/login-sample.png" width="300" height="442" alt="login sample">
-</div>
+<!-- Start: @login--b -->
+<section class="c-login">
+  <header class="c-login__header">
+    <h2>New Account Sign Up</h2>
+  </header>
+  <div id="c-textfield" class="c-textfield ">
+    <label for="email_1">Email address</label>
+    <input id="email_1" type="email" name="" value="Fausto_Rosenbaum38@example.org" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby="false"    >
+  </div>
+  <p>Your address is associated with:</p>
+  <p><strong>University of California, Office of the President (UCOP)</strong></p>
+  <button type="button">Sign In with Institution to Continue</button>
+  <p>This will create a new account. If you already have an account, <a href="">go back</a> to try a different email address, or <a href="">contact us</a>.</p>
+</section>
+<!-- End: @login--b -->
+
+<!-- Start: @login--c -->
+<section class="c-login">
+  <header class="c-login__header">
+    <h2>Sign In</h2>
+  </header>
+  <div id="c-textfield" class="c-textfield ">
+    <label for="email_1">Email address</label>
+    <input id="email_1" type="email" name="" value="Alphonso79@example.com" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby="false"    >
+  </div>
+  <p>Your account is associated with:</p>
+  <p><strong>University of California, Office of the President (UCOP)</strong></p>
+  <button type="button">Sign In with Institution to Continue</button>
+</section>
+<!-- End: @login--c -->
+
+<!-- Start: @login--d -->
+<section class="c-login">
+  <header class="c-login__header">
+    <h2>Sign In</h2>
+  </header>
+  <div id="c-textfield" class="c-textfield ">
+    <label for="email_1">Email address</label>
+    <input id="email_1" type="email" name="" value="Fred_Halvorson@example.com" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=""    >
+  </div>
+  <div id="c-textfield" class="c-textfield ">
+    <label for="pass_1">Password</label>
+    <input id="pass_1" type="password" name="" value="" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=""    >
+  </div>
+  <div class="c-login__pseudo-note"><a href="">Forgot password?</a></div>
+  <button type="button">Sign In with Institution to Continue</button>
+  <footer class="c-login__footer">
+    <p>Problems signing in? <a href="">Contact us</a>.</p>
+  </footer>
+</section>
+<!-- End: @login--d -->
+
+<!-- Start: @login--e -->
+<section class="c-login">
+  <header class="c-login__header">
+    <h2>New Account Sign Up</h2>
+  </header>
+  <div id="c-textfield" class="c-textfield ">
+    <label for="email_1">Email address</label>
+    <input id="email_1" type="email" name="" value="Reggie43@example.com" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=""    >
+  </div>
+  <div id="c-textfield" class="c-textfield required">
+    <label for="first_1">First name</label>
+    <input id="first_1" type="text" name="" value="" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=""    required>
+  </div>
+  <div id="c-textfield" class="c-textfield required">
+    <label for="last_1">Last name</label>
+    <input id="last_1" type="text" name="" value="" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=""    required>
+  </div>
+  <div id="c-textfield" class="c-textfield required">
+    <label for="inst_1">Institution</label>
+    <input id="inst_1" type="text" name="" value="" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=""    required>
+  </div>
+  <div class="c-login__pseudo-note">
+    <div id="c-checkbox" class="c-checkbox ">
+      <input id="listed_1" type="checkbox" name="" value="" aria-describedby=""  >
+      <label for="listed_1">My institution is not on the list</label>
+    </div>
+  </div>
+  <div id="c-textfield" class="c-textfield required">
+    <label for="pass_1">Password</label>
+    <input id="pass_1" type="password" name="" value="" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=""    required>
+  </div>
+  <div class="c-login__pseudo-note">
+    <div id="c-checkbox" class="c-checkbox ">
+      <input id="show_1" type="checkbox" name="" value="" aria-describedby=""  >
+      <label for="show_1">Show password</label>
+    </div>
+  </div>
+  <div id="c-checkbox" class="c-checkbox required">
+    <input id="show_1" type="checkbox" name="" value="" aria-describedby=""  required>
+    <label for="show_1">I accept the terms and conditions</label>
+  </div>
+  <button type="button">Sign Up</button>
+  <p>This will create a new account. If you already have an account, <a href="">go back</a> to try a different email address, or <a href="">contact us</a>.</p>
+</section>
+<!-- End: @login--e -->
 
     <script>
       if (document.querySelector('.c-header')) {

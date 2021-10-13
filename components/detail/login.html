@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.2" type="text/css">
 
 
-<title>Login | DMPTool UI</title>
+<title>Login Sequence | DMPTool UI</title>
 
 </head>
 <body>
@@ -68,7 +68,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/login.html" title="Preview">
-            Login
+            Login Sequence
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -180,12 +180,75 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-65dfd7f16c2bec3d43f3ab1dac48eaef-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-login&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
-  
-  </span><span class="hljs-comment">{{!-- Sample image of login content below. Replace with actual login component upon integration: --}}</span><span class="xml">
+        <pre><span class="xml"><span class="hljs-comment">&lt;!-- Step A --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__header&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Sign In / Sign Up<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">textfield</span> }}</span><span class="xml">
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">button</span> }}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__footer&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Problems signing in? <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>Contact us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;</span></span></span><span class="hljs-template-variable">{{ <span class="hljs-name">path</span> <span class="hljs-string">&#x27;/ui-assets/login-sample.png&#x27;</span> }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;300&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;442&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;login sample&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+<span class="hljs-comment">&lt;!-- Step B --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__header&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>New Account Sign Up<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">textfield</span> }}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Your address is associated with:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>University of California, Office of the President (UCOP)<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">button</span> }}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This will create a new account. If you already have an account, <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>go back<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> to try a different email address, or <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>contact us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Step C --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__header&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Sign In<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">textfield</span> }}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Your account is associated with:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>University of California, Office of the President (UCOP)<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">button</span> }}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Step D --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__header&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Sign In<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">textfield</span> email }}</span><span class="xml">
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">textfield</span> password }}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__pseudo-note&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>Forgot password?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">button</span> }}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__footer&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Problems signing in? <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>Contact us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Step E --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__header&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>New Account Sign Up<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">textfield</span> email }}</span><span class="xml">
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">textfield</span> firstname }}</span><span class="xml">
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">textfield</span> lastname }}</span><span class="xml">
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">textfield</span> institution }}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__pseudo-note&quot;</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">checkbox</span> not_listed}}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">textfield</span> password }}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__pseudo-note&quot;</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">checkbox</span> show_password}}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">checkbox</span> terms }}</span><span class="xml">
+  </span><span class="hljs-template-variable">{{&gt; @<span class="hljs-name">button</span> }}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This will create a new account. If you already have an account, <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>go back<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> to try a different email address, or <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>contact us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -193,9 +256,173 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-65dfd7f16c2bec3d43f3ab1dac48eaef-panel-context">
     <code class="Code Code--lang-json hljs">
         
-            
-            <pre><span class="hljs-comment">/* No context defined. */</span></pre>
-            
+        
+            <pre>
+<span class="hljs-comment">/* Step A */</span>
+{
+  <span class="hljs-attr">&quot;textfield&quot;</span>: {
+    <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Email address&quot;</span>,
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;email_1&quot;</span>,
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;email&quot;</span>,
+    <span class="hljs-attr">&quot;describedby_note_id&quot;</span>: <span class="hljs-string">&quot;note_1&quot;</span>,
+    <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;For SSO, use institutional address.&quot;</span>
+  },
+  <span class="hljs-attr">&quot;button&quot;</span>: {
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;button&quot;</span>,
+    <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;Continue&quot;</span>
+  }
+}
+
+</pre>
+        
+            <pre>
+<span class="hljs-comment">/* Step B */</span>
+{
+  <span class="hljs-attr">&quot;textfield&quot;</span>: {
+    <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Email address&quot;</span>,
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;email_1&quot;</span>,
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;email&quot;</span>,
+    <span class="hljs-attr">&quot;describedby_note_id&quot;</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;For SSO, use institutional address.&quot;</span>,
+    <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;Fausto_Rosenbaum38@example.org&quot;</span>
+  },
+  <span class="hljs-attr">&quot;button&quot;</span>: {
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;button&quot;</span>,
+    <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;Sign In with Institution to Continue&quot;</span>
+  }
+}
+
+</pre>
+        
+            <pre>
+<span class="hljs-comment">/* Step C */</span>
+{
+  <span class="hljs-attr">&quot;textfield&quot;</span>: {
+    <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Email address&quot;</span>,
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;email_1&quot;</span>,
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;email&quot;</span>,
+    <span class="hljs-attr">&quot;describedby_note_id&quot;</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;For SSO, use institutional address.&quot;</span>,
+    <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;Alphonso79@example.com&quot;</span>
+  },
+  <span class="hljs-attr">&quot;button&quot;</span>: {
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;button&quot;</span>,
+    <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;Sign In with Institution to Continue&quot;</span>
+  }
+}
+
+</pre>
+        
+            <pre>
+<span class="hljs-comment">/* Step D */</span>
+{
+  <span class="hljs-attr">&quot;textfield&quot;</span>: {
+    <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Email address&quot;</span>,
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;email_1&quot;</span>,
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;email&quot;</span>,
+    <span class="hljs-attr">&quot;describedby_note_id&quot;</span>: <span class="hljs-string">&quot;note_1&quot;</span>,
+    <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;For SSO, use institutional address.&quot;</span>
+  },
+  <span class="hljs-attr">&quot;button&quot;</span>: {
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;button&quot;</span>,
+    <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;Sign In with Institution to Continue&quot;</span>
+  },
+  <span class="hljs-attr">&quot;email&quot;</span>: {
+    <span class="hljs-attr">&quot;textfield&quot;</span>: {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Email address&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;email_1&quot;</span>,
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;email&quot;</span>,
+      <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;Fred_Halvorson@example.com&quot;</span>
+    }
+  },
+  <span class="hljs-attr">&quot;password&quot;</span>: {
+    <span class="hljs-attr">&quot;textfield&quot;</span>: {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Password&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;pass_1&quot;</span>,
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;password&quot;</span>
+    }
+  }
+}
+
+</pre>
+        
+            <pre>
+<span class="hljs-comment">/* Step E */</span>
+{
+  <span class="hljs-attr">&quot;textfield&quot;</span>: {
+    <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Email address&quot;</span>,
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;email_1&quot;</span>,
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;email&quot;</span>,
+    <span class="hljs-attr">&quot;describedby_note_id&quot;</span>: <span class="hljs-string">&quot;note_1&quot;</span>,
+    <span class="hljs-attr">&quot;note&quot;</span>: <span class="hljs-string">&quot;For SSO, use institutional address.&quot;</span>
+  },
+  <span class="hljs-attr">&quot;button&quot;</span>: {
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;button&quot;</span>,
+    <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;Sign Up&quot;</span>
+  },
+  <span class="hljs-attr">&quot;email&quot;</span>: {
+    <span class="hljs-attr">&quot;textfield&quot;</span>: {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Email address&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;email_1&quot;</span>,
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;email&quot;</span>,
+      <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;Reggie43@example.com&quot;</span>
+    }
+  },
+  <span class="hljs-attr">&quot;firstname&quot;</span>: {
+    <span class="hljs-attr">&quot;textfield&quot;</span>: {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;First name&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;first_1&quot;</span>,
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,
+      <span class="hljs-attr">&quot;required&quot;</span>: <span class="hljs-literal">true</span>
+    }
+  },
+  <span class="hljs-attr">&quot;lastname&quot;</span>: {
+    <span class="hljs-attr">&quot;textfield&quot;</span>: {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Last name&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;last_1&quot;</span>,
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,
+      <span class="hljs-attr">&quot;required&quot;</span>: <span class="hljs-literal">true</span>
+    }
+  },
+  <span class="hljs-attr">&quot;institution&quot;</span>: {
+    <span class="hljs-attr">&quot;textfield&quot;</span>: {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Institution&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;inst_1&quot;</span>,
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,
+      <span class="hljs-attr">&quot;required&quot;</span>: <span class="hljs-literal">true</span>
+    }
+  },
+  <span class="hljs-attr">&quot;not_listed&quot;</span>: {
+    <span class="hljs-attr">&quot;checkbox&quot;</span>: {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;My institution is not on the list&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;listed_1&quot;</span>
+    }
+  },
+  <span class="hljs-attr">&quot;password&quot;</span>: {
+    <span class="hljs-attr">&quot;textfield&quot;</span>: {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Password&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;pass_1&quot;</span>,
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;password&quot;</span>,
+      <span class="hljs-attr">&quot;required&quot;</span>: <span class="hljs-literal">true</span>
+    }
+  },
+  <span class="hljs-attr">&quot;show_password&quot;</span>: {
+    <span class="hljs-attr">&quot;checkbox&quot;</span>: {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;Show password&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;show_1&quot;</span>
+    }
+  },
+  <span class="hljs-attr">&quot;terms&quot;</span>: {
+    <span class="hljs-attr">&quot;checkbox&quot;</span>: {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;I accept the terms and conditions&quot;</span>,
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;show_1&quot;</span>,
+      <span class="hljs-attr">&quot;required&quot;</span>: <span class="hljs-literal">true</span>
+    }
+  }
+}
+
+</pre>
+        
         
     </code>
 </div>
@@ -236,6 +463,17 @@
             <span class="Meta-value">src/components/login.hbs</span>
         </li>
         
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(2)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="textfield.html">@<span>textfield</span></a>, 
+            
+                <a href="button.html">@<span>button</span></a>
+            
+            </span>
+        </li class="Meta-item">
+        
         
         <li class="Meta-item">
             <strong class="Meta-key">Referenced by <em class="Meta-count">(2)</em>:</strong>
@@ -256,10 +494,127 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-65dfd7f16c2bec3d43f3ab1dac48eaef-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-login&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
+        
+            <pre><span class="hljs-comment">&lt;!-- Step A --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__header&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Sign In / Sign Up<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-textfield&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-textfield &quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;email_1&quot;</span>&gt;</span>Email address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;email_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;note_1&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;note_1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-input__note&quot;</span>&gt;</span>For SSO, use institutional address.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Continue<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__footer&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Problems signing in? <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>Contact us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../ui-assets/login-sample.png&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;300&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;442&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;login sample&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+</pre>
+        
+            <pre><span class="hljs-comment">&lt;!-- Step B --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__header&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>New Account Sign Up<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-textfield&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-textfield &quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;email_1&quot;</span>&gt;</span>Email address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;email_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Fausto_Rosenbaum38@example.org&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Your address is associated with:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>University of California, Office of the President (UCOP)<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Sign In with Institution to Continue<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This will create a new account. If you already have an account, <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>go back<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> to try a different email address, or <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>contact us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+</pre>
+        
+            <pre><span class="hljs-comment">&lt;!-- Step C --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__header&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Sign In<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-textfield&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-textfield &quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;email_1&quot;</span>&gt;</span>Email address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;email_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Alphonso79@example.com&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Your account is associated with:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>University of California, Office of the President (UCOP)<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Sign In with Institution to Continue<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+</pre>
+        
+            <pre><span class="hljs-comment">&lt;!-- Step D --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__header&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Sign In<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-textfield&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-textfield &quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;email_1&quot;</span>&gt;</span>Email address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;email_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Fred_Halvorson@example.com&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-textfield&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-textfield &quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;pass_1&quot;</span>&gt;</span>Password<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pass_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__pseudo-note&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>Forgot password?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Sign In with Institution to Continue<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__footer&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Problems signing in? <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>Contact us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+</pre>
+        
+            <pre><span class="hljs-comment">&lt;!-- Step E --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__header&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>New Account Sign Up<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-textfield&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-textfield &quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;email_1&quot;</span>&gt;</span>Email address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;email_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Reggie43@example.com&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-textfield&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-textfield required&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;first_1&quot;</span>&gt;</span>First name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;first_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-textfield&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-textfield required&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;last_1&quot;</span>&gt;</span>Last name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;last_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-textfield&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-textfield required&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;inst_1&quot;</span>&gt;</span>Institution<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;inst_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__pseudo-note&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-checkbox &quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;listed_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;listed_1&quot;</span>&gt;</span>My institution is not on the list<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-textfield&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-textfield required&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;pass_1&quot;</span>&gt;</span>Password<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pass_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">pattern</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-login__pseudo-note&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-checkbox &quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;show_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;show_1&quot;</span>&gt;</span>Show password<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;c-checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-checkbox required&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;show_1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;show_1&quot;</span>&gt;</span>I accept the terms and conditions<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Sign Up<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This will create a new account. If you already have an account, <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>go back<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> to try a different email address, or <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>contact us<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+</pre>
+        
         
     </code>
 </div>
@@ -284,9 +639,11 @@
 
     
     
+        
+    
 
 
-<nav class="Navigation" data-behaviour="navigation">
+<nav class="Navigation in-variants-panel" data-behaviour="navigation">
     <div class="Navigation-panel Navigation-panel--main" data-role="main-panel">
     
         <div class="Navigation-group Navigation-search">
@@ -561,6 +918,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="checkbox.html" data-role="tree-link" data-pjax data-handle="checkbox">
+                <span>Checkbox</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="copyright.html" data-role="tree-link" data-pjax data-handle="copyright">
                 <span>Copyright</span>
                 
@@ -796,7 +1179,7 @@
         
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="login">
-                <span>Login</span>
+                <span>Login Sequence</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -927,6 +1310,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="notification.html" data-role="tree-link" data-pjax data-handle="notification">
                 <span>Notifications</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="notification-group.html" data-role="tree-link" data-pjax data-handle="notification-group">
+                <span>Notification Group</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1102,6 +1511,32 @@
         </li>
         
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="textfield.html" data-role="tree-link" data-pjax data-handle="textfield">
+                <span>Text Field</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
     </ul>
 </div>
@@ -1123,6 +1558,32 @@
         </button>
     </div>
     <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button.html" data-role="tree-link" data-pjax data-handle="button">
+                <span>Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
         
     
         
@@ -1255,8 +1716,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-09-24T18:58:22.548Z">
-                                9/24/2021
+                            <time datetime="2021-10-13T00:55:26.198Z">
+                                10/12/2021
                             </time>
                         
                     </dd>
@@ -1270,7 +1731,7 @@
     
     </div>
 
-    <div class="Navigation-panel Navigation-panel--variants" data-role="variant-panel">
+    <div class="Navigation-panel Navigation-panel--variants is-visible" data-role="variant-panel">
         <div class="Navigation-backButtonWrapper">
             <button class="Navigation-backButton" data-role="back" type="button">
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1317,6 +1778,159 @@
     
         
     
+        
+    
+        
+            
+            <div class="Navigation-group is-visible" data-role="variant-group" data-component="login">
+                
+<div class="Tree" data-behaviour="tree" id="tree-login-variants">
+    <div class="Tree-header">
+        <h3 class="Tree-title">Login Variants</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="login--step-a.html" data-role="tree-link" data-pjax data-handle="login">
+                <span>Step A</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="login--b.html" data-role="tree-link" data-pjax data-handle="login">
+                <span>Step B</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="login--c.html" data-role="tree-link" data-pjax data-handle="login">
+                <span>Step C</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="login--d.html" data-role="tree-link" data-pjax data-handle="login">
+                <span>Step D</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="login--e.html" data-role="tree-link" data-pjax data-handle="login">
+                <span>Step E</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+            </div>
         
     
         
@@ -1426,6 +2040,12 @@
 </div>
 
             </div>
+        
+    
+        
+    
+        
+    
         
     
         

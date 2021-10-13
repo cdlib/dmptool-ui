@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DMPTool Build Tool Tests</title>
+    <link href="../../ui-assets/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../../ui-assets/main.css">
+  </head>
+  <body class="t-tests">
+    <div class="c-notificationgroup">
+  <div id="js-notification-info" class="c-notification--info" role="alert">
+  <p>Successfully saved your changes.</p>
+  <button id="js-notification-close" class="c-notification__close"><span>Close</span></button>
+</div>
+
+  <div id="js-notification-warning" class="c-notification--warning" role="alert">
+  <p>The system will be down for maintenance starting 12/31/2025.</p>
+  <button id="js-notification-close" class="c-notification__close"><span>Close</span></button>
+</div>
+
+</div>
+
+    <script>
+      if (document.querySelector('.c-header')) {
+        document.querySelector('#js-headernav').hidden = true
+      }
+    </script>
+    <script src="../../ui-assets/main.js"></script>
+  </body>
+</html>
+
