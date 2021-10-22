@@ -7,6 +7,7 @@ import initAdminMenu from './admin-menu'
 import initRandomHeroImage from './random-hero-image'
 import initBlogCarousel from './blog-carousel'
 import initNotifications from './notifications'
+import initShowPassword from './show-password'
 
 // Rails needs the JS to execute after page load once the DOM tree is available
 window.addEventListener("load", () => {
@@ -19,4 +20,5 @@ window.addEventListener("load", () => {
   initRandomHeroImage()
   initBlogCarousel()
   initNotifications()
+  initShowPassword()
 });

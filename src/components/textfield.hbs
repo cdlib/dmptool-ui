@@ -1,0 +1,19 @@
+<div id="{{ textfield.component_id }}" class="c-textfield js-textfield {{#if textfield.invalid_description_id }}is-invalid{{/if}}">
+  <label for="{{ textfield.input_id }}">{{ textfield.label }} {{#if textfield.sublabel }}<em>{{ textfield.sublabel }}</em>{{/if}}</label>
+  <input
+    id="{{ textfield.input_id }}"
+    type="{{ textfield.type }}"
+    name="{{ textfield.name }}"
+    autocomplete="{{ textfield.autocomplete }}"
+    value="{{ textfield.value }}"
+    list="{{ textfield.list }}"
+    minlength="{{ textfield.minlength }}"
+    maxlength="{{ textfield.maxlength }}"
+    {{#if textfield.general_description_id }}aria-describedby="{{ textfield.general_description_id }}{{#if textfield.invalid_description_id }} {{ textfield.invalid_description_id }}{{/if}}"{{/if}}
+    {{#if textfield.required}}required{{/if}}
+    {{#if textfield.invalid_description_id }}aria-invalid="true"{{/if}}>
+  {{#if textfield.general_description_id }}
+    <div id="{{ textfield.general_description_id }}" class="c-textfield__general-description">{{ textfield.general_description }}</div>
+  {{/if}}
+    <div id="{{ textfield.invalid_description_id }}" class="c-textfield__invalid-description js-invalid-description" {{#unless textfield.invalid_description_id }}hidden{{/unless}}>{{ textfield.invalid_description }}</div>
+</div>
