@@ -1,16 +1,33 @@
 
 
-<section class="c-login">
+<section class="c-login js-login">
   <header class="c-login__header">
     <h2>New Account Sign Up</h2>
+    <p class="c-login__required-field js-login__required-field" hidden>required field</p>
   </header>
-  <div id="" class="c-textfield js-textfield  ">
-    <label for="email_2">Email address</label>
-    <input id="email_2" type="email" name="" autocomplete="email" value="Eudora51@example.com" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby="false "    >
-  </div>
-  <p>Your address is associated with:</p>
-  <p><strong>University of California, Office of the President (UCOP)</strong></p>
-  <button type="button">Sign In with Institution to Continue</button>
-  <p>This will create a new account. If you already have an account, <a href="">go back</a> to try a different email address, or <a href="">contact us</a>.</p>
+  <p role="alert" class="c-login__invalid-notification js-login__invalid-notification" hidden> Please correct the field(s) below:</p>
+  <form action="" novalidate>
+    <div id="login-email" class="c-textfield js-textfield ">
+      <label for="email_2">Email address </label>
+      <input
+        id="email_2"
+        type="email"
+        name=""
+        autocomplete="email"
+        value="Orlando_Baumbach@example.net"
+        list=""
+        minlength=""
+        maxlength=""
+        aria-describedby="false "
+        
+        >
+        <div id="" class="c-input__invalid-description js-invalid-description" hidden></div>
+    </div>
+    <p>Your address is associated with:</p>
+    <p><strong>University of California, Office of the President (UCOP)</strong></p>
+    <button type="submit">Sign In with Institution to Continue</button>
+    <p>This will create a new account. If you already have an account, <a href="">go back</a> to try a different email address, or <a href="">contact us</a>.</p>
+  </form>
+  <a class="c-serialnav" rel="prev" href="">Go Back</a>
 </section>
 

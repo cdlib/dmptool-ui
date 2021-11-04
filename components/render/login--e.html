@@ -1,46 +1,142 @@
 
 
-<section class="c-login">
+<section class="c-login js-login">
   <header class="c-login__header">
     <h2>New Account Sign Up</h2>
+    <p class="c-login__required-field js-login__required-field" hidden>required field</p>
   </header>
-  <div id="" class="c-textfield js-textfield  ">
-    <label for="email_5">Email address</label>
-    <input id="email_5" type="email" name="" autocomplete="email" value="Stefanie_Hayes@example.net" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=" "    >
-  </div>
-  <div id="" class="c-textfield js-textfield is-required ">
-    <label for="first_1">First name</label>
-    <input id="first_1" type="text" name="" autocomplete="given-name" value="" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=" "   required >
-  </div>
-  <div id="" class="c-textfield js-textfield is-required ">
-    <label for="last_1">Last name</label>
-    <input id="last_1" type="text" name="" autocomplete="family-name" value="" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=" "   required >
-  </div>
-  <div id="" class="c-textfield js-textfield is-required ">
-    <label for="inst_1">Institution</label>
-    <input id="inst_1" type="text" name="" autocomplete="organization" value="" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=" "   required >
-  </div>
-  <div class="c-login__pseudo-note">
-    <div id="" class="c-checkbox js-checkbox  ">
-      <input id="listed_1" type="checkbox" name="" value="" aria-describedby=" "   >
-      <label for="listed_1">My institution is not on the list</label>
+  <p role="alert" class="c-login__invalid-notification js-login__invalid-notification" hidden> Please correct the field(s) below:</p>
+  <form action="" novalidate>
+    <datalist id="the-datalist-id">
+      <option value="University of California, Berkeley"></option>
+      <option value="Harvard University"></option>
+      <option value="Stanford University"></option>
+      <option value="California State University, East Bay"></option>
+      <option value="Boston College"></option>
+    </datalist>
+    <div id="" class="c-textfield js-textfield ">
+      <label for="email_5">Email address </label>
+      <input
+        id="email_5"
+        type="email"
+        name=""
+        autocomplete="email"
+        value="Parker_Kunze@example.org"
+        list=""
+        minlength=""
+        maxlength=""
+        aria-describedby=" "
+        
+        >
+        <div id="" class="c-input__invalid-description js-invalid-description" hidden></div>
     </div>
-  </div>
-  <div id="js-password-field" class="c-textfield js-textfield is-required ">
-    <label for="pass_1">Password</label>
-    <input id="pass_1" type="password" name="" autocomplete="password" value="" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby=" "   required >
-  </div>
-  <div class="c-login__pseudo-note">
-    <div id="js-password-toggle" class="c-checkbox js-checkbox  ">
-      <input id="show_1" type="checkbox" name="" value="" aria-describedby=" "   >
-      <label for="show_1">Show password</label>
+    <div id="" class="c-textfield js-textfield ">
+      <label for="first_1">First name </label>
+      <input
+        id="first_1"
+        type="text"
+        name=""
+        autocomplete="given-name"
+        value=""
+        list=""
+        minlength=""
+        maxlength=""
+        aria-describedby=" "
+        required
+        >
+        <div id="" class="c-input__invalid-description js-invalid-description" hidden></div>
     </div>
-  </div>
-  <div id="" class="c-checkbox js-checkbox is-required ">
-    <input id="terms_1" type="checkbox" name="" value="" aria-describedby=" "   required>
-    <label for="terms_1">I accept the terms and conditions</label>
-  </div>
-  <button type="button">Sign Up</button>
-  <p>This will create a new account. If you already have an account, <a href="">go back</a> to try a different email address, or <a href="">contact us</a>.</p>
+    <div id="" class="c-textfield js-textfield ">
+      <label for="last_1">Last name </label>
+      <input
+        id="last_1"
+        type="text"
+        name=""
+        autocomplete="family-name"
+        value=""
+        list=""
+        minlength=""
+        maxlength=""
+        aria-describedby=" "
+        required
+        >
+        <div id="" class="c-input__invalid-description js-invalid-description" hidden></div>
+    </div>
+    <div id="js-inst-textfield" class="c-textfield js-textfield ">
+      <label for="inst_1">Institution </label>
+      <input
+        id="inst_1"
+        type="text"
+        name=""
+        autocomplete="off"
+        value=""
+        list="the-datalist-id"
+        minlength=""
+        maxlength=""
+        aria-describedby=" "
+        required
+        >
+        <div id="" class="c-input__invalid-description js-invalid-description" hidden></div>
+    </div>
+    <div class="c-login__pseudo-description">
+      <div id="js-unlisted-checkbox" class="c-checkbox js-checkbox ">
+        <input
+          id="listed_1"
+          type="checkbox"
+          name=""
+          value=""
+          aria-describedby="
+          "
+          >
+        <label for="listed_1">My institution is not on the list</label>
+          <div id="" class="c-checkbox__invalid-description js-invalid-description" hidden></div>
+      </div>
+    </div>
+    <div id="js-password-field" class="c-textfield js-textfield ">
+      <label for="pass_1">Password <em>(at least 8 characters)</em></label>
+      <input
+        id="pass_1"
+        type="password"
+        name=""
+        autocomplete="password"
+        value=""
+        list=""
+        minlength="8"
+        maxlength=""
+        aria-describedby=" "
+        required
+        >
+        <div id="" class="c-input__invalid-description js-invalid-description" hidden></div>
+    </div>
+    <div class="c-login__pseudo-description">
+      <div id="js-password-toggle" class="c-checkbox js-checkbox ">
+        <input
+          id="show_1"
+          type="checkbox"
+          name=""
+          value=""
+          aria-describedby="
+          "
+          >
+        <label for="show_1">Show password</label>
+          <div id="" class="c-checkbox__invalid-description js-invalid-description" hidden></div>
+      </div>
+    </div>
+    <div id="" class="c-checkbox js-checkbox ">
+      <input
+        id="terms_1"
+        type="checkbox"
+        name=""
+        value=""
+        aria-describedby="
+        "
+        required>
+      <label for="terms_1">I accept the terms and conditions</label>
+        <div id="" class="c-checkbox__invalid-description js-invalid-description" hidden></div>
+    </div>
+    <button type="submit">Sign Up</button>
+    <p>This will create a new account. If you already have an account, <a href="">go back</a> to try a different email address, or <a href="">contact us</a>.</p>
+  </form>
+  <a class="c-serialnav" rel="prev" href="">Go Back</a>
 </section>
 

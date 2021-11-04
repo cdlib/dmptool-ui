@@ -10,23 +10,13 @@
     <link rel="stylesheet" href="../../ui-assets/main.css">
   </head>
   <body class="t-tests">
-    <div id="id-1" class="c-textfield js-textfield is-invalid">
-  <label for="id-2">Text Field for a Name </label>
-  <input
-    id="id-2"
-    type="text"
-    name=""
-    autocomplete="name"
-    value=""
-    list=""
-    minlength=""
-    maxlength=""
-    aria-describedby="id-3 id-4"
-    required
-    aria-invalid="true">
-    <div id="id-3" class="c-input__general-description">More info about this field.</div>
-    <div id="id-4" class="c-input__invalid-description js-invalid-description" >This field is required.</div>
-</div>
+    <datalist id="datalist-id">
+  <option value="University of California, Berkeley"></option>
+  <option value="Harvard University"></option>
+  <option value="Stanford University"></option>
+  <option value="California State University, East Bay"></option>
+  <option value="Boston College"></option>
+</datalist>
 
     <script>
       if (document.querySelector('.c-header')) {

@@ -37,16 +37,32 @@
   <h1>Create Data Management Plans that meet requirements and promote your research</h1>
 </div>
 
-  <section class="c-login">
+  <section class="c-login js-login">
   <header class="c-login__header">
     <h2>Sign In / Sign Up</h2>
+    <p class="c-login__required-field js-login__required-field" hidden>required field</p>
   </header>
-  <div id="" class="c-textfield js-textfield  ">
-    <label for="email_1">Email address</label>
-    <input id="email_1" type="email_1" name="" autocomplete="email" value="" placeholder="" list="" pattern="" minlength="" maxlength="" aria-describedby="note_1 "    >
-      <div id="note_1" class="c-input__general-description">For SSO, use institutional address.</div>
-  </div>
-  <button type="button">Continue</button>
+  <p role="alert" class="c-login__invalid-notification js-login__invalid-notification" hidden> Please correct the field(s) below:</p>
+  <form action="" novalidate>
+    <div id="login-email" class="c-textfield js-textfield ">
+      <label for="email_1">Email address </label>
+      <input
+        id="email_1"
+        type="email"
+        name=""
+        autocomplete="email"
+        value=""
+        list=""
+        minlength=""
+        maxlength=""
+        aria-describedby="description_1 "
+        required
+        >
+        <div id="description_1" class="c-input__general-description">For SSO, use institutional address.</div>
+        <div id="" class="c-input__invalid-description js-invalid-description" hidden></div>
+    </div>
+    <button type="submit">Continue</button>
+  </form>
   <footer class="c-login__footer">
     <p>Problems signing in? <a href="">Contact us</a>.</p>
   </footer>
