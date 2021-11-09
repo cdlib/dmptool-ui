@@ -3,6 +3,98 @@
 @import 'variables';
 
 .c-login {
-  min-width: 350px;
-  filter: drop-shadow(0 0 0.7rem hsla(hue($color-black), saturation($color-black), lightness($color-black), 0.4));
+  display: flex;
+  flex-direction: column;
+  gap: $space-base;
+  inline-size: clamp(18rem, 35vw, 22rem);
+  padding: $space-base;
+  border: 1px solid $color-dmp-blue;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-base;
+  }
+
+  [aria-disabled='true'] { // #1
+    border: 1px solid $color-black-light;
+    background-color: $color-black-light;
+    cursor: not-allowed;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .c-serialnav {
+    margin-inline-end: auto;
+  }
 }
+
+.c-login__header {
+
+  h2 {
+    margin-block-start: 0;
+    margin-block-end: $space-sm;
+    color: $color-dmp-blue;
+    font-size: 1.2rem;
+  }
+}
+
+.c-login__required-field {
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: end;
+
+  &::before {
+    content: '* ';
+    color: $color-red;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.c-login__invalid-notification {
+  display: flex;
+  align-items: center;
+  color: $color-red;
+
+  &::before {
+    content: '';
+    margin-inline-end: 0.4rem;
+    flex: none;
+    inline-size: 1rem;
+    block-size: 1rem;
+    background-color: $color-red;
+    mask: url('solid.svg#exclamation-circle');
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.c-login__invalid-notification.errors-fixed {
+  color: $color-green;
+
+  &::before {
+    background-color: $color-green;
+    mask: url('solid.svg#check');
+  }
+}
+
+.c-login__pseudo-description { // #2
+  margin-block-start: -$space-base;
+  font-size: 0.9rem;
+}
+
+.c-login__footer {
+  margin-block-start: auto;
+  margin-inline-start: auto;
+}
+
+// #1: When the form valiation script returns invalid fields and sets the 'aria-disabled' attribute on the submit button to 'true', make the button look disabled.
+
+// #2: When the description of a form element is more than just plain text (like a link or additional form element), use this class on a separate element (like a <p> or <div>) directly after the form element instead of using the form element's aria-describeby. The form element's description will appear as if it's tied to the form element above it as if aria-describeby was used.
