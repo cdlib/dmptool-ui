@@ -1,0 +1,39 @@
+/* Serial Navigation */
+
+@import 'variables';
+
+.c-serialnav {
+  --icon-margin: 0.5rem;
+
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem $space-sm;
+  border: 1px solid $color-dmp-blue;
+  border-radius: 0.3rem;
+
+  &::before,
+  &::after {
+    flex: none;
+    inline-size: 0.5rem;
+    block-size: 1rem;
+    background-color: $color-dmp-blue;
+  }
+}
+
+.c-serialnav[rel='prev'] {
+
+  &::before {
+    content: '';
+    margin-inline-end: var(--icon-margin);
+    mask: url('regular.svg#chevron-left');
+  }
+}
+
+.c-serialnav[rel='next'] {
+
+  &::after {
+    content: '';
+    margin-inline-start: var(--icon-margin);
+    mask: url('regular.svg#chevron-right');
+  }
+}
