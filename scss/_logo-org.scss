@@ -3,11 +3,11 @@
 @import 'variables';
 
 .c-logo-org {
-  margin-inline-end: 2rem;
+  margin-inline-end: $space-base;
 
   img {
     display: block;
-    inline-size: calc(#{$logo-width} - 1rem);
+    inline-size: $logo-width;
     block-size: auto;
     background-color: $color-white;
   }
