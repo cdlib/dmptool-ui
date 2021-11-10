@@ -31,6 +31,6 @@ const initProfileMenu = () => {
     // Tabbing outside of menu closes it:
     window.addEventListener('focusin', profileMenuTarget)
   }
-};
+}
 
 export default () => initProfileMenu()

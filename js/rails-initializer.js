@@ -12,7 +12,7 @@ import initFormElRequired from './form-element-required'
 import initFormValidation from './form-validation'
 
 // Rails needs the JS to execute after page load once the DOM tree is available
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
   initWatchViewportWidth()
 
   initProfileMenu()
@@ -25,4 +25,4 @@ window.addEventListener("load", () => {
   initShowPassword()
   initFormElRequired()
   initFormValidation()
-});
+})
