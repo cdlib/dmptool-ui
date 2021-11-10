@@ -11,6 +11,7 @@
 @include minwidth1 {
 
   .c-subheader {
+    gap: $space-lg;
     grid-template-columns: auto 1fr auto;
     margin-block-start: $space-lg;
 
