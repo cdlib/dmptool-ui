@@ -7,52 +7,44 @@
   display: grid;
   grid-template-columns: 1fr auto;
   gap: $space-base;
+  padding: $space-base $space-base 0 $space-base;
 
-  .c-logo-dmptool {
-    margin-block-start: $space-base;
-    margin-inline-start: $space-base;
+  .c-headermenugroup {
+    grid-column: 1 / 3;
   }
 
   .c-navtoggle {
-    margin-block-start: $space-base;
-    margin-inline-end: $space-base;
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .c-headernav {
-    grid-column: 1 / 4;
+    grid-column: 1 / 3;
+    margin-inline: -$space-base;
   }
 
-  .c-user-profile {
-    grid-column: 1 / 4;
-    margin-inline-start: $space-base;
+  .c-subheader {
+    grid-column: 1 / 3;
   }
 
-  .c-language {
-    grid-column: 1 / 4;
-    margin-inline-start: $space-base;
-  }
-
-  .c-links-org {
-    grid-column: 1 / 4;
-    margin-inline-start: $space-base;
-  }
-
-  .c-admin {
-    grid-column: 1 / 4;
-    margin-inline-start: $space-base;
+  .c-notificationgroup {
+    grid-column: 1 / 3;
   }
 }
 
 @include minwidth1 {
 
   .c-header {
-    grid-template-columns: auto 1fr auto auto;
-    grid-template-rows: 1fr auto auto;
-    gap: $space-lg;
+    grid-template-columns: auto 1fr;
+    gap: normal $space-lg;
 
     .c-logo-dmptool {
-      grid-column: 1;
-      grid-row: 1 / span 2;
+      grid-row: 1 / 3;
+    }
+
+    .c-headermenugroup {
+      grid-column: 2;
+      justify-self: end;
     }
 
     .c-navtoggle {
@@ -61,54 +53,8 @@
 
     .c-headernav {
       grid-column: 2;
-      grid-row: 1 / span 2;
+      margin-inline: 0;
       align-self: end;
-    }
-
-    /* The sign in link is displayed when not logged in and not on the homepage */
-    .c-user-sign-in {
-      grid-column: 3;
-      grid-row: 1;
-      margin-block-end: -$space-sm; // (1)
-      align-self: end;
-    }
-
-    /* The profile menu is displayed when logged in */
-    .c-user-profile {
-      grid-column: 3;
-      grid-row: 1;
-      margin-block-end: -$space-sm; // (1)
-      align-self: end;
-    }
-
-    .c-language {
-      grid-column: 4;
-      grid-row: 1;
-      margin-block-end: -$space-sm; // (1)
-      margin-inline-start: 0;
-      margin-inline-end: $space-base;
-      align-self: end;
-    }
-
-    /* Sub-header that displays organizational content when the user is logged in */
-    .c-logo-org {
-      grid-column: 1;
-      grid-row: 3;
-      margin-block-start: -$space-sm; // (1)
-      align-self: center;
-    }
-
-    .c-links-org {
-      grid-column: 2 / span 2;
-      grid-row: 3;
-    }
-
-    /* Displayed if the user is an administrator */
-    .c-admin {
-      grid-column: 4;
-      grid-row: 3;
     }
   }
 }
-
-// (1) subtract c-language bottom margin to compensate for c-language__button bottom padding so that button text aligns with c-headernav links

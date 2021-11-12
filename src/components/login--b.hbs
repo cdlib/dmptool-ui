@@ -1,0 +1,15 @@
+<section class="c-login js-login">
+  <header class="c-login__header">
+    <h2>New Account Sign Up</h2>
+    <p class="c-login__required-field js-login__required-field" hidden>required field</p>
+  </header>
+  <p role="alert" class="c-login__invalid-notification js-login__invalid-notification" hidden></p>
+  <form action="" novalidate>
+    {{> @textfield }}
+    <p>Your address is associated with:</p>
+    <p><strong>University of California, Office of the President (UCOP)</strong></p>
+    {{> @button }}
+    <p>This will create a new account. If you already have an account, <a href="">go back</a> to try a different email address, or <a href="">contact us</a>.</p>
+  </form>
+  {{> @serial-nav }}
+</section>

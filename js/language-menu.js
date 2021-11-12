@@ -31,6 +31,6 @@ const initLanguageMenu = () => {
     // Tabbing outside of menu closes it:
     window.addEventListener('focusin', langMenuTarget)
   }
-};
+}
 
 export default () => initLanguageMenu()

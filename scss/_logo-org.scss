@@ -1,36 +1,20 @@
 /* Organization Logo */
 
-@import 'breakpoints-scss';
 @import 'variables';
 
 .c-logo-org {
 
   img {
-    width: 13rem;
-    height: auto;
+    display: block;
+    inline-size: $logo-width;
+    block-size: auto;
+    background-color: $color-white;
   }
+
+  // If <img> isn't present, then use text label:
 
   p {
+    margin: 0;
     font-size: 1.1rem;
-  }
-}
-
-@include minwidth1 {
-
-  .c-logo-org {
-
-    img {
-      width: 26vw;
-    }
-  }
-}
-
-@include minwidth2 {
-
-  .c-logo-org {
-
-    img {
-      width: 17rem;
-    }
   }
 }

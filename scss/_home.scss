@@ -6,70 +6,33 @@
 .t-home {
   display: grid;
   gap: $space-base;
-  grid-template-rows: auto 1fr auto;
   height: 100vh;
 
   main {
     display: grid;
-    grid-template-columns: 1fr auto;
     gap: $space-base;
-  }
-
-  .c-login {
-    margin-inline-start: $space-lg;
+    padding-inline: $space-base;
   }
 }
 
 @include minwidth1 {
 
   .t-home {
+    grid-template-rows: auto 1fr auto;
     max-width: 1500px;
     margin: 0 auto;
 
     main {
-      --hero-image: ''; // (1)
-
-      grid-template-columns: 1fr auto;
-      grid-template-rows: auto 1fr auto;
-
-      &::before {
-        content: '';
-        grid-column: 1 / 3;
-        grid-row: 1 / 3;
-        background-image: var(--hero-image);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-blend-mode: screen;
-      }
+      grid-template-columns: 1fr min-content; // #1
+      grid-template-rows: 1fr minmax(min-content, 25%);
     }
 
-    .c-calltoaction {
-      --calltoaction-grid-columns: subgrid; // (2)
-
-      display: grid;
-      grid-column: 1 / 3;
-      grid-row: 1;
-      margin-block-start: $space-lg + $space-base;
-      grid-template-columns: var(--calltoaction-grid-columns);
-    }
-
-    .c-login {
-      grid-column: 2;
-      grid-row: 1 / 3;
-      margin: $space-base;
-    }
+    // This component is a child of <main>:
 
     .c-home-stats {
-      grid-column: 1 / 3;
+      align-self: center;
     }
   }
 }
 
-/* Notes:
-
-(1) This CSS variable is set in /js/random-home-image.js
-
-(2) This CSS variable gets reset to 'auto [c-login pixel width]' in /js/call-to-action.js if CSS subgrid not supported
-
-*/
+// #1: 'min-content' keyword shrinks second column to fixed width of c-login so that c-blog content can wrap without expanding column

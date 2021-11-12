@@ -6,9 +6,6 @@
 .c-home-stats {
   --icon-base-size: 4rem;
 
-  padding-inline-start: $space-base;
-  padding-inline-end: $space-base;
-
   ul {
     @include resetlist;
 

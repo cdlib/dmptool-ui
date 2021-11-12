@@ -1,0 +1,9 @@
+{{ render '@skip-nav' }}
+{{> @header }}
+<main id="maincontent">
+  <h1>Generic Page</h1>
+  {{#each faker_data}}
+    <p>{{ paragraph.lorem }}</p>
+  {{/each}}
+</main>
+{{ render '@footer' }}

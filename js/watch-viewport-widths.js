@@ -14,7 +14,7 @@ const watchViewportWidth = viewportWidth => {
 const initWatchViewportWidth = () => {
   const viewportWidth = window.matchMedia(`(min-width: ${minwidth1})`)
 
-  initNavToggle();
+  initNavToggle()
 
   // Listen on watchViewportWidth function for changes to viewportWidth:
   watchViewportWidth(viewportWidth)

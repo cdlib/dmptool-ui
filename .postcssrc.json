@@ -1,5 +1,6 @@
 {
   "plugins": {
+    "autoprefixer": true,
     "postcss-svg": {
       "dirs": "node_modules/@fortawesome/fontawesome-pro/sprites/",
       "svgo": true

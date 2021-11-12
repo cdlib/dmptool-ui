@@ -1,0 +1,18 @@
+/* Header Menu Group */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.c-headermenugroup {
+  display: flex;
+  position: relative; // to .c-headermenu
+  gap: $space-base;
+  min-inline-size: 10rem; // not too narrow if only one menu item
+}
+
+@include minwidth1 {
+
+  .c-headermenugroup {
+    justify-content: flex-end;
+  }
+}

@@ -31,6 +31,6 @@ const initAdminMenu = () => {
     // Tabbing outside of menu closes it:
     window.addEventListener('focusin', adminMenuTarget)
   }
-};
+}
 
 export default () => initAdminMenu()

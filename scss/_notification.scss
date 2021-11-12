@@ -1,53 +1,77 @@
 /* System messages: noticiations/alerts/warnings/errors */
 
-@import 'breakpoints-scss';
 @import 'variables';
+@import 'utilities';
 
-.c-notification-area,
-.c-global-notification-area {
+.c-notification--info,
+.c-notification--warning,
+.c-notification--danger {
+
+  // Default colors and icon if not set individually below:
+
+  --color-foreground: #{$color-black};
+  --color-background: #{$color-white};
+  --icon: '';
+
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
   padding: $space-sm;
-}
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 
-.c-notification-area__info {
-  background-color: $color-green;
-  color: $color-white;
-}
+  &::before {
+    content: '';
+    flex: none;
+    inline-size: 1rem;
+    block-size: 1rem;
+    mask-size: 1rem;
+    mask-position: center;
+    mask-image: var(--icon);
+    background-color: var(--color-foreground);
+  }
 
-.c-notification-area__warning {
-  background-color: $color-red;
-  color: $color-white;
-}
+  p {
+    margin: 0;
+  }
 
-.c-global-notification-area__info {
-  background-color: $color-dmp-blue-light;
-  border-color: $color-dmp-blue;
-  color: $color-dmp-blue;
-
-  /* Override the color of the notification area's close/dismiss button */
-  button[data-dismiss="alert"] {
-    color: $color-dmp-blue;
-    opacity: 1;
+  &[hidden] {
+    display: none;
   }
 }
 
-.c-global-notification-area__warning {
-  background-color: $color-yellow-light;
-  color: $color-yellow-dark;
+.c-notification__close {
+  flex: none;
+  inline-size: 1rem;
+  block-size: 1rem;
+  margin-inline-start: auto;
+  border-style: none;
+  background-color: var(--color-foreground);
+  mask: url('solid.svg#times') center / 1rem;
 
-  /* Override the color of the notification area's close/dismiss button */
-  button[data-dismiss="alert"] {
-    color: $color-yellow-dark;
-    opacity: 1;
+  // hide 'close' button text except for screen readers:
+
+  span {
+    @include hide;
   }
 }
 
-.c-global-notification-area__danger {
-  background-color: $color-pink-light;
-  color: $color-pink-dark;
+// Individual colors and icon:
 
-  /* Override the color of the notification area's close/dismiss button */
-  button[data-dismiss="alert"] {
-    color: $color-pink-dark;
-    opacity: 1;
-  }
+.c-notification--info {
+  --color-foreground: #{$color-white};
+  --color-background: #{$color-green};
+  --icon: url('solid.svg#check-circle');
+}
+
+.c-notification--warning {
+  --color-foreground: #{$color-yellow-dark};
+  --color-background: #{$color-yellow-light};
+  --icon: url('solid.svg#exclamation-circle');
+}
+
+.c-notification--danger {
+  --color-foreground: #{$color-pink-dark};
+  --color-background: #{$color-pink-light};
+  --icon: url('solid.svg#exclamation-circle');
 }
