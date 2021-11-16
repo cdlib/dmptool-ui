@@ -11,6 +11,14 @@
 
   main {
     margin-inline: $space-base;
+
+    // Override for DMPRoadmap's: 'main { margin-bottom: 100px; }'
+    margin-bottom: 10px;
+  }
+
+  // Override for DMPRoadmap `footer { margin-bottom: -20px; }`
+  footer {
+    margin-bottom: auto;
   }
 }
 
