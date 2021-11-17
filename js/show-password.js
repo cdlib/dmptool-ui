@@ -1,9 +1,8 @@
 // Show Password //
-
-const passwordField = document.querySelector('#js-password-field input')
-const checkboxToggle = document.querySelector('#js-password-toggle input')
-
 const initShowPassword = () => {
+  const passwordField = document.querySelector('#js-password-field input')
+  const checkboxToggle = document.querySelector('#js-password-toggle input')
+
   if (passwordField) {
     checkboxToggle.addEventListener('change', (e) => {
       if (checkboxToggle.checked) {

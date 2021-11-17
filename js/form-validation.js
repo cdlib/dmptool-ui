@@ -1,13 +1,13 @@
 // Form Validation //
 
-const loginForm = document.querySelector('.js-login form')
-const formErrorMessage = document.querySelector('.js-login__invalid-notification')
-const formSubmitButton = document.querySelector('.js-login button[type="submit"]')
-const textfields = document.querySelectorAll('.js-textfield')
-const checkboxes = document.querySelectorAll('.js-checkbox')
-let errorCounter = 0
-
 const initFormValidation = () => {
+  const loginForm = document.querySelector('.js-login form')
+  const formErrorMessage = document.querySelector('.js-login__invalid-notification')
+  const formSubmitButton = document.querySelector('.js-login button[type="submit"]')
+  const textfields = document.querySelectorAll('.js-textfield')
+  const checkboxes = document.querySelectorAll('.js-checkbox')
+  let errorCounter = 0
+
   if (loginForm) {
     const validateFormComponents = (formComps) => {
       loginForm.addEventListener('submit', (event) => {
