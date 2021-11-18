@@ -21,10 +21,6 @@
     border: 1px solid $color-black-light;
     line-height: 1;
   }
-
-  [value]:not([value='']) { // #2
-    background-color: $color-gray-light;
-  }
 }
 
 .c-textfield__general-description {

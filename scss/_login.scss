@@ -7,6 +7,7 @@
   flex-direction: column;
   gap: $space-base;
   inline-size: clamp(18rem, 35vw, 22rem);
+  min-height: 25rem;
   padding: $space-base;
   border: 1px solid $color-dmp-blue;
 

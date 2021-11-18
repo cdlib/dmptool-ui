@@ -1,5 +1,7 @@
 // Form Validation //
 
+import getLocalizedString from './rails-locale'
+
 const initFormValidation = () => {
   const loginForm = document.querySelector('.js-login form')
   const formErrorMessage = document.querySelector('.js-login__invalid-notification')
@@ -21,16 +23,18 @@ const initFormValidation = () => {
           const showErrors = () => {
             if (formInput.getAttribute('type') === 'email') {
               if (formInput.validity.typeMismatch) {
-                invalidMessage.textContent = 'Please enter a valid email address.'
+                // invalidMessage.textContent = 'Please enter a valid email address.'
+                invalidMessage.textContent = getLocalizedString('invalidEmail')
               }
               if (formInput.validity.valueMissing) {
-                invalidMessage.textContent = 'Please enter an email address.'
+                // invalidMessage.textContent = 'Please enter an email address.'
+                invalidMessage.textContent = getLocalizedString('blankEmail')
               }
             }
 
             if (formInput.getAttribute('type') === 'checkbox') {
               if (formInput.validity.valueMissing) {
-                invalidMessage.textContent = 'Please check this box.'
+                invalidMessage.textContent = getLocalizedString('blankCheckbox')
               }
             }
 
@@ -38,17 +42,17 @@ const initFormValidation = () => {
 
             if (formInput.getAttribute('autocomplete') === 'password') {
               if (formInput.validity.tooShort) {
-                invalidMessage.textContent = 'Please enter a password of at least 8 characters.'
+                invalidMessage.textContent = getLocalizedString('invalidPassword')
               }
               if (formInput.validity.valueMissing) {
-                invalidMessage.textContent = 'Please enter a password.'
+                invalidMessage.textContent = getLocalizedString('blankPassword')
               }
             }
 
             if (formInput.getAttribute('type') === 'text') {
               if (formInput.validity.valueMissing) {
                 const labelText = formComp.querySelector('label').textContent.toLowerCase()
-                invalidMessage.textContent = `Please complete this ${labelText} field.`
+                invalidMessage.textContent = getLocalizedString('blankField', labelText)
               }
             }
           }
@@ -59,10 +63,10 @@ const initFormValidation = () => {
             let errorNumber = 'field'
 
             if (errorCounter > 1) {
-              errorNumber = `${errorCounter} fields`
+              errorNumber = `${errorCounter}`
             }
 
-            formErrorMessage.textContent = `Please correct the ${errorNumber} below:`
+            formErrorMessage.textContent = getLocalizedString('invalidForm', errorNumber)
           }
 
           // If the input is not valid:
@@ -123,7 +127,7 @@ const initFormValidation = () => {
 
               if (errorCounter === 0) {
                 formErrorMessage.classList.add('errors-fixed')
-                formErrorMessage.textContent = 'Ready to submit:'
+                formErrorMessage.textContent = getLocalizedString('validForm')
                 formSubmitButton.setAttribute('aria-disabled', false)
               }
 
@@ -138,6 +142,12 @@ const initFormValidation = () => {
     }
     validateFormComponents(textfields)
     validateFormComponents(checkboxes)
+
+    // Rails' form helpers will not let you set the novalidate attribute, so we use
+    // a class instead and then set the attribute here
+    if (loginForm.classList.contains('novalidate')) {
+      loginForm.setAttribute('novalidate', '')
+    }
   }
 }
 
