@@ -49,6 +49,17 @@ const initFormValidation = () => {
               }
             }
 
+            // Institution autocomplete textfield
+
+            if (formInput.getAttribute('autocomplete') === 'autocomplete') {
+              const customInstitutionCheckbox = formInput.parentNode.querySelector('')
+              if (formInput.validity.valueMissing) {
+                invalidMessage.textContent = getLocalizedString('SIGN_IN_UP_BLANK_PASSWORD')
+              }
+            }
+
+            // Other text fields (excluding the institutional autocomplete whose error handling
+            // is within the DMPTool codebase app/javascript/src/utils/autcomplete.js file)
             if (formInput.getAttribute('type') === 'text') {
               if (formInput.validity.valueMissing) {
                 const labelText = formComp.querySelector('label').textContent.toLowerCase()
@@ -60,6 +71,12 @@ const initFormValidation = () => {
           // Use plural error message if error count is greater than 1:
 
           const reportErrors = () => {
+            let errorNumber = getLocalizedString('FIELD')
+
+            if (errorCounter > 1) {
+              errorNumber = `${errorCounter} ${getLocalizedString('FIELDS')}`
+            }
+
             formErrorMessage.textContent = getLocalizedString('SIGN_IN_UP_INVALID_FORM', errorCounter)
           }
 
