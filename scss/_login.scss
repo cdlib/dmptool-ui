@@ -7,7 +7,6 @@
   flex-direction: column;
   gap: $space-base;
   inline-size: clamp(18rem, 35vw, 22rem);
-  min-height: 25rem;
   padding: $space-base;
   border: 1px solid $color-dmp-blue;
 
@@ -94,12 +93,6 @@
 .c-login__footer {
   margin-block-start: auto;
   margin-inline-start: auto;
-
-  // Overrides to DMPRoadmap: `footer { margin-bottom: -20px; position: static, width: 100% }`
-  margin-bottom: auto;
-  position: inherit;
-  display: inherit;
-  width: auto
 }
 
 // #1: When the form valiation script returns invalid fields and sets the 'aria-disabled' attribute on the submit button to 'true', make the button look disabled.
