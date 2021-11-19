@@ -24,17 +24,17 @@ const initFormValidation = () => {
             if (formInput.getAttribute('type') === 'email') {
               if (formInput.validity.typeMismatch) {
                 // invalidMessage.textContent = 'Please enter a valid email address.'
-                invalidMessage.textContent = getLocalizedString('invalidEmail')
+                invalidMessage.textContent = getLocalizedString('SIGN_IN_UP_INVALID_EMAIL')
               }
               if (formInput.validity.valueMissing) {
                 // invalidMessage.textContent = 'Please enter an email address.'
-                invalidMessage.textContent = getLocalizedString('blankEmail')
+                invalidMessage.textContent = getLocalizedString('SIGN_IN_UP_BLANK_EMAIL')
               }
             }
 
             if (formInput.getAttribute('type') === 'checkbox') {
               if (formInput.validity.valueMissing) {
-                invalidMessage.textContent = getLocalizedString('blankCheckbox')
+                invalidMessage.textContent = getLocalizedString('SIGN_IN_UP_BLANK_CHECKBOX')
               }
             }
 
@@ -42,17 +42,17 @@ const initFormValidation = () => {
 
             if (formInput.getAttribute('autocomplete') === 'password') {
               if (formInput.validity.tooShort) {
-                invalidMessage.textContent = getLocalizedString('invalidPassword')
+                invalidMessage.textContent = getLocalizedString('SIGN_IN_UP_INVALID_PASSWORD')
               }
               if (formInput.validity.valueMissing) {
-                invalidMessage.textContent = getLocalizedString('blankPassword')
+                invalidMessage.textContent = getLocalizedString('SIGN_IN_UP_BLANK_PASSWORD')
               }
             }
 
             if (formInput.getAttribute('type') === 'text') {
               if (formInput.validity.valueMissing) {
                 const labelText = formComp.querySelector('label').textContent.toLowerCase()
-                invalidMessage.textContent = getLocalizedString('blankField', labelText)
+                invalidMessage.textContent = getLocalizedString('SIGN_IN_UP_BLANK_FIELD', labelText)
               }
             }
           }
@@ -60,13 +60,7 @@ const initFormValidation = () => {
           // Use plural error message if error count is greater than 1:
 
           const reportErrors = () => {
-            let errorNumber = 'field'
-
-            if (errorCounter > 1) {
-              errorNumber = `${errorCounter}`
-            }
-
-            formErrorMessage.textContent = getLocalizedString('invalidForm', errorNumber)
+            formErrorMessage.textContent = getLocalizedString('SIGN_IN_UP_INVALID_FORM', errorCounter)
           }
 
           // If the input is not valid:
@@ -127,7 +121,7 @@ const initFormValidation = () => {
 
               if (errorCounter === 0) {
                 formErrorMessage.classList.add('errors-fixed')
-                formErrorMessage.textContent = getLocalizedString('validForm')
+                formErrorMessage.textContent = getLocalizedString('SIGN_IN_UP_VALID_FORM')
                 formSubmitButton.setAttribute('aria-disabled', false)
               }
 

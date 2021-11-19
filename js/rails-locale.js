@@ -1,76 +1,66 @@
-// Function to fetch the current user's locale setting from a function defined in the
-// DMPTool's app/javascript/src/utils/getConstant.js. Rails keps track of the user's
-// locale
-const _getCurrentLocale = () => {
-  let currentLocale = 'en'
+// Provides access to localized strings
+//
+// The DMPTool Rails application keeps track of the user's locale and has built in
+// translations from 'en' to: 'de', 'en-CA', 'en-GB', 'en-US', 'es', 'fi', 'fr-CA',
+//                            'fr-FR', 'pt-BR', 'sv-FI' and 'tr-TR'
+//
+// This module returns the correct version of a string based on the current user's
+// locale. To accomplish this, we send a key and optional variable text.
+// For example:
+//
+//    getLocalizedString(blankCheckbox) -> 'Por favor, verifique esta caixa.'
+//    getLocalizedString(invalidForm, 4) -> 'Please correct the 4 fields below:'
+//
+// The list of known localization keys (along with examples) are:
+//    - SIGN_IN_UP_BLANK_CHECKBOX     'Please check this box.'
+//    - SIGN_IN_UP_BLANK_EMAIL        'Please enter an email address.'
+//    - SIGN_IN_UP_BLANK_PASSWORD     'Please enter a password.'
+//
+//    - SIGN_IN_UP_INVALID_EMAIL      'Please enter a valid email address.'
+//    - SIGN_IN_UP_INVALID_FIELD      'Please complete this %<variable_text>s field.'
+//    - SIGN_IN_UP_INVALID_FORM       'Please correct the %<variable_text>s fields below:'
+//    - SIGN_IN_UP_INVALID_PASSWORD   'Please enter a password of at least 8 characters.'
+//
+//    - SIGN_IN_UP_VALID_FORM         'Ready to submit:'
+//
+// The definitive list of available keys can be found in the following file in the
+// dmptool repo: /app/views/branded/layouts/_json_constants.html.erb
+//
 
-  // If the getConstant function is defined then fetch the current locale
-  if (typeof getConstant !== 'undefined') {
-    currentLocale = getConstant('CURRENT_LOCALE')
-    if (currentLocale.length >= 2) {
-      currentLocale = currentLocale.substring(0, 2)
-    }
-  }
-  return currentLocale
-}
-
-// JSON containing our translatable strings
-const _localizedStrings = {
-  blankCheckbox: {
-    en: 'Please check this box.',
-    pt: 'Por favor, verifique esta caixa.'
-  },
-  blankEmail: {
-    en: 'Please enter an email address.',
-    pt: 'Por favor, digite um endereço de e-mail.'
-  },
-  blankPassword: {
-    en: 'Please enter a password.',
-    pt: 'Por favor, digite uma senha.'
-  },
-  invalidEmail: {
-    en: 'Please enter a valid email address.',
-    pt: 'Por favor, insira um endereço de e-mail válido.'
-  },
-  invalidField: {
-    en: 'Please complete this ${variable_text} field.',
-    pt: 'Por favor, complete este campo ${variable_text}.'
-  },
-  invalidForm: {
-    en: 'Please correct the ${variable_text} fields below:',
-    pt: 'Por favor, corrija os campos ${variable_text} abaixo:'
-  },
-  invalidPassword: {
-    en: 'Please enter a password of at least 8 characters.',
-    pt: 'Digite uma senha de pelo menos 8 caracteres.'
-  },
-  validForm: {
-    en: 'Ready to submit:',
-    pt: 'Pronto para enviar:'
-  },
+// Some defaults so that things display on the dmptool-ui pages
+const _defaultStrings = {
+  SIGN_IN_UP_BLANK_CHECKBOX: 'Please check this box.',
+  SIGN_IN_UP_BLANK_EMAIL: 'Please enter an email address.',
+  SIGN_IN_UP_BLANK_PASSWORD: 'Please enter a password.',
+  SIGN_IN_UP_INVALID_EMAIL: 'Please enter a valid email address.',
+  SIGN_IN_UP_INVALID_FIELD: 'Please complete this %<variable_text>s field.',
+  SIGN_IN_UP_INVALID_FORM: 'Please correct the %<variable_text>s fields below:',
+  SIGN_IN_UP_INVALID_PASSWORD: 'Please enter a password of at least 8 characters.',
+  SIGN_IN_UP_VALID_FORM: 'Ready to submit:'
 }
 
 // Function that takes in a key from the _localizedStrings JSON object above
 // and returns the correct translation for the user's current locale
 export default function getLocalizedString(key, variable_text) {
-  const locale = _getCurrentLocale()
+  let string = 'Undefined String'
 
-  if (locale && key) {
-    if (_localizedStrings.hasOwnProperty(key) && _localizedStrings[key].hasOwnProperty(locale)) {
-      console.log(`LOCALE IS: ${locale} -- ${key}`)
-      console.log(_localizedStrings[key])
-
-      const localizedString = _localizedStrings[key][locale]
-
-      if (localizedString.includes('${variable_text}') && variable_text) {
-        return localizedString.replace('${variable_text}', variable_text)
-      } else {
-        return localizedString
-      }
-    } else {
-      return `Unable to find translation of '${key}' for the '${locale}' locale`
+  // getConstant is defined in the DMPTool Rails application in
+  // the /app/javascript/utils/getConstant.js file
+  if (key && (typeof getConstant !== 'undefined')) {
+    localizedString = getConstant(key)
+    if (localizedString) {
+      string = localizedString
     }
   } else {
-    return 'Unable to translate string!';
+    // getConstant was not defined or no key was specified
+    string = _defaultStrings.hasOwnProperty(key) ? _defaultStrings[key] : 'Undefined String';
+  }
+
+  // If variable_text was specified and the string has a placeholder for it, then
+  // swap in the variable_text
+  if (string.includes('%<variable_text>s') && variable_text) {
+    return string.replace('%<variable_text>s', variable_text)
+  } else {
+    return string
   }
 }
