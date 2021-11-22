@@ -12,4 +12,3 @@ cp dist/ui-assets/SourceSans3VF-Italic.ttf.*.woff2 ../dmptool/app/assets/fonts/S
 cp dist/ui-assets/SourceSans3VF-Italic.ttf.*.woff ../dmptool/app/assets/fonts/SourceSans3VF-Italic.ttf.woff
 cp dist/ui-assets/SourceSans3VF-Roman.ttf.*.woff2 ../dmptool/app/assets/fonts/SourceSans3VF-Roman.ttf.woff2
 cp dist/ui-assets/SourceSans3VF-Roman.ttf.*.woff ../dmptool/app/assets/fonts/SourceSans3VF-Roman.ttf.woff
-
