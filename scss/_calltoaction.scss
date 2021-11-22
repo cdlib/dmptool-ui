@@ -4,7 +4,6 @@
 @import 'variables';
 
 .c-calltoaction {
-
   h1 {
     margin-block: 0;
     padding: $space-base $space-lg;
@@ -23,6 +22,7 @@
     display: flex;
     position: relative;
     flex-direction: column;
+    min-height: 450px;
     background-color: $color-white;
 
     h1 {
@@ -41,7 +41,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      filter: opacity(40%);
+      filter: opacity(90%);
     }
   }
 }
