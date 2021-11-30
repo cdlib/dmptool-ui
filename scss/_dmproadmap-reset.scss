@@ -1,0 +1,18 @@
+/* DMP Roadmap Reset */
+
+/*
+This resets the following global styles introduced within /ui-assets/dmproadmap.css, which simulates the real-world context of integrating this UI with DMPRoadmap's styles.
+
+Please read comments in dmproadmap.scss for more information.
+*/
+
+body,
+html,
+main,
+footer,
+fieldset,
+legend,
+a {
+  all: unset;
+  display: revert;
+}
