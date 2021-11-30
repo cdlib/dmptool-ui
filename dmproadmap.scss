@@ -1,0 +1,16 @@
+/* DMP Roadmap Styles */
+
+// This imports the following stylesheets used in DMPRoadmap:
+
+@import 'node_modules/DMPRoadmap/app/assets/stylesheets/variables/colours';
+@import 'node_modules/DMPRoadmap/app/assets/stylesheets/blocks/html';
+
+/*
+These styles are compliled by Parcel during the serve and build processes into /ui-assets/dmproadmap.css.
+
+The dmproadmap.css stylesheet is linked within the <head> of the template files in this UI (e.g. _template-home.hbs) before the main.css stylesheet.
+
+On page load, these templates will load the dmproadmap.css stylesheet first, then the main.css stylesheet, which contains a reset of the dmproadmap.css styles to fix global styles from there affecting styling in main.css.
+
+This simulates the real-world context of this UI integrated within DMPRoadmap, where the main.css stylesheet containing the DMPRoadmap style resets will be loaded after the DMPRoadmap styles.
+*/
