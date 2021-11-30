@@ -93,7 +93,7 @@
     <p class="c-login__required-field js-login__required-field" hidden>required field</p>
   </header>
   <p role="alert" class="c-login__invalid-notification js-login__invalid-notification" hidden></p>
-  <form action="" novalidate>
+  <form action="" class="novalidate">
     <div id="login-email" class="c-textfield js-textfield ">
       <label for="email_1">Email address </label>
       <input
@@ -106,7 +106,7 @@
         minlength=""
         maxlength=""
         aria-describedby="description_1"
-        required
+        class="required"
         >
         <div id="description_1" class="c-textfield__general-description">For SSO, use institutional address.</div>
         <div id="" class="c-textfield__invalid-description js-invalid-description" hidden></div>
