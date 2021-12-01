@@ -15,6 +15,7 @@ module.exports = {
       general_description: 'More info about this field.',
       general_description_id: 'id-3', // #2
       required: true, // #3
+      readonly: false,
       invalid_description: 'This field is required.',
       invalid_description_id: 'id-4' // #4
     }
