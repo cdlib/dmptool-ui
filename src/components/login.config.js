@@ -31,6 +31,7 @@ module.exports = {
           type: 'email',
           autocomplete: 'email',
           required: false,
+          readonly: true,
           value: faker.internet.exampleEmail(),
           general_description_id: false
         },
@@ -53,6 +54,7 @@ module.exports = {
           type: 'email',
           autocomplete: 'email',
           required: false,
+          readonly: true,
           value: faker.internet.exampleEmail(),
           general_description_id: false
         },
@@ -75,6 +77,7 @@ module.exports = {
             label: 'Email address',
             type: 'email',
             autocomplete: 'email',
+            readonly: true,
             value: faker.internet.exampleEmail()
           }
         },
@@ -108,6 +111,7 @@ module.exports = {
             type: 'email',
             name: 'email',
             autocomplete: 'email',
+            readonly: true,
             value: faker.internet.exampleEmail(),
           }
         },

@@ -22,7 +22,9 @@
     line-height: 1;
   }
 
-  input:disabled {
+  // 'read-only' state:
+
+  input[aria-disabled='true']:read-only { // #2
     background-color: $color-gray-light;
   }
 }
@@ -69,4 +71,4 @@
 
 // #1: Select if <em> text is added as a sub-label within <label>.
 
-// #2: Select if <input> value doesn't contain an empty string.
+// #2: Select if <input> value contains the 'readonly' attribute to make it not editable, and the 'aria-disabled="true" attribute to indicate to screen readers that it's disabled.
