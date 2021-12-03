@@ -29,12 +29,14 @@
 
 // Some defaults so that things display on the dmptool-ui pages
 const _defaultStrings = {
+  SIGN_IN_UP_FIELD: 'field',
+  SIGN_IN_UP_FIELDS: 'fields',
   SIGN_IN_UP_BLANK_CHECKBOX: 'Please check this box.',
   SIGN_IN_UP_BLANK_EMAIL: 'Please enter an email address.',
   SIGN_IN_UP_BLANK_PASSWORD: 'Please enter a password.',
   SIGN_IN_UP_INVALID_EMAIL: 'Please enter a valid email address.',
   SIGN_IN_UP_INVALID_FIELD: 'Please complete this %<variable_text>s field.',
-  SIGN_IN_UP_INVALID_FORM: 'Please correct the %<variable_text>s fields below:',
+  SIGN_IN_UP_INVALID_FORM: 'Please correct the %<variable_text>s below:',
   SIGN_IN_UP_INVALID_PASSWORD: 'Please enter a password of at least 8 characters.',
   SIGN_IN_UP_VALID_FORM: 'Ready to submit:'
 }
