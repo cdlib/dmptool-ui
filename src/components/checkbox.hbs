@@ -6,7 +6,7 @@
     value="{{ checkbox.value }}"
     aria-describedby="{{ checkbox.general_description_id }}
     {{#if checkbox.invalid_description_id }}{{ checkbox.invalid_description_id }}{{/if}}"
-    {{#if checkbox.required}}class="required"{{/if}}>
+    {{#if checkbox.required}}class="require-me"{{/if}}>
   <label for="{{ checkbox.input_id }}">{{ checkbox.label }}</label>
   {{#if checkbox.general_description_id}}
     <div id="{{ checkbox.general_description_id }}" class="c-checkbox__general-description">{{ checkbox.general_description }}</div>
