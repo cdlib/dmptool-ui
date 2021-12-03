@@ -63,7 +63,7 @@ const initFormValidation = () => {
             if (formInput.getAttribute('type') === 'text') {
               if (formInput.validity.valueMissing) {
                 const labelText = formComp.querySelector('label').textContent.toLowerCase()
-                invalidMessage.textContent = getLocalizedString('SIGN_IN_UP_BLANK_FIELD', labelText)
+                invalidMessage.textContent = getLocalizedString('SIGN_IN_UP_INVALID_FIELD', labelText)
               }
             }
           }
@@ -71,13 +71,13 @@ const initFormValidation = () => {
           // Use plural error message if error count is greater than 1:
 
           const reportErrors = () => {
-            let errorNumber = getLocalizedString('FIELD')
+            let errorNumber = getLocalizedString('SIGN_IN_UP_FIELD')
 
             if (errorCounter > 1) {
-              errorNumber = `${errorCounter} ${getLocalizedString('FIELDS')}`
+              errorNumber = `${errorCounter} ${getLocalizedString('SIGN_IN_UP_FIELDS')}`
             }
 
-            formErrorMessage.textContent = getLocalizedString('SIGN_IN_UP_INVALID_FORM', errorCounter)
+            formErrorMessage.textContent = getLocalizedString('SIGN_IN_UP_INVALID_FORM', errorNumber)
           }
 
           // If the input is not valid:
