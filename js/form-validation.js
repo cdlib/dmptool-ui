@@ -52,7 +52,6 @@ const initFormValidation = () => {
             // Institution autocomplete textfield
 
             if (formInput.getAttribute('autocomplete') === 'autocomplete') {
-              const customInstitutionCheckbox = formInput.parentNode.querySelector('')
               if (formInput.validity.valueMissing) {
                 invalidMessage.textContent = getLocalizedString('SIGN_IN_UP_BLANK_PASSWORD')
               }

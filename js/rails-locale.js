@@ -17,8 +17,8 @@
 //    - SIGN_IN_UP_BLANK_PASSWORD     'Please enter a password.'
 //
 //    - SIGN_IN_UP_INVALID_EMAIL      'Please enter a valid email address.'
-//    - SIGN_IN_UP_INVALID_FIELD      'Please complete this %<variable_text>s field.'
-//    - SIGN_IN_UP_INVALID_FORM       'Please correct the %<variable_text>s fields below:'
+//    - SIGN_IN_UP_INVALID_FIELD      'Please complete this %<variableText>s field.'
+//    - SIGN_IN_UP_INVALID_FORM       'Please correct the %<variableText>s fields below:'
 //    - SIGN_IN_UP_INVALID_PASSWORD   'Please enter a password of at least 8 characters.'
 //
 //    - SIGN_IN_UP_VALID_FORM         'Ready to submit:'
@@ -35,33 +35,34 @@ const _defaultStrings = {
   SIGN_IN_UP_BLANK_EMAIL: 'Please enter an email address.',
   SIGN_IN_UP_BLANK_PASSWORD: 'Please enter a password.',
   SIGN_IN_UP_INVALID_EMAIL: 'Please enter a valid email address.',
-  SIGN_IN_UP_INVALID_FIELD: 'Please complete this %<variable_text>s field.',
-  SIGN_IN_UP_INVALID_FORM: 'Please correct the %<variable_text>s below:',
+  SIGN_IN_UP_INVALID_FIELD: 'Please complete this %<variableText>s field.',
+  SIGN_IN_UP_INVALID_FORM: 'Please correct the %<variableText>s below:',
   SIGN_IN_UP_INVALID_PASSWORD: 'Please enter a password of at least 8 characters.',
   SIGN_IN_UP_VALID_FORM: 'Ready to submit:'
 }
 
 // Function that takes in a key from the _localizedStrings JSON object above
 // and returns the correct translation for the user's current locale
-export default function getLocalizedString(key, variable_text) {
+export default function getLocalizedString (key, variableText) {
+  let localizedString = ''
   let string = 'Undefined String'
 
   // getConstant is defined in the DMPTool Rails application in
   // the /app/javascript/utils/getConstant.js file
   if (key && (typeof getConstant !== 'undefined')) {
-    localizedString = getConstant(key)
+    localizedString = getConstant(key) // eslint-disable-line no-undef
     if (localizedString) {
       string = localizedString
     }
   } else {
     // getConstant was not defined or no key was specified
-    string = _defaultStrings.hasOwnProperty(key) ? _defaultStrings[key] : 'Undefined String';
+    string = Object.prototype.hasOwnProperty.call(_defaultStrings, 'key') ? _defaultStrings[key] : 'Undefined String'
   }
 
-  // If variable_text was specified and the string has a placeholder for it, then
-  // swap in the variable_text
-  if (string.includes('%<variable_text>s') && variable_text) {
-    return string.replace('%<variable_text>s', variable_text)
+  // If variableText was specified and the string has a placeholder for it, then
+  // swap in the variableText
+  if (string.includes('%<variableText>s') && variableText) {
+    return string.replace('%<variableText>s', variableText)
   } else {
     return string
   }

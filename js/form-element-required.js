@@ -9,7 +9,7 @@ const initFormElRequired = () => {
 
   const requiredFormElements = (formEls) => {
     for (const formEl of formEls) {
-      const input = formEl.querySelector('input');
+      const input = formEl.querySelector('input')
 
       if (input.classList.contains('require-me')) {
         input.setAttribute('required', '')
