@@ -56,7 +56,7 @@ export default function getLocalizedString (key, variableText) {
     }
   } else {
     // getConstant was not defined or no key was specified
-    string = Object.prototype.hasOwnProperty.call(_defaultStrings, 'key') ? _defaultStrings[key] : 'Undefined String'
+    string = _defaultStrings.hasOwnProperty(key) ? _defaultStrings[key] : 'Undefined String' // eslint-disable-line no-prototype-builtins
   }
 
   // If variableText was specified and the string has a placeholder for it, then
