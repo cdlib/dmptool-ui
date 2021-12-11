@@ -1,0 +1,40 @@
+/* Search Component */
+
+@import 'variables';
+
+.c-search {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  > button {
+    align-self: flex-start;
+  }
+}
+
+.c-search-form {
+  display: flex;
+  align-items: center;
+
+  input {
+    flex: 1;
+    padding: 0.3rem;
+    min-inline-size: 0; // overrides browser default
+    border: 1px solid $color-black-light;
+    line-height: 1;
+  }
+
+  button {
+    flex: none;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    margin-inline-start: $space-sm;
+    mask: url('solid.svg#search') no-repeat center / contain;
+  }
+}
