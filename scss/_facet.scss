@@ -1,0 +1,91 @@
+/* Facet Component */
+
+@import 'variables';
+@import 'utilities';
+
+.c-facet {
+  // empty
+}
+
+.c-facet header {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: $space-sm;
+  padding: $space-sm $space-sm $space-sm 0;
+  border-block-end: 1px solid $color-dmp-blue;
+
+  h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+// Facet toggle button:
+
+.c-facet__toggle-list {
+  inline-size: 1rem;
+  block-size: 1rem;
+  border-style: none;
+  background-color: $color-dmp-blue;
+  mask-size: 1rem;
+  mask-position: center;
+
+  &[aria-expanded='false'] {
+    mask-image: url('solid.svg#plus');
+  }
+
+  &[aria-expanded='true'] {
+    mask-image: url('solid.svg#minus');
+  }
+}
+
+// Facet list:
+
+.c-facet__list {
+  @include resetlist;
+
+  display: flex;
+  flex-direction: column;
+  gap: $space-base;
+  max-block-size: 15rem;
+  padding-inline: $space-sm;
+  overflow-y: auto;
+
+  &[hidden] {
+    display: none;
+  }
+
+  // hide actual input but not from screen readers:
+
+  input {
+    @include hide;
+  }
+
+  label {
+    display: flex;
+    gap: $space-sm;
+  }
+
+  // create simulated input box using label's pseudo element:
+
+  label::before {
+    content: '';
+    flex: none;
+    inline-size: 1rem;
+    block-size: 1rem;
+    border: 1px solid $color-black-light;
+  }
+
+  // if input is checked, add a 'check' icon to the label's pseudo element:
+
+  input:checked + label::before {
+    background-color: $color-dmp-blue;
+    mask: url('solid.svg#check-square') center / 1rem;
+  }
+}
+
+.c-facet__item-total {
+  flex: none;
+  margin-inline-start: auto;
+}
