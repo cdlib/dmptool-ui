@@ -180,7 +180,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-f5a098608281f3e125765b1f45979b80-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-plan-creator&quot;</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">plan_creator</span> }}</span><span class="xml">, </span><span class="hljs-template-variable">{{ <span class="hljs-name">plan_institution</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-plan-creator&quot;</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">plan.creator</span> }}</span><span class="xml">, </span><span class="hljs-template-variable">{{ <span class="hljs-name">plan.institution</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -190,8 +190,10 @@
         
             
             <pre>{
-  <span class="hljs-attr">&quot;plan_creator&quot;</span>: <span class="hljs-string">&quot;Debora Gusmão Melo&quot;</span>,
-  <span class="hljs-attr">&quot;plan_institution&quot;</span>: <span class="hljs-string">&quot;Universidade Federal de São Carlos (UFSCar)&quot;</span>
+  <span class="hljs-attr">&quot;plan&quot;</span>: {
+    <span class="hljs-attr">&quot;creator&quot;</span>: <span class="hljs-string">&quot;Debora Gusmão Melo&quot;</span>,
+    <span class="hljs-attr">&quot;institution&quot;</span>: <span class="hljs-string">&quot;Universidade Federal de São Carlos (UFSCar)&quot;</span>
+  }
 }</pre>
             
         
@@ -1768,7 +1770,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-22T18:29:50.901Z">
+                            <time datetime="2021-12-22T22:38:45.798Z">
                                 12/22/2021
                             </time>
                         
