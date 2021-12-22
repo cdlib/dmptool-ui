@@ -181,14 +181,22 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-7f7d1f50720801a54410830ec81ff886-panel-view">
     <code class="Code Code--lang-handlebars hljs">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;c-plan-metadata&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>DMP ID:<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">plan_metadata.id</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Subject:<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">plan_metadata.subject</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Last Modified:<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">plan_metadata.modified</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Language:<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">plan_metadata.language</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> plan_metadata.id}}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>DMP ID:<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">plan_metadata.id</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+  </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> plan_metadata.subject}}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Subject:<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">plan_metadata.subject</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+  </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> plan_metadata.modified}}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Last Modified:<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">plan_metadata.modified</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+  </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> plan_metadata.language}}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Language:<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">plan_metadata.language</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -1790,8 +1798,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2021-12-22T00:30:23.158Z">
-                                12/21/2021
+                            <time datetime="2021-12-22T18:24:27.326Z">
+                                12/22/2021
                             </time>
                         
                     </dd>
