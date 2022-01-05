@@ -11,16 +11,24 @@
     <link rel="stylesheet" href="../../ui-assets/main.css">
   </head>
   <body class="t-tests">
-    <nav class="c-pagination">
+    
+<nav class="c-pagination" aria-label="Pagination">
+  <a href="" aria-label="View all pages">View All</a>
   <ul>
-    <li class="c-pagination__view-all"><a href="">View All</a></li>
-    <li><a href="">1</a></li>
-    <li><a href="">2</a></li>
-    <li><a href="">3</a></li>
-    <li><a href="">4</a></li>
-    <li><a href="">5</a></li>
-    <li><a rel="next" href="">Next &gt;</a></li>
-    <li><a href="">Last &gt;&gt;</a></li>
+    <li><a href="" aria-label="First Page">First</a></li>
+    <li><a rel="prev" href="" aria-label="Previous Page">Previous</a></li>
+    <li><a href="" aria-label="Page 1">1</a></li>
+    <li><a href="" aria-label="Page 2">2</a></li>
+    <li><a href="" aria-label="Page 3">3</a></li>
+    <li><a href="" aria-label="Page 4">4</a></li>
+    <li><a href="" aria-label="Page 5" aria-current="page">5</a></li>
+    <li><a href="" aria-label="Page 6">6</a></li>
+    <li><a href="" aria-label="Page 7">7</a></li>
+    <li><a href="" aria-label="Page 8">8</a></li>
+    <li><a href="" aria-label="Page 9">9</a></li>
+    <li class="c-pagination__overflow">&hellip;</li>
+    <li><a rel="next" href="" aria-label="Next Page">Next</a></li>
+    <li><a href="" aria-label="Last Page">Last</a></li>
   </ul>
 </nav>
 
