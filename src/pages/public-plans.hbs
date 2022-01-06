@@ -1,0 +1,32 @@
+{{ render '@skip-nav' }}
+{{> @header }}
+<aside class="t-publicplans__intro" aria-label="About public plans">
+  <h1>Public Plans</h1>
+  <p>Public plans are plans created using the DMPTool and shared publicly by their owners.</p>
+  <p><strong>Featured</strong> plans have been vetted by curators for quality, completeness, and adherence to funder guidelines.</p>
+  <p>Plans labeled <strong>Funded</strong> are associated with grants that have been reported as funded through our <a href="">machine-actionable DMP project</a>. Many plans associated with successfully funded grants do not have the label.</p>
+</aside>
+<aside class="t-publicplans__plans" aria-labelledby="plans-heading">
+  <div class="t-publicplans__section-header">
+    <h2 id="plans-heading">Find a plan&hellip;</h2>
+  </div>
+  <form id="plan-form" method="post" action="https://www.hashemian.com/tools/form-post-tester.php/dmptool123">
+    {{ render '@search' }}
+    {{ render '@facet--funder' }}
+    {{ render '@facet--institution' }}
+    {{ render '@facet--language' }}
+    {{ render '@facet--subject' }}
+    {{ render '@clear-filters' }}
+  </form>
+</aside>
+<main id="maincontent">
+  <div class="t-publicplans__section-header">
+    <h2>Plans (10)</h2>
+    {{> @sort }}
+  </div>
+  {{#each plan_item}}
+    {{> @plan }}
+  {{/each}}
+  {{ render '@pagination' }}
+</main>
+{{ render '@footer' }}
