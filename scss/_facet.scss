@@ -4,7 +4,18 @@
 @import 'utilities';
 
 .c-facet {
-  // empty
+
+  ul {
+    @include resetlist;
+
+    display: flex;
+    flex-direction: column;
+    gap: $space-base;
+  }
+
+  > ul {
+    padding-inline: $space-sm;
+  }
 }
 
 .c-facet header {
@@ -43,14 +54,6 @@
 // Facet list:
 
 .c-facet__list {
-  @include resetlist;
-
-  display: flex;
-  flex-direction: column;
-  gap: $space-base;
-  max-block-size: 15rem;
-  padding-inline: $space-sm;
-  overflow-y: auto;
 
   &[hidden] {
     display: none;
@@ -89,3 +92,5 @@
   flex: none;
   margin-inline-start: auto;
 }
+
+// #1: Removes the default triangle icon.

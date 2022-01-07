@@ -1,8 +1,13 @@
 const faker = require('faker/locale/en')
 const funderItems = []
+const funderItemsMore = []
 const institutionItems = []
+const institutionItemsMore = []
 const languageItems = []
+const languageItemsMore = []
 const subjectItems = []
+const subjectItemsMore = []
+const initialItems = 5
 
 // Sample facet data:
 
@@ -17,43 +22,83 @@ const languageDataTotal = Object.keys(languageData).length
 const subjectDataTotal = Object.keys(subjectData).length
 
 for (let i = 0; i < funderDataTotal; i++) {
-  funderItems.push({
-    facet: {
-      itemnumber: faker.datatype.number(10000),
-      itemlabel: funderData[i],
-      itemtotal: faker.datatype.number(1000)
-    }
-  })
+  if (i < initialItems) {
+    funderItems.push({
+      facet: {
+        itemnumber: faker.datatype.number(10000),
+        itemlabel: funderData[i],
+        itemtotal: faker.datatype.number(1000)
+      }
+    })
+  } else {
+    funderItemsMore.push({
+      facet: {
+        itemnumber: faker.datatype.number(10000),
+        itemlabel: funderData[i],
+        itemtotal: faker.datatype.number(1000)
+      }
+    })
+  }
 }
 
 for (let i = 0; i < institutionDataTotal; i++) {
-  institutionItems.push({
-    facet: {
-      itemnumber: faker.datatype.number(10000),
-      itemlabel: institutionData[i],
-      itemtotal: faker.datatype.number(1000)
-    }
-  })
+  if (i < initialItems) {
+    institutionItems.push({
+      facet: {
+        itemnumber: faker.datatype.number(10000),
+        itemlabel: institutionData[i],
+        itemtotal: faker.datatype.number(1000)
+      }
+    })
+  } else {
+    institutionItemsMore.push({
+      facet: {
+        itemnumber: faker.datatype.number(10000),
+        itemlabel: institutionData[i],
+        itemtotal: faker.datatype.number(1000)
+      }
+    })
+  }
 }
 
 for (let i = 0; i < languageDataTotal; i++) {
-  languageItems.push({
-    facet: {
-      itemnumber: faker.datatype.number(10000),
-      itemlabel: languageData[i],
-      itemtotal: faker.datatype.number(1000)
-    }
-  })
+  if (i < initialItems) {
+    languageItems.push({
+      facet: {
+        itemnumber: faker.datatype.number(10000),
+        itemlabel: languageData[i],
+        itemtotal: faker.datatype.number(1000)
+      }
+    })
+  } else {
+    languageItemsMore.push({
+      facet: {
+        itemnumber: faker.datatype.number(10000),
+        itemlabel: languageData[i],
+        itemtotal: faker.datatype.number(1000)
+      }
+    })
+  }
 }
 
 for (let i = 0; i < subjectDataTotal; i++) {
-  subjectItems.push({
-    facet: {
-      itemnumber: faker.datatype.number(10000),
-      itemlabel: subjectData[i],
-      itemtotal: faker.datatype.number(1000)
-    }
-  })
+  if (i < initialItems) {
+    subjectItems.push({
+      facet: {
+        itemnumber: faker.datatype.number(10000),
+        itemlabel: subjectData[i],
+        itemtotal: faker.datatype.number(1000)
+      }
+    })
+  } else {
+    subjectItemsMore.push({
+      facet: {
+        itemnumber: faker.datatype.number(10000),
+        itemlabel: subjectData[i],
+        itemtotal: faker.datatype.number(1000)
+      }
+    })
+  }
 }
 
 module.exports = {
@@ -64,7 +109,8 @@ module.exports = {
     facet: {
       total: funderDataTotal
     },
-    facet_items: funderItems
+    facet_items: funderItems,
+    facet_items_more: funderItemsMore
   },
   variants: [
     {
@@ -73,7 +119,8 @@ module.exports = {
         facet: {
           total: institutionDataTotal
         },
-      facet_items: institutionItems
+      facet_items: institutionItems,
+      facet_items_more: institutionItemsMore
       }
     },
     {
@@ -82,7 +129,8 @@ module.exports = {
         facet: {
           total: languageDataTotal
         },
-      facet_items: languageItems
+      facet_items: languageItems,
+      facet_items_more: languageItemsMore
       }
     },
     {
@@ -91,7 +139,8 @@ module.exports = {
         facet: {
           total: subjectDataTotal
         },
-      facet_items: subjectItems
+      facet_items: subjectItems,
+      facet_items_more: subjectItemsMore
       }
     }
   ]

@@ -7,5 +7,17 @@
   {{#each facet_items}}
     <li><input id="facet-item-{{facet.itemnumber}}" type="checkbox" name="subject" value="{{facet.itemlabel}}"><label for="facet-item-{{facet.itemnumber}}">{{facet.itemlabel}} <span class="c-facet__item-total js-facet__item-total">({{facet.itemtotal}})</span></label></li>
   {{/each}}
+  {{#if facet_items_more }}
+    <li>
+      <details class="c-more">
+        <summary>Show more</summary>
+        <ul>
+        {{#each facet_items_more}}
+          <li><input id="facet-item-{{facet.itemnumber}}" type="checkbox" name="subject" value="{{facet.itemlabel}}"><label for="facet-item-{{facet.itemnumber}}">{{facet.itemlabel}} <span class="c-facet__item-total js-facet__item-total">({{facet.itemtotal}})</span></label></li>
+        {{/each}}
+        </ul>
+      </details>
+    </li>
+  {{/if}}
   </ul>
 </section>
