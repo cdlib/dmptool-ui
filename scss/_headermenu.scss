@@ -22,10 +22,11 @@
 
   &::after {
     content: '';
-    width: 1rem;
-    height: 1rem;
+    inline-size: 0.8rem;
+    block-size: 0.8rem;
     margin-inline-start: $space-sm;
-    background: url('solid.svg#caret-down' param(--color $color-dmp-blue)) center / 0.8rem no-repeat;
+    background-color: $color-dmp-blue;
+    mask: url('solid.svg#caret-down') center / 0.8rem;
   }
 
   &[aria-expanded='true'] {

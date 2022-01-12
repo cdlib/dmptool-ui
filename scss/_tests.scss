@@ -35,11 +35,11 @@
     }
   }
 
-  // Tests for CSS background-image with SVGs. Confirm that postcss-svg is parsing a Font Awesome SVG sprite fragment and setting the fill color to green:
+  // Tests for CSS mask with SVGs. Confirm that postcss-svg is parsing a Font Awesome SVG sprite fragment:
 
   .c-tests4 {
     height: 10rem;
-    background-image: url('regular.svg#address-card' param(--color hsl(120, 100%, 25%)));
-    background-repeat: no-repeat;
+    background-color: $color-green;
+    mask: url('regular.svg#address-card') left / contain no-repeat;
   }
 }

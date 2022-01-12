@@ -9,24 +9,27 @@
   display: flex;
   flex-direction: column;
   gap: $space-sm;
+}
 
-  // all org links:
+.c-links-org__ucop,
+.c-links-org__uc3-helpdesk {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
 
-  a {
-    display: inline-block;
-    padding-inline-start: 1.1rem;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 0.8rem;
+  &::before {
+    content: '';
+    inline-size: 0.8rem;
+    block-size: 0.8rem;
+    background-color: $color-dmp-blue;
+    mask: var(--icon-source) center / 0.8rem;
   }
 }
 
-// specific org links:
-
 .c-links-org__ucop {
-  background-image: url('solid.svg#globe' param(--color $color-dmp-blue));
+  --icon-source: url('solid.svg#globe');
 }
 
 .c-links-org__uc3-helpdesk {
-  background-image: url('solid.svg#envelope' param(--color $color-dmp-blue));
+  --icon-source: url('solid.svg#envelope');
 }
