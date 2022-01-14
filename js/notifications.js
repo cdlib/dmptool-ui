@@ -7,7 +7,7 @@ const notifDanger = document.querySelector('#js-notification-danger')
 const initNotifications = () => {
   const notification = notifType => {
     if (notifType) {
-      const notifClose = notifType.querySelector('#js-notification-close')
+      const notifClose = notifType.querySelector('.js-notification-close')
       notifClose.addEventListener('click', () => {
         notifType.hidden = true
       })

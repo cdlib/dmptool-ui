@@ -1,0 +1,8 @@
+<ul class="c-taggroup">
+  {{#if plan.featured}}
+    <li>{{ render '@tag--featured' }}</li>
+  {{/if}}
+  {{#if plan.funded}}
+    <li>{{ render '@tag--funded' }}</li>
+  {{/if}}
+</ul>

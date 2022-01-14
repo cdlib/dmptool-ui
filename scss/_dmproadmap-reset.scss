@@ -1,4 +1,4 @@
-/* DMP Roadmap Reset */
+/* DMP Roadmap Resets */
 
 /*
 This resets the following global styles introduced within /ui-assets/dmproadmap.css, which simulates the real-world context of integrating this UI with DMPRoadmap's styles.
@@ -15,4 +15,13 @@ legend,
 a {
   all: unset;
   display: revert;
+}
+
+// Font Awesome resets:
+
+.fab:not(.small),
+.far:not(.small),
+.fas:not(.small) {
+  color: inherit;
+  font-size: inherit;
 }

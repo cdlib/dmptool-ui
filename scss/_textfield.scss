@@ -24,7 +24,7 @@
 
   // 'read-only' state:
 
-  input[aria-disabled='true']:read-only { // #2
+  [aria-disabled='true']:read-only { // #2
     background-color: $color-gray-light;
   }
 }

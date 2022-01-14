@@ -2,29 +2,38 @@
 
 @import 'variables';
 
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors */
+
 table {
-  border: none;
+  border-style: none;
 
   thead th {
     background-color: $color-dmp-blue;
     color: $color-white;
 
-    .fas, .fas:not(.small) {
+    .fas,
+    .fas:not(.small) {
       color: $color-white;
     }
   }
 
-  tbody tr:nth-child(even){
+  tbody tr:nth-child(even) {
     background-color: $color-gray-light;
   }
+}
 
-  .table-hover tbody tr:hover td,
-  .table-hover tbody tr:hover th {
+.table-hover tbody tr:hover {
+
+  td,
+  th {
     background-color: $color-gray-medium;
   }
 }
 
+/* stylelint-enable */
+
 /* This would ideally be something like .c-searchbox but we must match the DMPRoadmap selector */
-#search-addon .fa-search {
+
+#search-addon .fa-search { /* stylelint-disable-line selector-max-id */
   color: $color-white;
 }

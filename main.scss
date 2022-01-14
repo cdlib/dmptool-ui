@@ -17,7 +17,9 @@
 @use 'scss/button';
 @use 'scss/calltoaction';
 @use 'scss/checkbox';
+@use 'scss/clear';
 @use 'scss/copyright';
+@use 'scss/facet';
 @use 'scss/footer';
 @use 'scss/footernav';
 @use 'scss/header';
@@ -31,14 +33,24 @@
 @use 'scss/logo-cdl';
 @use 'scss/logo-dmptool';
 @use 'scss/logo-org';
+@use 'scss/more';
 @use 'scss/navtoggle';
 @use 'scss/notification';
 @use 'scss/notificationgroup';
+@use 'scss/pagination';
+@use 'scss/plan';
+@use 'scss/plan-metadata';
+@use 'scss/plan-organization';
+@use 'scss/plan-title';
+@use 'scss/search';
 @use 'scss/signin';
 @use 'scss/serialnav';
 @use 'scss/skipnav';
+@use 'scss/sort';
 @use 'scss/social';
 @use 'scss/subheader';
+@use 'scss/tag';
+@use 'scss/taggroup';
 @use 'scss/tables';
 @use 'scss/textfield';
 
@@ -46,4 +58,5 @@
 
 @use 'scss/generic';
 @use 'scss/home';
+@use 'scss/publicplans';
 @use 'scss/tests';

@@ -1,0 +1,18 @@
+<dl class="c-plan-metadata">
+  {{#if plan.metadata.id_link}}
+    <dt>DMP ID:</dt>
+    <dd><a href="{{ plan.metadata.id_link }}">{{ plan.metadata.id_display }}</a></dd>
+  {{/if}}
+  {{#if plan.metadata.subject}}
+    <dt>Subject:</dt>
+    <dd>{{ plan.metadata.subject }}</dd>
+  {{/if}}
+  {{#if plan.metadata.modified}}
+    <dt>Last Modified:</dt>
+    <dd>{{ plan.metadata.modified }}</dd>
+  {{/if}}
+  {{#if plan.metadata.language}}
+    <dt>Language:</dt>
+    <dd>{{ plan.metadata.language }}</dd>
+  {{/if}}
+</dl>

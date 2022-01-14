@@ -1,0 +1,24 @@
+/* Plan Metadata Component */
+
+@import 'variables';
+
+.c-plan-metadata {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  margin: 0;
+  gap: $space-base;
+
+  dt {
+    justify-self: end;
+    text-align: end;
+  }
+
+  dd {
+    align-self: end;
+    margin: 0;
+  }
+
+  a {
+    word-break: break-all;
+  }
+}

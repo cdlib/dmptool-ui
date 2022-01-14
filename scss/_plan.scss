@@ -1,0 +1,43 @@
+/* Plan Component */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.c-plan {
+  display: grid;
+  padding: 0 $space-base $space-base $space-base;
+  gap: $space-base;
+  background-color: $color-gray-light;
+
+  .c-taggroup {
+    margin-inline-start: -$space-base;
+    justify-self: start;
+  }
+
+  .c-plan-metadata {
+    justify-self: end;
+  }
+}
+
+@include minwidth1 {
+
+  .c-plan {
+    grid-template-columns: 1fr 35%;
+    grid-template-rows: auto auto 1fr auto;
+
+    .c-plan-template {
+      grid-column: 1;
+    }
+
+    .c-plan-title {
+      align-self: center;
+    }
+
+    .c-plan-metadata {
+      grid-column: 2;
+      grid-row: 2 / 5;
+      align-self: end;
+      justify-self: stretch;
+    }
+  }
+}

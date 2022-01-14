@@ -1,0 +1,64 @@
+/* Public Plans Page */
+
+@import 'breakpoints-scss';
+@import 'variables';
+
+.t-publicplans {
+  display: grid;
+  gap: $space-base;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100vh;
+
+  .t-publicplans__intro,
+  .t-publicplans__plans,
+  main {
+    margin-inline: $space-base;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .t-publicplans__section-header {
+    margin-block-end: $space-base;
+    padding-block-end: 0.3rem;
+    border-block-end: 1px solid $color-dmp-blue;
+  }
+
+  main .t-publicplans__section-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $space-sm;
+  }
+
+  .c-search,
+  .c-facet,
+  .c-clear,
+  .c-plan {
+    margin-block-end: $space-base;
+  }
+}
+
+@include minwidth1 {
+
+  .t-publicplans {
+    grid-template-columns: 25% 1fr;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    .t-publicplans__intro,
+    header,
+    footer {
+      grid-column: 1 / 3;
+    }
+
+    .t-publicplans__plans {
+      margin-inline-end: 0;
+    }
+
+    main {
+      margin-inline-start: 0;
+    }
+  }
+}

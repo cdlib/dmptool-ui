@@ -1,0 +1,36 @@
+/* Show More Component */
+
+@import 'variables';
+
+.c-more summary {
+  display: flex; // #1
+  cursor: default;
+  user-select: none;
+
+  &::-webkit-details-marker {
+    display: none; // #2
+  }
+
+  &::after {
+    content: '';
+    margin-inline-start: $space-sm;
+    inline-size: 1rem;
+    block-size: 1rem;
+    background-color: $color-dmp-blue;
+    mask: url('solid.svg#caret-down') center / 1rem;
+  }
+
+  + * { // #3
+    margin-block-start: $space-base;
+  }
+}
+
+.c-more[open] summary {
+  color: $color-dmp-blue;
+}
+
+// #1: Besides setting the ::after pseudo element for the custom icon, setting 'display' to anything other than 'list-item' will remove the default triangle icon in Chrome and Firefox; see: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary#default_style
+
+// #2: removes the default triangle icon in Safari
+
+// #3: Selects the first element after the <summary>.

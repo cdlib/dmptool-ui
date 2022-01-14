@@ -1,0 +1,36 @@
+{
+  "facet": {
+    "funder": [
+      "Alfred P. Sloan",
+      "National Aeronautics and Space Administration (NASA)",
+      "National Institutes of Helath (NIH)",
+      "National Science Foundation (NSF)",
+      "FAPESP - São Paulo Research Foundation (fapesp.br)",
+      "United States Geological Survey (USGS)"
+    ],
+    "institution": [
+      "Instituto Butantan (butantan.gov.br)",
+      "Purdue University",
+      "São Paulo State University (UNESP)",
+      "Tula Foundation (tula.org)",
+      "Universidade Federal de São Carlos (UFSCar)",
+      "University of Delaware (UDel)",
+      "Washington University",
+      "Worcester Polytechnic Institute (wpi.edu)"
+    ],
+    "language": [
+      "English",
+      "Português (Brasil)"
+    ],
+    "subject": [
+      "Biological sciences",
+      "Chemical engineering",
+      "Clinical medicine",
+      "Earth and related environmental sciences",
+      "Engineering and Technology",
+      "Health sciences",
+      "Medical and Health Sciences",
+      "Social Sciences"
+    ]
+  }
+}

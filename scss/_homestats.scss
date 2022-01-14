@@ -4,7 +4,6 @@
 @import 'utilities';
 
 .c-home-stats {
-  --icon-base-size: 4rem;
 
   ul {
     @include resetlist;
@@ -19,24 +18,28 @@
 .c-home-stats__users,
 .c-home-stats__participants,
 .c-home-stats__plans {
-  padding-block-start: 4.5rem;
-  background-repeat: no-repeat;
-  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
   font-weight: bold;
   text-align: center;
+
+  &::before {
+    content: '';
+    block-size: 4rem; // icon size
+    background-color: $color-dmp-blue;
+    mask: var(--icon-source) center / contain no-repeat;
+  }
 }
 
 .c-home-stats__users {
-  background-image: url('light.svg#users' param(--color $color-dmp-blue));
-  background-size: calc(var(--icon-base-size) * 1.25);
+  --icon-source: url('light.svg#users');
 }
 
 .c-home-stats__participants {
-  background-image: url('light.svg#university' param(--color $color-dmp-blue));
-  background-size: var(--icon-base-size);
+  --icon-source: url('light.svg#university');
 }
 
 .c-home-stats__plans {
-  background-image: url('light.svg#edit' param(--color $color-dmp-blue));
-  background-size: calc(var(--icon-base-size) * 1.05);
+  --icon-source: url('light.svg#edit');
 }

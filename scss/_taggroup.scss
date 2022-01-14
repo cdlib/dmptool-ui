@@ -1,0 +1,11 @@
+/* Tag Components Group */
+
+@import 'utilities';
+@import 'variables';
+
+.c-taggroup {
+  @include resetlist;
+
+  display: flex;
+  gap: $space-sm;
+}

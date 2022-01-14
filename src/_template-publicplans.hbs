@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DMPTool</title>
+    <link href="{{ path '/ui-assets/favicon.ico' }}" rel="shortcut icon">
+    <link rel="stylesheet" href="{{ path '/ui-assets/dmproadmap.css' }}">
+    <link rel="stylesheet" href="{{ path '/ui-assets/main.css' }}">
+  </head>
+  <body class="t-publicplans">
+    {{{ yield }}}
+    <script>
+      if (document.querySelector('.c-header')) {
+        document.querySelector('#js-headernav').hidden = true
+      }
+    </script>
+    <script src="{{ path '/ui-assets/main.js' }}"></script>
+  </body>
+</html>
