@@ -34,6 +34,8 @@
     "@fortawesome/fontawesome-pro": "^5.15.3",
     "@frctl/fractal": "^1.5.6",
     "@frctl/mandelbrot": "^1.9.0",
+    "@parcel/optimizer-data-url": "^2.2.1",
+    "@parcel/transformer-inline-string": "^2.2.1",
     "@parcel/transformer-sass": "^2.2.1",
     "del-cli": "^3.0.1",
     "DMPRoadmap": "git+https://github.com/DMPRoadmap/roadmap.git",
