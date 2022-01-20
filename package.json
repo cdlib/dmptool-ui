@@ -59,6 +59,12 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-use-logical": "^1.1.0"
   },
+  "alias": {
+    "fa-brands/*": "./node_modules/@fortawesome/fontawesome-pro/svgs/brands/$1",
+    "fa-light/*": "./node_modules/@fortawesome/fontawesome-pro/svgs/light/$1",
+    "fa-regular/*": "./node_modules/@fortawesome/fontawesome-pro/svgs/regular/$1",
+    "fa-solid/*": "./node_modules/@fortawesome/fontawesome-pro/svgs/solid/$1"
+  },
   "browserslist": [
     "> 1% in my stats"
   ],
