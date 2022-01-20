@@ -68,7 +68,7 @@
     inline-size: 1rem;
     block-size: 1rem;
     background-color: $color-red;
-    mask: url('solid.svg#exclamation-circle');
+    mask: url('data-url:fa-solid/exclamation-circle.svg');
   }
 
   &[hidden] {
@@ -81,7 +81,7 @@
 
   &::before {
     background-color: $color-green;
-    mask: url('solid.svg#check');
+    mask: url('data-url:fa-solid/check.svg');
   }
 }
 

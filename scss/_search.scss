@@ -35,6 +35,6 @@
     inline-size: 1.5rem;
     block-size: 1.5rem;
     margin-inline-start: $space-sm;
-    mask: url('solid.svg#search') no-repeat center / contain;
+    mask: url('data-url:fa-solid/search.svg') no-repeat center / contain;
   }
 }

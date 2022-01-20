@@ -35,11 +35,11 @@
     }
   }
 
-  // Tests for CSS mask with SVGs. Confirm that postcss-svg is parsing a Font Awesome SVG sprite fragment:
+  // Tests for CSS mask with SVGs. Confirm that Parcel is inlining an aliased Font Awesome SVG as a data URL (see: https://parceljs.org/features/bundle-inlining/#inlining-as-a-data-url)
 
   .c-tests4 {
     height: 10rem;
     background-color: $color-green;
-    mask: url('regular.svg#address-card') left / contain no-repeat;
+    mask: url('data-url:fa-regular/address-card.svg') left / contain no-repeat;
   }
 }

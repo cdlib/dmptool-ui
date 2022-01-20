@@ -47,7 +47,7 @@
   margin-inline-start: auto;
   border-style: none;
   background-color: var(--color-foreground);
-  mask: url('solid.svg#times') center / 1rem;
+  mask: url('data-url:fa-solid/times.svg') center / 1rem;
 
   // hide 'close' button text except for screen readers:
 
@@ -61,17 +61,17 @@
 .c-notification--info {
   --color-foreground: #{$color-white};
   --color-background: #{$color-green};
-  --icon: url('solid.svg#check-circle');
+  --icon: url('data-url:fa-solid/check-circle.svg');
 }
 
 .c-notification--warning {
   --color-foreground: #{$color-yellow-dark};
   --color-background: #{$color-yellow-light};
-  --icon: url('solid.svg#exclamation-circle');
+  --icon: url('data-url:fa-solid/exclamation-circle.svg');
 }
 
 .c-notification--danger {
   --color-foreground: #{$color-pink-dark};
   --color-background: #{$color-pink-light};
-  --icon: url('solid.svg#exclamation-circle');
+  --icon: url('data-url:fa-solid/exclamation-circle.svg');
 }

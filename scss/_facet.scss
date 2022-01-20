@@ -43,11 +43,11 @@
   mask-position: center;
 
   &[aria-expanded='false'] {
-    mask-image: url('solid.svg#plus');
+    mask-image: url('data-url:fa-solid/plus.svg');
   }
 
   &[aria-expanded='true'] {
-    mask-image: url('solid.svg#minus');
+    mask-image: url('data-url:fa-solid/minus.svg');
   }
 }
 
@@ -84,7 +84,7 @@
 
   input:checked + label::before {
     background-color: $color-dmp-blue;
-    mask: url('solid.svg#check-square') center / 1rem;
+    mask: url('data-url:fa-solid/check-square.svg') center / 1rem;
   }
 }
 
