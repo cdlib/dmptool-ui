@@ -33,13 +33,13 @@
 }
 
 .c-home-stats__users {
-  --icon-source: url('light.svg#users');
+  --icon-source: url('data-url:fa-light/users.svg');
 }
 
 .c-home-stats__participants {
-  --icon-source: url('light.svg#university');
+  --icon-source: url('data-url:fa-light/university.svg');
 }
 
 .c-home-stats__plans {
-  --icon-source: url('light.svg#edit');
+  --icon-source: url('data-url:fa-light/edit.svg');
 }

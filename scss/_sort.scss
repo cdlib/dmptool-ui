@@ -13,7 +13,7 @@
     inline-size: 1rem;
     block-size: 1rem;
     background-color: $color-white;
-    mask: url('solid.svg#caret-down') center / 1rem;
+    mask: url('data-url:fa-solid/caret-down.svg') center / 1rem;
     pointer-events: none;
   }
 

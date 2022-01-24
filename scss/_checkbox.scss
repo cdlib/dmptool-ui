@@ -32,7 +32,7 @@
   // if input is checked, add a 'check' icon to the label's pseudo element:
 
   input:checked + label::before {
-    mask: url('solid.svg#check-square') center / 1rem;
+    mask: url('data-url:fa-solid/check-square.svg') center / 1rem;
     background-color: $color-dmp-blue;
   }
 }

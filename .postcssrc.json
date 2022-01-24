@@ -1,12 +1,12 @@
 {
   "plugins": {
-    "autoprefixer": true,
-    "postcss-svg": {
-      "dirs": "node_modules/@fortawesome/fontawesome-pro/sprites/",
-      "svgo": true
-    },
-    "postcss-logical": {
-      "dir": "ltr"
+    "postcss-preset-env": {
+      "stage": "2",
+      "features": {
+        "logical-properties-and-values": {
+          "dir": "ltr"
+        }
+      }
     }
   }
 }

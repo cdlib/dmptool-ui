@@ -26,7 +26,7 @@
     block-size: 0.8rem;
     margin-inline-start: $space-sm;
     background-color: $color-dmp-blue;
-    mask: url('solid.svg#caret-down') center / 0.8rem;
+    mask: url('data-url:fa-solid/caret-down.svg') center / 0.8rem;
   }
 
   &[aria-expanded='true'] {

@@ -34,7 +34,9 @@
     "@fortawesome/fontawesome-pro": "^5.15.3",
     "@frctl/fractal": "^1.5.6",
     "@frctl/mandelbrot": "^1.9.0",
-    "@parcel/transformer-sass": "^2.0.1",
+    "@parcel/optimizer-data-url": "^2.2.1",
+    "@parcel/transformer-inline-string": "^2.2.1",
+    "@parcel/transformer-sass": "^2.2.1",
     "del-cli": "^3.0.1",
     "DMPRoadmap": "git+https://github.com/DMPRoadmap/roadmap.git",
     "faker": "^5.5.3",
@@ -44,9 +46,8 @@
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "pa11y": "^6.0.0",
-    "parcel": "^2.0.1",
-    "postcss-logical": "^4.0.2",
-    "postcss-svg": "^3.0.0",
+    "parcel": "^2.2.1",
+    "postcss-preset-env": "^7.2.3",
     "sharp": "^0.29.3",
     "snazzy": "^9.0.0",
     "source-sans": "^3.28.0",
@@ -56,6 +57,12 @@
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-use-logical": "^1.1.0"
+  },
+  "alias": {
+    "fa-brands/*": "./node_modules/@fortawesome/fontawesome-pro/svgs/brands/$1",
+    "fa-light/*": "./node_modules/@fortawesome/fontawesome-pro/svgs/light/$1",
+    "fa-regular/*": "./node_modules/@fortawesome/fontawesome-pro/svgs/regular/$1",
+    "fa-solid/*": "./node_modules/@fortawesome/fontawesome-pro/svgs/solid/$1"
   },
   "browserslist": [
     "> 1% in my stats"
