@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "The UI for the DMPTool Website",
   "scripts": {
-    "serve": "npm-run-all clean --parallel watchimages watchstyles watchjs parcel-dev fractal-dev --silent",
-    "build": "run-s clean minifyimages parcel-build fractal-build --silent",
+    "serve": "npm-run-all clean --parallel watchstyles watchjs parcel-dev fractal-dev --silent",
+    "build": "run-s clean parcel-build fractal-build --silent",
     "publish": "run-s clean minifyimages parcel-build fractal-build github-pages --silent",
     "clean": "del dist ui-assets",
     "fractal-dev": "fractal start --sync --watch",
     "fractal-build": "fractal build",
-    "parcel-dev": "parcel watch dmproadmap.scss main.scss main.js --dist-dir ui-assets --public-url . --no-cache",
-    "parcel-build": "parcel build dmproadmap.scss main.scss main.js --dist-dir ui-assets --public-url . --no-cache --no-source-maps",
+    "parcel-dev": "parcel watch dmproadmap.scss main.scss main.js 'images/[!hero, .DS_Store_]*' --dist-dir ui-assets --public-url . --no-cache",
+    "parcel-build": "parcel build dmproadmap.scss main.scss main.js 'images/[!hero, .DS_Store_]*' --dist-dir ui-assets --public-url . --no-cache --no-source-maps",
     "watchimages": "onchange -i images -- npm run minifyimages",
     "watchstyles": "onchange -i main.scss scss/* -- npm run lintstyles",
     "watchjs": "onchange -i main.js js/* -- npm run lintjs",
@@ -34,9 +34,10 @@
     "@fortawesome/fontawesome-pro": "^5.15.3",
     "@frctl/fractal": "^1.5.6",
     "@frctl/mandelbrot": "^1.9.0",
-    "@parcel/optimizer-data-url": "^2.2.1",
-    "@parcel/transformer-inline-string": "^2.2.1",
-    "@parcel/transformer-sass": "^2.2.1",
+    "@parcel/optimizer-data-url": "^2.3.2",
+    "@parcel/transformer-inline-string": "^2.3.2",
+    "@parcel/transformer-raw": "^2.3.2",
+    "@parcel/transformer-sass": "^2.3.2",
     "del-cli": "^3.0.1",
     "DMPRoadmap": "git+https://github.com/DMPRoadmap/roadmap.git",
     "faker": "^5.5.3",
@@ -46,7 +47,8 @@
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "pa11y": "^6.0.0",
-    "parcel": "^2.2.1",
+    "parcel": "^2.3.2",
+    "parcel-namer-custom": "^0.2.0",
     "postcss-preset-env": "^7.2.3",
     "sharp": "^0.29.3",
     "snazzy": "^9.0.0",
@@ -67,6 +69,9 @@
   "browserslist": [
     "> 1% in my stats"
   ],
+  "parcel-namer-custom": {
+    "images/.*": "[name].[ext]"
+  },
   "stylelint": {
     "defaultSeverity": "warning",
     "extends": [
